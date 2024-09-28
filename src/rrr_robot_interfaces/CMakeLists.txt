@@ -29,7 +29,6 @@ endif()
 rosidl_generate_interfaces(${PROJECT_NAME}
   "srv/RRRMode.srv"
   "srv/RRRIPK.srv"
-  "srv/RRRIPKTarget.srv"
   DEPENDENCIES geometry_msgs sensor_msgs
 )
 
