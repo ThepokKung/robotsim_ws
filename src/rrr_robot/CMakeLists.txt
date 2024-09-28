@@ -27,6 +27,9 @@ ament_python_install_package(${PROJECT_NAME})
 
 # Install Python executables
 install(PROGRAMS
+  scripts/jointstate_script.py
+  scripts/mode_control.py
+  scripts/ipk_call.py
   scripts/dummy_script.py
   DESTINATION lib/${PROJECT_NAME}
 )
