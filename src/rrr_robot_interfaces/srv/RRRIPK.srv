@@ -1,7 +1,5 @@
-string mode_call
-geometry_msgs/PoseStamped target
 geometry_msgs/PoseStamped ipk_mode
+geometry_msgs/PoseStamped ipk_target
 ---
-bool mode_change
 bool ipk_check
 sensor_msgs/JointState ipk_sol

@@ -3,7 +3,7 @@
 from rrr_robot.dummy_module import dummy_function, dummy_var
 import rclpy
 from rclpy.node import Node
-from rrr_robot_interfaces.srv import RRRService
+from rrr_robot_interfaces.srv import RRRIPK
 
 
 class IPKNode(Node):
@@ -11,12 +11,13 @@ class IPKNode(Node):
         super().__init__('ipk_node')
 
         # Service server
-        self.create_service(RRRService, '/ipk', self.ipk_callback)
+        self.create_service(RRRIPK, '/ipk', self.ipk_callback)
 
-    def ipk_callback(self,request:RRRService.Request, response:RRRService.Response):
+    def ipk_callback(self,request:RRRIPK.Request, response:RRRIPK.Response):
         if request.ipk_mode.header.frame_id == '0':
             response.ipk_check = True
-            self.get_logger().info(f'Service call IPK')
+            print(response.ipk_check)
+            self.get_logger().info(f'Service IPK Run')
         return response
     
 def main(args=None):

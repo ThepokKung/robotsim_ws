@@ -1,0 +1,5 @@
+geometry_msgs/PoseStamped ipk_mode
+geometry_msgs/PoseStamped ipk_target
+---
+bool ipk_check
+sensor_msgs/JointState ipk_sol

@@ -242,11 +242,14 @@ CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_introspection_c__pyext.dir/r
   /opt/ros/humble/include/rosidl_typesupport_interface/rosidl_typesupport_interface/macros.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/service_type_support_struct.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/action_type_support_struct.h \
-  rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_service__type_support.h \
+  rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_mode__type_support.h \
   rosidl_generator_c/rrr_robot_interfaces/msg/rosidl_generator_c__visibility_control.h \
-  rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_service__struct.h \
+  rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_mode__struct.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
+  rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_mode__functions.h \
+  rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrripk__type_support.h \
+  rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrripk__struct.h \
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose_stamped__struct.h \
   /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__struct.h \
   /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.h \
@@ -254,16 +257,20 @@ CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_introspection_c__pyext.dir/r
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point__struct.h \
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__struct.h \
   /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/joint_state__struct.h \
-  rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_service__functions.h
+  rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrripk__functions.h
 
-
-rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_service__functions.h:
 
 /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point__struct.h:
 
+rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrripk__struct.h:
+
+rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrripk__type_support.h:
+
+rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_mode__functions.h:
+
 /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h:
 
-rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_service__type_support.h:
+rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_mode__type_support.h:
 
 /usr/include/python3.10/fileutils.h:
 
@@ -315,6 +322,8 @@ rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_service__type_support.h:
 
 /usr/include/python3.10/abstract.h:
 
+rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_mode__struct.h:
+
 /usr/include/python3.10/cpython/pylifecycle.h:
 
 /usr/include/python3.10/pystate.h:
@@ -342,6 +351,8 @@ rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_service__type_support.h:
 /usr/include/python3.10/dictobject.h:
 
 /usr/include/python3.10/cpython/listobject.h:
+
+rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrripk__functions.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/stdbool.h:
 
@@ -476,8 +487,6 @@ rosidl_generator_c/rrr_robot_interfaces/msg/rosidl_generator_c__visibility_contr
 /usr/include/x86_64-linux-gnu/sys/stat.h:
 
 /usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
-
-rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_service__struct.h:
 
 /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/action_type_support_struct.h:
 

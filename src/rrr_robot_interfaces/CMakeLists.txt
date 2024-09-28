@@ -27,7 +27,9 @@ if(BUILD_TESTING)
 endif()
 
 rosidl_generate_interfaces(${PROJECT_NAME}
-  "srv/RRRService.srv"
+  "srv/RRRMode.srv"
+  "srv/RRRIPK.srv"
+  "srv/RRRIPKTarget.srv"
   DEPENDENCIES geometry_msgs sensor_msgs
 )
 

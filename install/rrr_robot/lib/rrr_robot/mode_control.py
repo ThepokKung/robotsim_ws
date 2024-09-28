@@ -3,7 +3,7 @@
 from rrr_robot.dummy_module import dummy_function, dummy_var
 import rclpy
 from rclpy.node import Node
-from rrr_robot_interfaces.srv import RRRService
+from rrr_robot_interfaces.srv import RRRMode , RRRIPK 
 from geometry_msgs.msg import PoseStamped
 from functools import partial 
 
@@ -16,43 +16,49 @@ class ModeControl(Node):
                                Inverse Pose Kinematics Mode : IPK\n \
                                Tele-operation Mode : Teleop\n \
                                Autonomous Mode : Auto')
+        
         # Service server
-        self.create_service(RRRService, '/robot_mode', self.mode_callback)
-        self.create_service(RRRService, '/target_ipk', self.target_ipk_callback)
+        self.create_service(RRRMode, '/robot_mode', self.mode_callback)
+        self.create_service(RRRIPK, '/ipk_target', self.ipk_target_callback)
 
         # Service client
-        self.ipk = self.create_client(RRRService, '/ipk')
+        self.ipk = self.create_client(RRRIPK, '/ipk')
 
         self.mode = ''
-        self.target = PoseStamped()
+        # self.ipk_target = PoseStamped()
 
     def call_mode_IPK(self):
         self.get_logger().info(f'Mode IPK Run')
-        gold_pos = RRRService.Request()
-        gold_pos.ipk_mode.pose = self.target.pose
-        self.repon = self.ipk.call_async(gold_pos)
-        self.repon.add_done_callback(partial(self.ipk_callback))
-    
-    def ipk_callback(self, repon):
+        goal_pos = RRRIPK.Request()
+        goal_pos = self.ipk_target
+        self.get_logger().info(f'goal pos : {goal_pos}')
+        self.ipk_responce = self.ipk.call_async(goal_pos)
+        self.ipk_responce.add_done_callback(partial(self.ipk_callback))
+        
+
+    def ipk_callback(self, ipk_responce):
         try:
-            response = repon.result()
+            response = ipk_responce.result()
             print(response.ipk_check)
         except Exception as e:
             self.get_logger().info(f'Service call failed {e}')
+        return
 
 
-    def target_ipk_callback(self,request:RRRService.Request, response:RRRService.Response):
+
+    def ipk_target_callback(self,request:RRRIPK.Request,  response:RRRIPK.Response):
         if self.mode == 'IPK':
-            self.target = request.target
+            self.ipk_target = request.ipk_target
             self.call_mode_IPK()
         else:
-            self.get_logger().info(f'No Mode call')
+            self.get_logger().info(f'IPK Mode not run')
         return response
 
-    def mode_callback(self, request:RRRService.Request, response:RRRService.Response):
+    def mode_callback(self, request:RRRMode.Request, response:RRRMode.Response):
         self.mode = request.mode_call
         if self.mode == 'IPK':
             self.get_logger().info(f'Mode call : {self.mode}')
+            response.mode_change = True
         else:
             self.get_logger().info(f'Mode call : Fail')
         return response

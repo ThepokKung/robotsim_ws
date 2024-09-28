@@ -1,9 +1,17 @@
 file(REMOVE_RECURSE
   "CMakeFiles/rrr_robot_interfaces__cpp"
-  "rosidl_generator_cpp/rrr_robot_interfaces/srv/detail/rrr_service__builder.hpp"
-  "rosidl_generator_cpp/rrr_robot_interfaces/srv/detail/rrr_service__struct.hpp"
-  "rosidl_generator_cpp/rrr_robot_interfaces/srv/detail/rrr_service__traits.hpp"
-  "rosidl_generator_cpp/rrr_robot_interfaces/srv/rrr_service.hpp"
+  "rosidl_generator_cpp/rrr_robot_interfaces/srv/detail/rrr_mode__builder.hpp"
+  "rosidl_generator_cpp/rrr_robot_interfaces/srv/detail/rrr_mode__struct.hpp"
+  "rosidl_generator_cpp/rrr_robot_interfaces/srv/detail/rrr_mode__traits.hpp"
+  "rosidl_generator_cpp/rrr_robot_interfaces/srv/detail/rrripk__builder.hpp"
+  "rosidl_generator_cpp/rrr_robot_interfaces/srv/detail/rrripk__struct.hpp"
+  "rosidl_generator_cpp/rrr_robot_interfaces/srv/detail/rrripk__traits.hpp"
+  "rosidl_generator_cpp/rrr_robot_interfaces/srv/detail/rrripk_target__builder.hpp"
+  "rosidl_generator_cpp/rrr_robot_interfaces/srv/detail/rrripk_target__struct.hpp"
+  "rosidl_generator_cpp/rrr_robot_interfaces/srv/detail/rrripk_target__traits.hpp"
+  "rosidl_generator_cpp/rrr_robot_interfaces/srv/rrr_mode.hpp"
+  "rosidl_generator_cpp/rrr_robot_interfaces/srv/rrripk.hpp"
+  "rosidl_generator_cpp/rrr_robot_interfaces/srv/rrripk_target.hpp"
 )
 
 # Per-language clean rules from dependency scanning.
