@@ -91,7 +91,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rrr_robot" TYPE DIRECTORY FILES "")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rrr_robot" TYPE DIRECTORY FILES
+    "/home/waritt/robotsim_ws/src/rrr_robot/config"
+    "/home/waritt/robotsim_ws/src/rrr_robot/launch"
+    "/home/waritt/robotsim_ws/src/rrr_robot/meshes"
+    "/home/waritt/robotsim_ws/src/rrr_robot/robot"
+    )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
