@@ -71,9 +71,11 @@ rrr_robot_interfaces__py/CMakeFiles/rrr_robot_interfaces__py: rosidl_generator_p
 rrr_robot_interfaces__py/CMakeFiles/rrr_robot_interfaces__py: rosidl_generator_py/rrr_robot_interfaces/_rrr_robot_interfaces_s.ep.rosidl_typesupport_c.c
 rrr_robot_interfaces__py/CMakeFiles/rrr_robot_interfaces__py: rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_mode.py
 rrr_robot_interfaces__py/CMakeFiles/rrr_robot_interfaces__py: rosidl_generator_py/rrr_robot_interfaces/srv/_rrripk.py
+rrr_robot_interfaces__py/CMakeFiles/rrr_robot_interfaces__py: rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_auto.py
 rrr_robot_interfaces__py/CMakeFiles/rrr_robot_interfaces__py: rosidl_generator_py/rrr_robot_interfaces/srv/__init__.py
 rrr_robot_interfaces__py/CMakeFiles/rrr_robot_interfaces__py: rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_mode_s.c
 rrr_robot_interfaces__py/CMakeFiles/rrr_robot_interfaces__py: rosidl_generator_py/rrr_robot_interfaces/srv/_rrripk_s.c
+rrr_robot_interfaces__py/CMakeFiles/rrr_robot_interfaces__py: rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_auto_s.c
 
 rosidl_generator_py/rrr_robot_interfaces/_rrr_robot_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/lib/rosidl_generator_py/rosidl_generator_py
 rosidl_generator_py/rrr_robot_interfaces/_rrr_robot_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_generator_py/__init__.py
@@ -90,6 +92,7 @@ rosidl_generator_py/rrr_robot_interfaces/_rrr_robot_interfaces_s.ep.rosidl_types
 rosidl_generator_py/rrr_robot_interfaces/_rrr_robot_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/rosidl_generator_py/resource/_srv.py.em
 rosidl_generator_py/rrr_robot_interfaces/_rrr_robot_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/rrr_robot_interfaces/srv/RRRMode.idl
 rosidl_generator_py/rrr_robot_interfaces/_rrr_robot_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/rrr_robot_interfaces/srv/RRRIPK.idl
+rosidl_generator_py/rrr_robot_interfaces/_rrr_robot_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/rrr_robot_interfaces/srv/RRRAuto.idl
 rosidl_generator_py/rrr_robot_interfaces/_rrr_robot_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/geometry_msgs/msg/Accel.idl
 rosidl_generator_py/rrr_robot_interfaces/_rrr_robot_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/geometry_msgs/msg/AccelStamped.idl
 rosidl_generator_py/rrr_robot_interfaces/_rrr_robot_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/geometry_msgs/msg/AccelWithCovariance.idl
@@ -195,6 +198,9 @@ rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_mode.py: rosidl_generator_py/r
 rosidl_generator_py/rrr_robot_interfaces/srv/_rrripk.py: rosidl_generator_py/rrr_robot_interfaces/_rrr_robot_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rrr_robot_interfaces/srv/_rrripk.py
 
+rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_auto.py: rosidl_generator_py/rrr_robot_interfaces/_rrr_robot_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_auto.py
+
 rosidl_generator_py/rrr_robot_interfaces/srv/__init__.py: rosidl_generator_py/rrr_robot_interfaces/_rrr_robot_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rrr_robot_interfaces/srv/__init__.py
 
@@ -204,10 +210,15 @@ rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_mode_s.c: rosidl_generator_py/
 rosidl_generator_py/rrr_robot_interfaces/srv/_rrripk_s.c: rosidl_generator_py/rrr_robot_interfaces/_rrr_robot_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rrr_robot_interfaces/srv/_rrripk_s.c
 
+rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_auto_s.c: rosidl_generator_py/rrr_robot_interfaces/_rrr_robot_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_auto_s.c
+
 rrr_robot_interfaces__py: rosidl_generator_py/rrr_robot_interfaces/_rrr_robot_interfaces_s.ep.rosidl_typesupport_c.c
 rrr_robot_interfaces__py: rosidl_generator_py/rrr_robot_interfaces/_rrr_robot_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 rrr_robot_interfaces__py: rosidl_generator_py/rrr_robot_interfaces/_rrr_robot_interfaces_s.ep.rosidl_typesupport_introspection_c.c
 rrr_robot_interfaces__py: rosidl_generator_py/rrr_robot_interfaces/srv/__init__.py
+rrr_robot_interfaces__py: rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_auto.py
+rrr_robot_interfaces__py: rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_auto_s.c
 rrr_robot_interfaces__py: rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_mode.py
 rrr_robot_interfaces__py: rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_mode_s.c
 rrr_robot_interfaces__py: rosidl_generator_py/rrr_robot_interfaces/srv/_rrripk.py

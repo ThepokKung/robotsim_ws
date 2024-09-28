@@ -72,6 +72,9 @@ CMakeFiles/rrr_robot_interfaces: rosidl_cmake/srv/RRRMode_Response.msg
 CMakeFiles/rrr_robot_interfaces: /home/waritt/robotsim_ws/src/rrr_robot_interfaces/srv/RRRIPK.srv
 CMakeFiles/rrr_robot_interfaces: rosidl_cmake/srv/RRRIPK_Request.msg
 CMakeFiles/rrr_robot_interfaces: rosidl_cmake/srv/RRRIPK_Response.msg
+CMakeFiles/rrr_robot_interfaces: /home/waritt/robotsim_ws/src/rrr_robot_interfaces/srv/RRRAuto.srv
+CMakeFiles/rrr_robot_interfaces: rosidl_cmake/srv/RRRAuto_Request.msg
+CMakeFiles/rrr_robot_interfaces: rosidl_cmake/srv/RRRAuto_Response.msg
 CMakeFiles/rrr_robot_interfaces: /opt/ros/humble/share/geometry_msgs/msg/Accel.idl
 CMakeFiles/rrr_robot_interfaces: /opt/ros/humble/share/geometry_msgs/msg/AccelStamped.idl
 CMakeFiles/rrr_robot_interfaces: /opt/ros/humble/share/geometry_msgs/msg/AccelWithCovariance.idl

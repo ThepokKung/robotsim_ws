@@ -252,4 +252,7 @@ CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generato
  /home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrripk__type_support.h
  /home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrripk__struct.h
  /home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrripk__functions.h
+ /home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_auto__type_support.h
+ /home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_auto__struct.h
+ /home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_auto__functions.h
 

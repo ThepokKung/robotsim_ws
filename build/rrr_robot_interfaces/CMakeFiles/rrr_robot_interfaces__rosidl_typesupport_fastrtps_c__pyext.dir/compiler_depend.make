@@ -250,8 +250,17 @@ CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl
   rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_mode__functions.h \
   rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrripk__type_support.h \
   rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrripk__struct.h \
-  rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrripk__functions.h
+  rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrripk__functions.h \
+  rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_auto__type_support.h \
+  rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_auto__struct.h \
+  rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_auto__functions.h
 
+
+rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_auto__functions.h:
+
+rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_auto__struct.h:
+
+rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_auto__type_support.h:
 
 rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrripk__struct.h:
 

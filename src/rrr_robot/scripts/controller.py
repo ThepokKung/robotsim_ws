@@ -2,8 +2,9 @@
 
 import rclpy
 from rclpy.node import Node
-from rrr_robot_interfaces.srv import RRRMode , RRRIPK
+from rrr_robot_interfaces.srv import RRRMode , RRRIPK , RRRAuto
 from sensor_msgs.msg import JointState
+from geometry_msgs.msg import PoseStamped
 from functools import partial
 import roboticstoolbox as rtb
 from spatialmath import SE3
@@ -18,12 +19,17 @@ class ControllerNode(Node):
         # Service server
         self.create_service(RRRMode, '/robot_mode', self.mode_callback)
         self.create_service(RRRIPK, '/ipk', self.ipk_callback)
+        self.create_service(RRRIPK, '/ipk', self.ipk_callback)
 
         # Service client
-        # self.ipk = self.create_client(RRRIPK, '/ipk')
+        self.random = self.create_client(RRRAuto, '/random')
 
         # Pub Topic
         self.joint_pub = self.create_publisher(JointState, "/joint_states", 10)
+        # self.end_effector_pub = self.create_publisher(JointState, "/joint_states", 10)
+
+        # Sub Topic
+        self.create_subscription(PoseStamped, '/target', self.random_target_callback, 10)
 
         # Timmer
         self.dt = 0.01
@@ -40,7 +46,6 @@ class ControllerNode(Node):
         )
 
         self.mode = ''
-        # self.ipk_target = RRRIPK.Request()
 
         self.name = ["joint_1", "joint_2", "joint_3"]
         self.q = [1.0, 1.5, 2.0]
@@ -97,7 +102,16 @@ class ControllerNode(Node):
                 response.ipk_q3 = self.q_goal[2]
         return response
 
-
+    def andom_target_callback(self,msg :PoseStamped):
+        goal_x = msg.pose.position.x
+        goal_y = msg.pose.position.y
+        goal_z = msg.pose.position.z
+        inpk_check = self.invert_kinematic(goal_x,goal_y,goal_z)
+        if inpk_check:
+            call_random = RRRAuto.Request()
+            call_random.target_call = True
+            self.random.call_async(call_random)
+    
     def mode_callback(self, request:RRRMode.Request, response:RRRMode.Response):
         self.mode = request.mode_call
         if self.mode == 'IPK':
@@ -109,6 +123,9 @@ class ControllerNode(Node):
         elif self.mode == 'Auto':
             self.get_logger().info(f'Mode call : {self.mode}')
             response.mode_change = True
+            call_random = RRRAuto.Request()
+            call_random.target_call = True
+            self.random.call_async(call_random)
         else:
             self.get_logger().info(f'Mode call : {self.mode} not found')
         return response

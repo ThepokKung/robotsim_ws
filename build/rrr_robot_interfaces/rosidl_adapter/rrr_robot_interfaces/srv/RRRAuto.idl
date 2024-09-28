@@ -1,0 +1,21 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from rrr_robot_interfaces/srv/RRRAuto.srv
+// generated code does not contain a copyright notice
+
+
+module rrr_robot_interfaces {
+  module srv {
+    struct RRRAuto_Request {
+      boolean target_call;
+    };
+    struct RRRAuto_Response {
+      double random_target_x;
+
+      double random_target_y;
+
+      double random_target_z;
+
+      boolean move_end;
+    };
+  };
+};

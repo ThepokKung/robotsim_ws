@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "../rosidl_generator_py/rrr_robot_interfaces/_rrr_robot_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c"
   "../rosidl_generator_py/rrr_robot_interfaces/_rrr_robot_interfaces_s.ep.rosidl_typesupport_introspection_c.c"
   "../rosidl_generator_py/rrr_robot_interfaces/srv/__init__.py"
+  "../rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_auto.py"
+  "../rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_auto_s.c"
   "../rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_mode.py"
   "../rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_mode_s.c"
   "../rosidl_generator_py/rrr_robot_interfaces/srv/_rrripk.py"

@@ -2,6 +2,7 @@
   "package_name": "rrr_robot_interfaces",
   "non_idl_tuples": [
     "/home/waritt/robotsim_ws/src/rrr_robot_interfaces:srv/RRRMode.srv",
-    "/home/waritt/robotsim_ws/src/rrr_robot_interfaces:srv/RRRIPK.srv"
+    "/home/waritt/robotsim_ws/src/rrr_robot_interfaces:srv/RRRIPK.srv",
+    "/home/waritt/robotsim_ws/src/rrr_robot_interfaces:srv/RRRAuto.srv"
   ]
 }

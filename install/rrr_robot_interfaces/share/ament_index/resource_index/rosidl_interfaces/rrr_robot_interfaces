@@ -1,3 +1,7 @@
+srv/RRRAuto.idl
+srv/RRRAuto.srv
+srv/RRRAuto_Request.msg
+srv/RRRAuto_Response.msg
 srv/RRRIPK.idl
 srv/RRRIPK.srv
 srv/RRRIPK_Request.msg
