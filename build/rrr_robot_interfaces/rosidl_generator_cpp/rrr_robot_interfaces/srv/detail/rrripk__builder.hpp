@@ -79,16 +79,48 @@ namespace srv
 namespace builder
 {
 
-class Init_RRRIPK_Response_ipk_sol
+class Init_RRRIPK_Response_ipk_q3
 {
 public:
-  explicit Init_RRRIPK_Response_ipk_sol(::rrr_robot_interfaces::srv::RRRIPK_Response & msg)
+  explicit Init_RRRIPK_Response_ipk_q3(::rrr_robot_interfaces::srv::RRRIPK_Response & msg)
   : msg_(msg)
   {}
-  ::rrr_robot_interfaces::srv::RRRIPK_Response ipk_sol(::rrr_robot_interfaces::srv::RRRIPK_Response::_ipk_sol_type arg)
+  ::rrr_robot_interfaces::srv::RRRIPK_Response ipk_q3(::rrr_robot_interfaces::srv::RRRIPK_Response::_ipk_q3_type arg)
   {
-    msg_.ipk_sol = std::move(arg);
+    msg_.ipk_q3 = std::move(arg);
     return std::move(msg_);
+  }
+
+private:
+  ::rrr_robot_interfaces::srv::RRRIPK_Response msg_;
+};
+
+class Init_RRRIPK_Response_ipk_q2
+{
+public:
+  explicit Init_RRRIPK_Response_ipk_q2(::rrr_robot_interfaces::srv::RRRIPK_Response & msg)
+  : msg_(msg)
+  {}
+  Init_RRRIPK_Response_ipk_q3 ipk_q2(::rrr_robot_interfaces::srv::RRRIPK_Response::_ipk_q2_type arg)
+  {
+    msg_.ipk_q2 = std::move(arg);
+    return Init_RRRIPK_Response_ipk_q3(msg_);
+  }
+
+private:
+  ::rrr_robot_interfaces::srv::RRRIPK_Response msg_;
+};
+
+class Init_RRRIPK_Response_ipk_q1
+{
+public:
+  explicit Init_RRRIPK_Response_ipk_q1(::rrr_robot_interfaces::srv::RRRIPK_Response & msg)
+  : msg_(msg)
+  {}
+  Init_RRRIPK_Response_ipk_q2 ipk_q1(::rrr_robot_interfaces::srv::RRRIPK_Response::_ipk_q1_type arg)
+  {
+    msg_.ipk_q1 = std::move(arg);
+    return Init_RRRIPK_Response_ipk_q2(msg_);
   }
 
 private:
@@ -101,10 +133,10 @@ public:
   Init_RRRIPK_Response_ipk_check()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  Init_RRRIPK_Response_ipk_sol ipk_check(::rrr_robot_interfaces::srv::RRRIPK_Response::_ipk_check_type arg)
+  Init_RRRIPK_Response_ipk_q1 ipk_check(::rrr_robot_interfaces::srv::RRRIPK_Response::_ipk_check_type arg)
   {
     msg_.ipk_check = std::move(arg);
-    return Init_RRRIPK_Response_ipk_sol(msg_);
+    return Init_RRRIPK_Response_ipk_q1(msg_);
   }
 
 private:

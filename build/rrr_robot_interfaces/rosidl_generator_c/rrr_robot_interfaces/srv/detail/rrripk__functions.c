@@ -270,10 +270,6 @@ rrr_robot_interfaces__srv__RRRIPK_Request__Sequence__copy(
 }
 
 
-// Include directives for member types
-// Member `ipk_sol`
-#include "sensor_msgs/msg/detail/joint_state__functions.h"
-
 bool
 rrr_robot_interfaces__srv__RRRIPK_Response__init(rrr_robot_interfaces__srv__RRRIPK_Response * msg)
 {
@@ -281,11 +277,9 @@ rrr_robot_interfaces__srv__RRRIPK_Response__init(rrr_robot_interfaces__srv__RRRI
     return false;
   }
   // ipk_check
-  // ipk_sol
-  if (!sensor_msgs__msg__JointState__init(&msg->ipk_sol)) {
-    rrr_robot_interfaces__srv__RRRIPK_Response__fini(msg);
-    return false;
-  }
+  // ipk_q1
+  // ipk_q2
+  // ipk_q3
   return true;
 }
 
@@ -296,8 +290,9 @@ rrr_robot_interfaces__srv__RRRIPK_Response__fini(rrr_robot_interfaces__srv__RRRI
     return;
   }
   // ipk_check
-  // ipk_sol
-  sensor_msgs__msg__JointState__fini(&msg->ipk_sol);
+  // ipk_q1
+  // ipk_q2
+  // ipk_q3
 }
 
 bool
@@ -310,10 +305,16 @@ rrr_robot_interfaces__srv__RRRIPK_Response__are_equal(const rrr_robot_interfaces
   if (lhs->ipk_check != rhs->ipk_check) {
     return false;
   }
-  // ipk_sol
-  if (!sensor_msgs__msg__JointState__are_equal(
-      &(lhs->ipk_sol), &(rhs->ipk_sol)))
-  {
+  // ipk_q1
+  if (lhs->ipk_q1 != rhs->ipk_q1) {
+    return false;
+  }
+  // ipk_q2
+  if (lhs->ipk_q2 != rhs->ipk_q2) {
+    return false;
+  }
+  // ipk_q3
+  if (lhs->ipk_q3 != rhs->ipk_q3) {
     return false;
   }
   return true;
@@ -329,12 +330,12 @@ rrr_robot_interfaces__srv__RRRIPK_Response__copy(
   }
   // ipk_check
   output->ipk_check = input->ipk_check;
-  // ipk_sol
-  if (!sensor_msgs__msg__JointState__copy(
-      &(input->ipk_sol), &(output->ipk_sol)))
-  {
-    return false;
-  }
+  // ipk_q1
+  output->ipk_q1 = input->ipk_q1;
+  // ipk_q2
+  output->ipk_q2 = input->ipk_q2;
+  // ipk_q3
+  output->ipk_q3 = input->ipk_q3;
   return true;
 }
 

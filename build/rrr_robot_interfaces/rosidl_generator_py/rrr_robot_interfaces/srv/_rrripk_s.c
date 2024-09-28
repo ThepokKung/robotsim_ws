@@ -149,10 +149,6 @@ PyObject * rrr_robot_interfaces__srv__rrripk__request__convert_to_py(void * raw_
 // already included above
 // #include "rrr_robot_interfaces/srv/detail/rrripk__functions.h"
 
-ROSIDL_GENERATOR_C_IMPORT
-bool sensor_msgs__msg__joint_state__convert_from_py(PyObject * _pymsg, void * _ros_message);
-ROSIDL_GENERATOR_C_IMPORT
-PyObject * sensor_msgs__msg__joint_state__convert_to_py(void * raw_ros_message);
 
 ROSIDL_GENERATOR_C_EXPORT
 bool rrr_robot_interfaces__srv__rrripk__response__convert_from_py(PyObject * _pymsg, void * _ros_message)
@@ -196,15 +192,31 @@ bool rrr_robot_interfaces__srv__rrripk__response__convert_from_py(PyObject * _py
     ros_message->ipk_check = (Py_True == field);
     Py_DECREF(field);
   }
-  {  // ipk_sol
-    PyObject * field = PyObject_GetAttrString(_pymsg, "ipk_sol");
+  {  // ipk_q1
+    PyObject * field = PyObject_GetAttrString(_pymsg, "ipk_q1");
     if (!field) {
       return false;
     }
-    if (!sensor_msgs__msg__joint_state__convert_from_py(field, &ros_message->ipk_sol)) {
-      Py_DECREF(field);
+    assert(PyFloat_Check(field));
+    ros_message->ipk_q1 = PyFloat_AS_DOUBLE(field);
+    Py_DECREF(field);
+  }
+  {  // ipk_q2
+    PyObject * field = PyObject_GetAttrString(_pymsg, "ipk_q2");
+    if (!field) {
       return false;
     }
+    assert(PyFloat_Check(field));
+    ros_message->ipk_q2 = PyFloat_AS_DOUBLE(field);
+    Py_DECREF(field);
+  }
+  {  // ipk_q3
+    PyObject * field = PyObject_GetAttrString(_pymsg, "ipk_q3");
+    if (!field) {
+      return false;
+    }
+    assert(PyFloat_Check(field));
+    ros_message->ipk_q3 = PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
 
@@ -240,14 +252,33 @@ PyObject * rrr_robot_interfaces__srv__rrripk__response__convert_to_py(void * raw
       }
     }
   }
-  {  // ipk_sol
+  {  // ipk_q1
     PyObject * field = NULL;
-    field = sensor_msgs__msg__joint_state__convert_to_py(&ros_message->ipk_sol);
-    if (!field) {
-      return NULL;
-    }
+    field = PyFloat_FromDouble(ros_message->ipk_q1);
     {
-      int rc = PyObject_SetAttrString(_pymessage, "ipk_sol", field);
+      int rc = PyObject_SetAttrString(_pymessage, "ipk_q1", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // ipk_q2
+    PyObject * field = NULL;
+    field = PyFloat_FromDouble(ros_message->ipk_q2);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "ipk_q2", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // ipk_q3
+    PyObject * field = NULL;
+    field = PyFloat_FromDouble(ros_message->ipk_q3);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "ipk_q3", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

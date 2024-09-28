@@ -299,30 +299,6 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_fastrtps_cp
 
 
 // forward declaration of message dependencies and their conversion functions
-namespace sensor_msgs
-{
-namespace msg
-{
-namespace typesupport_fastrtps_cpp
-{
-bool cdr_serialize(
-  const sensor_msgs::msg::JointState &,
-  eprosima::fastcdr::Cdr &);
-bool cdr_deserialize(
-  eprosima::fastcdr::Cdr &,
-  sensor_msgs::msg::JointState &);
-size_t get_serialized_size(
-  const sensor_msgs::msg::JointState &,
-  size_t current_alignment);
-size_t
-max_serialized_size_JointState(
-  bool & full_bounded,
-  bool & is_plain,
-  size_t current_alignment);
-}  // namespace typesupport_fastrtps_cpp
-}  // namespace msg
-}  // namespace sensor_msgs
-
 
 namespace rrr_robot_interfaces
 {
@@ -341,10 +317,12 @@ cdr_serialize(
 {
   // Member: ipk_check
   cdr << (ros_message.ipk_check ? true : false);
-  // Member: ipk_sol
-  sensor_msgs::msg::typesupport_fastrtps_cpp::cdr_serialize(
-    ros_message.ipk_sol,
-    cdr);
+  // Member: ipk_q1
+  cdr << ros_message.ipk_q1;
+  // Member: ipk_q2
+  cdr << ros_message.ipk_q2;
+  // Member: ipk_q3
+  cdr << ros_message.ipk_q3;
   return true;
 }
 
@@ -361,9 +339,14 @@ cdr_deserialize(
     ros_message.ipk_check = tmp ? true : false;
   }
 
-  // Member: ipk_sol
-  sensor_msgs::msg::typesupport_fastrtps_cpp::cdr_deserialize(
-    cdr, ros_message.ipk_sol);
+  // Member: ipk_q1
+  cdr >> ros_message.ipk_q1;
+
+  // Member: ipk_q2
+  cdr >> ros_message.ipk_q2;
+
+  // Member: ipk_q3
+  cdr >> ros_message.ipk_q3;
 
   return true;
 }
@@ -387,11 +370,24 @@ get_serialized_size(
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
-  // Member: ipk_sol
-
-  current_alignment +=
-    sensor_msgs::msg::typesupport_fastrtps_cpp::get_serialized_size(
-    ros_message.ipk_sol, current_alignment);
+  // Member: ipk_q1
+  {
+    size_t item_size = sizeof(ros_message.ipk_q1);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // Member: ipk_q2
+  {
+    size_t item_size = sizeof(ros_message.ipk_q2);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // Member: ipk_q3
+  {
+    size_t item_size = sizeof(ros_message.ipk_q3);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
 
   return current_alignment - initial_alignment;
 }
@@ -424,23 +420,31 @@ max_serialized_size_RRRIPK_Response(
     current_alignment += array_size * sizeof(uint8_t);
   }
 
-  // Member: ipk_sol
+  // Member: ipk_q1
   {
     size_t array_size = 1;
 
+    last_member_size = array_size * sizeof(uint64_t);
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
 
-    last_member_size = 0;
-    for (size_t index = 0; index < array_size; ++index) {
-      bool inner_full_bounded;
-      bool inner_is_plain;
-      size_t inner_size =
-        sensor_msgs::msg::typesupport_fastrtps_cpp::max_serialized_size_JointState(
-        inner_full_bounded, inner_is_plain, current_alignment);
-      last_member_size += inner_size;
-      current_alignment += inner_size;
-      full_bounded &= inner_full_bounded;
-      is_plain &= inner_is_plain;
-    }
+  // Member: ipk_q2
+  {
+    size_t array_size = 1;
+
+    last_member_size = array_size * sizeof(uint64_t);
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
+
+  // Member: ipk_q3
+  {
+    size_t array_size = 1;
+
+    last_member_size = array_size * sizeof(uint64_t);
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
 
   size_t ret_val = current_alignment - initial_alignment;
@@ -451,7 +455,7 @@ max_serialized_size_RRRIPK_Response(
     using DataType = rrr_robot_interfaces::srv::RRRIPK_Response;
     is_plain =
       (
-      offsetof(DataType, ipk_sol) +
+      offsetof(DataType, ipk_q3) +
       last_member_size
       ) == ret_val;
   }

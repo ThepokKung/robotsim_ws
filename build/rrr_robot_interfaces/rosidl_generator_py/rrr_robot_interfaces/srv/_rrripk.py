@@ -156,6 +156,8 @@ class RRRIPK_Request(metaclass=Metaclass_RRRIPK_Request):
 # already imported above
 # import builtins
 
+import math  # noqa: E402, I100
+
 # already imported above
 # import rosidl_parser.definition
 
@@ -192,10 +194,6 @@ class Metaclass_RRRIPK_Response(type):
             cls._TYPE_SUPPORT = module.type_support_msg__srv__rrripk__response
             cls._DESTROY_ROS_MESSAGE = module.destroy_ros_message_msg__srv__rrripk__response
 
-            from sensor_msgs.msg import JointState
-            if JointState.__class__._TYPE_SUPPORT is None:
-                JointState.__class__.__import_type_support__()
-
     @classmethod
     def __prepare__(cls, name, bases, **kwargs):
         # list constant names here so that they appear in the help text of
@@ -210,17 +208,23 @@ class RRRIPK_Response(metaclass=Metaclass_RRRIPK_Response):
 
     __slots__ = [
         '_ipk_check',
-        '_ipk_sol',
+        '_ipk_q1',
+        '_ipk_q2',
+        '_ipk_q3',
     ]
 
     _fields_and_field_types = {
         'ipk_check': 'boolean',
-        'ipk_sol': 'sensor_msgs/JointState',
+        'ipk_q1': 'double',
+        'ipk_q2': 'double',
+        'ipk_q3': 'double',
     }
 
     SLOT_TYPES = (
         rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
-        rosidl_parser.definition.NamespacedType(['sensor_msgs', 'msg'], 'JointState'),  # noqa: E501
+        rosidl_parser.definition.BasicType('double'),  # noqa: E501
+        rosidl_parser.definition.BasicType('double'),  # noqa: E501
+        rosidl_parser.definition.BasicType('double'),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
@@ -228,8 +232,9 @@ class RRRIPK_Response(metaclass=Metaclass_RRRIPK_Response):
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
         self.ipk_check = kwargs.get('ipk_check', bool())
-        from sensor_msgs.msg import JointState
-        self.ipk_sol = kwargs.get('ipk_sol', JointState())
+        self.ipk_q1 = kwargs.get('ipk_q1', float())
+        self.ipk_q2 = kwargs.get('ipk_q2', float())
+        self.ipk_q3 = kwargs.get('ipk_q3', float())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -262,7 +267,11 @@ class RRRIPK_Response(metaclass=Metaclass_RRRIPK_Response):
             return False
         if self.ipk_check != other.ipk_check:
             return False
-        if self.ipk_sol != other.ipk_sol:
+        if self.ipk_q1 != other.ipk_q1:
+            return False
+        if self.ipk_q2 != other.ipk_q2:
+            return False
+        if self.ipk_q3 != other.ipk_q3:
             return False
         return True
 
@@ -285,18 +294,49 @@ class RRRIPK_Response(metaclass=Metaclass_RRRIPK_Response):
         self._ipk_check = value
 
     @builtins.property
-    def ipk_sol(self):
-        """Message field 'ipk_sol'."""
-        return self._ipk_sol
+    def ipk_q1(self):
+        """Message field 'ipk_q1'."""
+        return self._ipk_q1
 
-    @ipk_sol.setter
-    def ipk_sol(self, value):
+    @ipk_q1.setter
+    def ipk_q1(self, value):
         if __debug__:
-            from sensor_msgs.msg import JointState
             assert \
-                isinstance(value, JointState), \
-                "The 'ipk_sol' field must be a sub message of type 'JointState'"
-        self._ipk_sol = value
+                isinstance(value, float), \
+                "The 'ipk_q1' field must be of type 'float'"
+            assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
+                "The 'ipk_q1' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
+        self._ipk_q1 = value
+
+    @builtins.property
+    def ipk_q2(self):
+        """Message field 'ipk_q2'."""
+        return self._ipk_q2
+
+    @ipk_q2.setter
+    def ipk_q2(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, float), \
+                "The 'ipk_q2' field must be of type 'float'"
+            assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
+                "The 'ipk_q2' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
+        self._ipk_q2 = value
+
+    @builtins.property
+    def ipk_q3(self):
+        """Message field 'ipk_q3'."""
+        return self._ipk_q3
+
+    @ipk_q3.setter
+    def ipk_q3(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, float), \
+                "The 'ipk_q3' field must be of type 'float'"
+            assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
+                "The 'ipk_q3' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
+        self._ipk_q3 = value
 
 
 class Metaclass_RRRIPK(type):

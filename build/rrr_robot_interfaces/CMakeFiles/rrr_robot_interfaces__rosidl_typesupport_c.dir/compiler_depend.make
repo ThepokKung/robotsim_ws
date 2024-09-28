@@ -78,7 +78,6 @@ CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/r
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose__struct.h \
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point__struct.h \
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__struct.h \
-  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/joint_state__struct.h \
   rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrripk__type_support.h \
   rosidl_generator_c/rrr_robot_interfaces/msg/rosidl_generator_c__visibility_control.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/service_type_support_struct.h \
@@ -152,8 +151,6 @@ rosidl_typesupport_c/rrr_robot_interfaces/srv/rrripk__type_support.cpp:
 /opt/ros/humble/include/rosidl_typesupport_c/rosidl_typesupport_c/type_support_map.h:
 
 /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/service_type_support_struct.h:
-
-/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/joint_state__struct.h:
 
 /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__struct.h:
 

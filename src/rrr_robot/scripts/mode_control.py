@@ -36,7 +36,14 @@ class ModeControl(Node):
     def ipk_callback(self, ipk_responce):
         try:
             response = ipk_responce.result()
-            print(response.ipk_check)
+            check = response.ipk_check
+            q = [0,0,0]
+            q[0] = response.ipk_q1
+            q[1] = response.ipk_q2
+            q[2] = response.ipk_q3
+            if check:
+                self.get_logger().info(f'IPK Check : {check}')
+                self.get_logger().info(f'Q sol : {q}')
         except Exception as e:
             self.get_logger().info(f'Service call failed {e}')
         return

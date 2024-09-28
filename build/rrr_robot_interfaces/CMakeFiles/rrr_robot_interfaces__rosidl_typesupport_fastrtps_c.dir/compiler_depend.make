@@ -502,14 +502,11 @@ CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesu
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose__struct.h \
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point__struct.h \
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__struct.h \
-  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/joint_state__struct.h \
   rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrripk__functions.h \
   /usr/include/c++/11/stdlib.h \
   rosidl_generator_c/rrr_robot_interfaces/msg/rosidl_generator_c__visibility_control.h \
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose_stamped__functions.h \
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/rosidl_generator_c__visibility_control.h \
-  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/joint_state__functions.h \
-  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/rosidl_generator_c__visibility_control.h \
   /opt/ros/humble/include/rosidl_typesupport_fastrtps_cpp/rosidl_typesupport_fastrtps_cpp/service_type_support.h \
   /opt/ros/humble/include/rmw/rmw/types.h \
   /opt/ros/humble/include/rcutils/rcutils/logging.h \
@@ -838,13 +835,9 @@ rosidl_typesupport_fastrtps_c/rrr_robot_interfaces/srv/detail/rrripk_target__ros
 
 rosidl_generator_c/rrr_robot_interfaces/srv/rrripk.h:
 
-/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/rosidl_generator_c__visibility_control.h:
-
 /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/rosidl_generator_c__visibility_control.h:
 
 rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrripk__functions.h:
-
-/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/joint_state__struct.h:
 
 /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__struct.h:
 
@@ -1245,8 +1238,6 @@ rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrripk_target__functions.h:
 /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h:
 
 /usr/include/asm-generic/errno.h:
-
-/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/joint_state__functions.h:
 
 /opt/ros/humble/include/rosidl_runtime_cpp/rosidl_typesupport_cpp/service_type_support.hpp:
 

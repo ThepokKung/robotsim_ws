@@ -141,10 +141,6 @@ using RRRIPK_Request =
 }  // namespace rrr_robot_interfaces
 
 
-// Include directives for member types
-// Member 'ipk_sol'
-#include "sensor_msgs/msg/detail/joint_state__struct.hpp"
-
 #ifndef _WIN32
 # define DEPRECATED__rrr_robot_interfaces__srv__RRRIPK_Response __attribute__((deprecated))
 #else
@@ -164,22 +160,27 @@ struct RRRIPK_Response_
   using Type = RRRIPK_Response_<ContainerAllocator>;
 
   explicit RRRIPK_Response_(rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
-  : ipk_sol(_init)
   {
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       this->ipk_check = false;
+      this->ipk_q1 = 0.0;
+      this->ipk_q2 = 0.0;
+      this->ipk_q3 = 0.0;
     }
   }
 
   explicit RRRIPK_Response_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
-  : ipk_sol(_alloc, _init)
   {
+    (void)_alloc;
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       this->ipk_check = false;
+      this->ipk_q1 = 0.0;
+      this->ipk_q2 = 0.0;
+      this->ipk_q3 = 0.0;
     }
   }
 
@@ -187,9 +188,15 @@ struct RRRIPK_Response_
   using _ipk_check_type =
     bool;
   _ipk_check_type ipk_check;
-  using _ipk_sol_type =
-    sensor_msgs::msg::JointState_<ContainerAllocator>;
-  _ipk_sol_type ipk_sol;
+  using _ipk_q1_type =
+    double;
+  _ipk_q1_type ipk_q1;
+  using _ipk_q2_type =
+    double;
+  _ipk_q2_type ipk_q2;
+  using _ipk_q3_type =
+    double;
+  _ipk_q3_type ipk_q3;
 
   // setters for named parameter idiom
   Type & set__ipk_check(
@@ -198,10 +205,22 @@ struct RRRIPK_Response_
     this->ipk_check = _arg;
     return *this;
   }
-  Type & set__ipk_sol(
-    const sensor_msgs::msg::JointState_<ContainerAllocator> & _arg)
+  Type & set__ipk_q1(
+    const double & _arg)
   {
-    this->ipk_sol = _arg;
+    this->ipk_q1 = _arg;
+    return *this;
+  }
+  Type & set__ipk_q2(
+    const double & _arg)
+  {
+    this->ipk_q2 = _arg;
+    return *this;
+  }
+  Type & set__ipk_q3(
+    const double & _arg)
+  {
+    this->ipk_q3 = _arg;
     return *this;
   }
 
@@ -250,7 +269,13 @@ struct RRRIPK_Response_
     if (this->ipk_check != other.ipk_check) {
       return false;
     }
-    if (this->ipk_sol != other.ipk_sol) {
+    if (this->ipk_q1 != other.ipk_q1) {
+      return false;
+    }
+    if (this->ipk_q2 != other.ipk_q2) {
+      return false;
+    }
+    if (this->ipk_q3 != other.ipk_q3) {
       return false;
     }
     return true;

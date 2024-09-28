@@ -129,12 +129,6 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspecti
 // #include "rrr_robot_interfaces/srv/detail/rrripk__struct.h"
 
 
-// Include directives for member types
-// Member `ipk_sol`
-#include "sensor_msgs/msg/joint_state.h"
-// Member `ipk_sol`
-#include "sensor_msgs/msg/detail/joint_state__rosidl_typesupport_introspection_c.h"
-
 #ifdef __cplusplus
 extern "C"
 {
@@ -154,7 +148,7 @@ void rrr_robot_interfaces__srv__RRRIPK_Response__rosidl_typesupport_introspectio
   rrr_robot_interfaces__srv__RRRIPK_Response__fini(message_memory);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember rrr_robot_interfaces__srv__RRRIPK_Response__rosidl_typesupport_introspection_c__RRRIPK_Response_message_member_array[2] = {
+static rosidl_typesupport_introspection_c__MessageMember rrr_robot_interfaces__srv__RRRIPK_Response__rosidl_typesupport_introspection_c__RRRIPK_Response_message_member_array[4] = {
   {
     "ipk_check",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_BOOLEAN,  // type
@@ -173,14 +167,48 @@ static rosidl_typesupport_introspection_c__MessageMember rrr_robot_interfaces__s
     NULL  // resize(index) function pointer
   },
   {
-    "ipk_sol",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
+    "ipk_q1",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
     0,  // upper bound of string
-    NULL,  // members of sub message (initialized later)
+    NULL,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(rrr_robot_interfaces__srv__RRRIPK_Response, ipk_sol),  // bytes offset in struct
+    offsetof(rrr_robot_interfaces__srv__RRRIPK_Response, ipk_q1),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
+    "ipk_q2",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(rrr_robot_interfaces__srv__RRRIPK_Response, ipk_q2),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
+    "ipk_q3",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(rrr_robot_interfaces__srv__RRRIPK_Response, ipk_q3),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
@@ -194,7 +222,7 @@ static rosidl_typesupport_introspection_c__MessageMember rrr_robot_interfaces__s
 static const rosidl_typesupport_introspection_c__MessageMembers rrr_robot_interfaces__srv__RRRIPK_Response__rosidl_typesupport_introspection_c__RRRIPK_Response_message_members = {
   "rrr_robot_interfaces__srv",  // message namespace
   "RRRIPK_Response",  // message name
-  2,  // number of fields
+  4,  // number of fields
   sizeof(rrr_robot_interfaces__srv__RRRIPK_Response),
   rrr_robot_interfaces__srv__RRRIPK_Response__rosidl_typesupport_introspection_c__RRRIPK_Response_message_member_array,  // message members
   rrr_robot_interfaces__srv__RRRIPK_Response__rosidl_typesupport_introspection_c__RRRIPK_Response_init_function,  // function to initialize message memory (memory has to be allocated)
@@ -212,8 +240,6 @@ static rosidl_message_type_support_t rrr_robot_interfaces__srv__RRRIPK_Response_
 ROSIDL_TYPESUPPORT_INTROSPECTION_C_EXPORT_rrr_robot_interfaces
 const rosidl_message_type_support_t *
 ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, rrr_robot_interfaces, srv, RRRIPK_Response)() {
-  rrr_robot_interfaces__srv__RRRIPK_Response__rosidl_typesupport_introspection_c__RRRIPK_Response_message_member_array[1].members_ =
-    ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, sensor_msgs, msg, JointState)();
   if (!rrr_robot_interfaces__srv__RRRIPK_Response__rosidl_typesupport_introspection_c__RRRIPK_Response_message_type_support_handle.typesupport_identifier) {
     rrr_robot_interfaces__srv__RRRIPK_Response__rosidl_typesupport_introspection_c__RRRIPK_Response_message_type_support_handle.typesupport_identifier =
       rosidl_typesupport_introspection_c__identifier;

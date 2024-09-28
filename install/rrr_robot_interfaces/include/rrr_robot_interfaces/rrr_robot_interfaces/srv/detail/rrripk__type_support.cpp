@@ -173,7 +173,7 @@ void RRRIPK_Response_fini_function(void * message_memory)
   typed_message->~RRRIPK_Response();
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember RRRIPK_Response_message_member_array[2] = {
+static const ::rosidl_typesupport_introspection_cpp::MessageMember RRRIPK_Response_message_member_array[4] = {
   {
     "ipk_check",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_BOOLEAN,  // type
@@ -192,14 +192,48 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember RRRIPK_Respon
     nullptr  // resize(index) function pointer
   },
   {
-    "ipk_sol",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_MESSAGE,  // type
+    "ipk_q1",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_DOUBLE,  // type
     0,  // upper bound of string
-    ::rosidl_typesupport_introspection_cpp::get_message_type_support_handle<sensor_msgs::msg::JointState>(),  // members of sub message
+    nullptr,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(rrr_robot_interfaces::srv::RRRIPK_Response, ipk_sol),  // bytes offset in struct
+    offsetof(rrr_robot_interfaces::srv::RRRIPK_Response, ipk_q1),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
+    nullptr  // resize(index) function pointer
+  },
+  {
+    "ipk_q2",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_DOUBLE,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(rrr_robot_interfaces::srv::RRRIPK_Response, ipk_q2),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
+    nullptr  // resize(index) function pointer
+  },
+  {
+    "ipk_q3",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_DOUBLE,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(rrr_robot_interfaces::srv::RRRIPK_Response, ipk_q3),  // bytes offset in struct
     nullptr,  // default value
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
@@ -213,7 +247,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember RRRIPK_Respon
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers RRRIPK_Response_message_members = {
   "rrr_robot_interfaces::srv",  // message namespace
   "RRRIPK_Response",  // message name
-  2,  // number of fields
+  4,  // number of fields
   sizeof(rrr_robot_interfaces::srv::RRRIPK_Response),
   RRRIPK_Response_message_member_array,  // message members
   RRRIPK_Response_init_function,  // function to initialize message memory (memory has to be allocated)

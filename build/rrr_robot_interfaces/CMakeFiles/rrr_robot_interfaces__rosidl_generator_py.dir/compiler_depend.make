@@ -511,7 +511,6 @@ CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/rrr
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose__struct.h \
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point__struct.h \
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__struct.h \
-  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/joint_state__struct.h \
   rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrripk__functions.h \
   rosidl_generator_c/rrr_robot_interfaces/msg/rosidl_generator_c__visibility_control.h
 
@@ -780,8 +779,6 @@ rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrripk_target__struct.h:
 rosidl_generator_py/rrr_robot_interfaces/srv/_rrripk_target_s.c:
 
 rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrripk__functions.h:
-
-/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/joint_state__struct.h:
 
 /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__struct.h:
 

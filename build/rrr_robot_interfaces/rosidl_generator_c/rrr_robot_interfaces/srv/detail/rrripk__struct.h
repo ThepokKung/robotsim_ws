@@ -42,15 +42,13 @@ typedef struct rrr_robot_interfaces__srv__RRRIPK_Request__Sequence
 
 // Constants defined in the message
 
-// Include directives for member types
-// Member 'ipk_sol'
-#include "sensor_msgs/msg/detail/joint_state__struct.h"
-
 /// Struct defined in srv/RRRIPK in the package rrr_robot_interfaces.
 typedef struct rrr_robot_interfaces__srv__RRRIPK_Response
 {
   bool ipk_check;
-  sensor_msgs__msg__JointState ipk_sol;
+  double ipk_q1;
+  double ipk_q2;
+  double ipk_q3;
 } rrr_robot_interfaces__srv__RRRIPK_Response;
 
 // Struct for a sequence of rrr_robot_interfaces__srv__RRRIPK_Response.

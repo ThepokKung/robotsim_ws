@@ -3,7 +3,6 @@
 // generated code does not contain a copyright notice
 
 #include "geometry_msgs/msg/PoseStamped.idl"
-#include "sensor_msgs/msg/JointState.idl"
 
 module rrr_robot_interfaces {
   module srv {
@@ -15,7 +14,11 @@ module rrr_robot_interfaces {
     struct RRRIPK_Response {
       boolean ipk_check;
 
-      sensor_msgs::msg::JointState ipk_sol;
+      double ipk_q1;
+
+      double ipk_q2;
+
+      double ipk_q3;
     };
   };
 };

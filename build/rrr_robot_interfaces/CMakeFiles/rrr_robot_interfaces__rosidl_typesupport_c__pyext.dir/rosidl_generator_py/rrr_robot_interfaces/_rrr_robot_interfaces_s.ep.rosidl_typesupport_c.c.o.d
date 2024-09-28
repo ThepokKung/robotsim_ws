@@ -215,7 +215,6 @@ CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generato
  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose__struct.h \
  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point__struct.h \
  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__struct.h \
- /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/joint_state__struct.h \
  /home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrripk__functions.h \
  /home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrripk_target__type_support.h \
  /home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrripk_target__struct.h \

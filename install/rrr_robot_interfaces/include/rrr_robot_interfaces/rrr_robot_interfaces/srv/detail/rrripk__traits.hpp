@@ -126,10 +126,6 @@ struct is_message<rrr_robot_interfaces::srv::RRRIPK_Request>
 
 }  // namespace rosidl_generator_traits
 
-// Include directives for member types
-// Member 'ipk_sol'
-#include "sensor_msgs/msg/detail/joint_state__traits.hpp"
-
 namespace rrr_robot_interfaces
 {
 
@@ -148,10 +144,24 @@ inline void to_flow_style_yaml(
     out << ", ";
   }
 
-  // member: ipk_sol
+  // member: ipk_q1
   {
-    out << "ipk_sol: ";
-    to_flow_style_yaml(msg.ipk_sol, out);
+    out << "ipk_q1: ";
+    rosidl_generator_traits::value_to_yaml(msg.ipk_q1, out);
+    out << ", ";
+  }
+
+  // member: ipk_q2
+  {
+    out << "ipk_q2: ";
+    rosidl_generator_traits::value_to_yaml(msg.ipk_q2, out);
+    out << ", ";
+  }
+
+  // member: ipk_q3
+  {
+    out << "ipk_q3: ";
+    rosidl_generator_traits::value_to_yaml(msg.ipk_q3, out);
   }
   out << "}";
 }  // NOLINT(readability/fn_size)
@@ -170,13 +180,34 @@ inline void to_block_style_yaml(
     out << "\n";
   }
 
-  // member: ipk_sol
+  // member: ipk_q1
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "ipk_sol:\n";
-    to_block_style_yaml(msg.ipk_sol, out, indentation + 2);
+    out << "ipk_q1: ";
+    rosidl_generator_traits::value_to_yaml(msg.ipk_q1, out);
+    out << "\n";
+  }
+
+  // member: ipk_q2
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "ipk_q2: ";
+    rosidl_generator_traits::value_to_yaml(msg.ipk_q2, out);
+    out << "\n";
+  }
+
+  // member: ipk_q3
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "ipk_q3: ";
+    rosidl_generator_traits::value_to_yaml(msg.ipk_q3, out);
+    out << "\n";
   }
 }  // NOLINT(readability/fn_size)
 
@@ -226,11 +257,11 @@ inline const char * name<rrr_robot_interfaces::srv::RRRIPK_Response>()
 
 template<>
 struct has_fixed_size<rrr_robot_interfaces::srv::RRRIPK_Response>
-  : std::integral_constant<bool, has_fixed_size<sensor_msgs::msg::JointState>::value> {};
+  : std::integral_constant<bool, true> {};
 
 template<>
 struct has_bounded_size<rrr_robot_interfaces::srv::RRRIPK_Response>
-  : std::integral_constant<bool, has_bounded_size<sensor_msgs::msg::JointState>::value> {};
+  : std::integral_constant<bool, true> {};
 
 template<>
 struct is_message<rrr_robot_interfaces::srv::RRRIPK_Response>
