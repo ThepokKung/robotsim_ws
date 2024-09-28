@@ -1,3 +1,2 @@
 geometry_msgs/PoseStamped ipk_target
 ---
-bool ipk_target_check

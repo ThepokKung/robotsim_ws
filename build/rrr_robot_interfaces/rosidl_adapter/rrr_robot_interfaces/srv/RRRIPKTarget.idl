@@ -10,7 +10,7 @@ module rrr_robot_interfaces {
       geometry_msgs::msg::PoseStamped ipk_target;
     };
     struct RRRIPKTarget_Response {
-      boolean ipk_target_check;
+      uint8 structure_needs_at_least_one_member;
     };
   };
 };

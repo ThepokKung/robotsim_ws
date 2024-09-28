@@ -3,7 +3,7 @@
 from rrr_robot.dummy_module import dummy_function, dummy_var
 import rclpy
 from rclpy.node import Node
-from rrr_robot_interfaces.srv import RRRMode , RRRIPK 
+from rrr_robot_interfaces.srv import RRRMode , RRRIPK ,RRRIPKTarget
 from geometry_msgs.msg import PoseStamped
 from functools import partial 
 
@@ -19,20 +19,17 @@ class ModeControl(Node):
         
         # Service server
         self.create_service(RRRMode, '/robot_mode', self.mode_callback)
-        self.create_service(RRRIPK, '/ipk_target', self.ipk_target_callback)
+        self.create_service(RRRIPKTarget, '/ipk_target', self.ipk_target_callback)
 
         # Service client
         self.ipk = self.create_client(RRRIPK, '/ipk')
 
         self.mode = ''
-        # self.ipk_target = PoseStamped()
+        self.ipk_target = RRRIPK.Request()
 
     def call_mode_IPK(self):
         self.get_logger().info(f'Mode IPK Run')
-        goal_pos = RRRIPK.Request()
-        goal_pos = self.ipk_target
-        self.get_logger().info(f'goal pos : {goal_pos}')
-        self.ipk_responce = self.ipk.call_async(goal_pos)
+        self.ipk_responce = self.ipk.call_async(self.ipk_target)
         self.ipk_responce.add_done_callback(partial(self.ipk_callback))
         
 
@@ -46,9 +43,9 @@ class ModeControl(Node):
 
 
 
-    def ipk_target_callback(self,request:RRRIPK.Request,  response:RRRIPK.Response):
+    def ipk_target_callback(self,request:RRRIPKTarget.Request,  response:RRRIPKTarget.Response):
         if self.mode == 'IPK':
-            self.ipk_target = request.ipk_target
+            self.ipk_target.ipk_mode = request.ipk_target
             self.call_mode_IPK()
         else:
             self.get_logger().info(f'IPK Mode not run')

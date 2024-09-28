@@ -256,7 +256,7 @@ rrr_robot_interfaces__srv__RRRIPKTarget_Response__init(rrr_robot_interfaces__srv
   if (!msg) {
     return false;
   }
-  // ipk_target_check
+  // structure_needs_at_least_one_member
   return true;
 }
 
@@ -266,7 +266,7 @@ rrr_robot_interfaces__srv__RRRIPKTarget_Response__fini(rrr_robot_interfaces__srv
   if (!msg) {
     return;
   }
-  // ipk_target_check
+  // structure_needs_at_least_one_member
 }
 
 bool
@@ -275,8 +275,8 @@ rrr_robot_interfaces__srv__RRRIPKTarget_Response__are_equal(const rrr_robot_inte
   if (!lhs || !rhs) {
     return false;
   }
-  // ipk_target_check
-  if (lhs->ipk_target_check != rhs->ipk_target_check) {
+  // structure_needs_at_least_one_member
+  if (lhs->structure_needs_at_least_one_member != rhs->structure_needs_at_least_one_member) {
     return false;
   }
   return true;
@@ -290,8 +290,8 @@ rrr_robot_interfaces__srv__RRRIPKTarget_Response__copy(
   if (!input || !output) {
     return false;
   }
-  // ipk_target_check
-  output->ipk_target_check = input->ipk_target_check;
+  // structure_needs_at_least_one_member
+  output->structure_needs_at_least_one_member = input->structure_needs_at_least_one_member;
   return true;
 }
 

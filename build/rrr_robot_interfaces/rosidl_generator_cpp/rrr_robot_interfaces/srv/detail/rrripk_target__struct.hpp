@@ -149,7 +149,7 @@ struct RRRIPKTarget_Response_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->ipk_target_check = false;
+      this->structure_needs_at_least_one_member = 0;
     }
   }
 
@@ -159,22 +159,15 @@ struct RRRIPKTarget_Response_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->ipk_target_check = false;
+      this->structure_needs_at_least_one_member = 0;
     }
   }
 
   // field types and members
-  using _ipk_target_check_type =
-    bool;
-  _ipk_target_check_type ipk_target_check;
+  using _structure_needs_at_least_one_member_type =
+    uint8_t;
+  _structure_needs_at_least_one_member_type structure_needs_at_least_one_member;
 
-  // setters for named parameter idiom
-  Type & set__ipk_target_check(
-    const bool & _arg)
-  {
-    this->ipk_target_check = _arg;
-    return *this;
-  }
 
   // constant declarations
 
@@ -218,7 +211,7 @@ struct RRRIPKTarget_Response_
   // comparison operators
   bool operator==(const RRRIPKTarget_Response_ & other) const
   {
-    if (this->ipk_target_check != other.ipk_target_check) {
+    if (this->structure_needs_at_least_one_member != other.structure_needs_at_least_one_member) {
       return false;
     }
     return true;

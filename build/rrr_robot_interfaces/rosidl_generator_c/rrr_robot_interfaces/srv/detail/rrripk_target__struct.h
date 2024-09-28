@@ -43,7 +43,7 @@ typedef struct rrr_robot_interfaces__srv__RRRIPKTarget_Request__Sequence
 /// Struct defined in srv/RRRIPKTarget in the package rrr_robot_interfaces.
 typedef struct rrr_robot_interfaces__srv__RRRIPKTarget_Response
 {
-  bool ipk_target_check;
+  uint8_t structure_needs_at_least_one_member;
 } rrr_robot_interfaces__srv__RRRIPKTarget_Response;
 
 // Struct for a sequence of rrr_robot_interfaces__srv__RRRIPKTarget_Response.

@@ -129,14 +129,14 @@ void rrr_robot_interfaces__srv__RRRIPKTarget_Response__rosidl_typesupport_intros
 
 static rosidl_typesupport_introspection_c__MessageMember rrr_robot_interfaces__srv__RRRIPKTarget_Response__rosidl_typesupport_introspection_c__RRRIPKTarget_Response_message_member_array[1] = {
   {
-    "ipk_target_check",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_BOOLEAN,  // type
+    "structure_needs_at_least_one_member",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_UINT8,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(rrr_robot_interfaces__srv__RRRIPKTarget_Response, ipk_target_check),  // bytes offset in struct
+    offsetof(rrr_robot_interfaces__srv__RRRIPKTarget_Response, structure_needs_at_least_one_member),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer

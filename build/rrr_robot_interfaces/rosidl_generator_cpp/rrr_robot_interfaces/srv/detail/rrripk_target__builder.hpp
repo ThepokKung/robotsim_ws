@@ -60,26 +60,6 @@ namespace rrr_robot_interfaces
 namespace srv
 {
 
-namespace builder
-{
-
-class Init_RRRIPKTarget_Response_ipk_target_check
-{
-public:
-  Init_RRRIPKTarget_Response_ipk_target_check()
-  : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
-  {}
-  ::rrr_robot_interfaces::srv::RRRIPKTarget_Response ipk_target_check(::rrr_robot_interfaces::srv::RRRIPKTarget_Response::_ipk_target_check_type arg)
-  {
-    msg_.ipk_target_check = std::move(arg);
-    return std::move(msg_);
-  }
-
-private:
-  ::rrr_robot_interfaces::srv::RRRIPKTarget_Response msg_;
-};
-
-}  // namespace builder
 
 }  // namespace srv
 
@@ -90,7 +70,7 @@ template<>
 inline
 auto build<::rrr_robot_interfaces::srv::RRRIPKTarget_Response>()
 {
-  return rrr_robot_interfaces::srv::builder::Init_RRRIPKTarget_Response_ipk_target_check();
+  return ::rrr_robot_interfaces::srv::RRRIPKTarget_Response(rosidl_runtime_cpp::MessageInitialization::ZERO);
 }
 
 }  // namespace rrr_robot_interfaces

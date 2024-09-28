@@ -154,7 +154,15 @@ bool rrr_robot_interfaces__srv__rrripk_target__response__convert_from_py(PyObjec
     assert(strncmp("rrr_robot_interfaces.srv._rrripk_target.RRRIPKTarget_Response", full_classname_dest, 61) == 0);
   }
   rrr_robot_interfaces__srv__RRRIPKTarget_Response * ros_message = _ros_message;
-  ros_message->structure_needs_at_least_one_member = 0;
+  {  // ipk_target_check
+    PyObject * field = PyObject_GetAttrString(_pymsg, "ipk_target_check");
+    if (!field) {
+      return false;
+    }
+    assert(PyBool_Check(field));
+    ros_message->ipk_target_check = (Py_True == field);
+    Py_DECREF(field);
+  }
 
   return true;
 }
@@ -176,7 +184,18 @@ PyObject * rrr_robot_interfaces__srv__rrripk_target__response__convert_to_py(voi
       return NULL;
     }
   }
-  (void)raw_ros_message;
+  rrr_robot_interfaces__srv__RRRIPKTarget_Response * ros_message = (rrr_robot_interfaces__srv__RRRIPKTarget_Response *)raw_ros_message;
+  {  // ipk_target_check
+    PyObject * field = NULL;
+    field = PyBool_FromLong(ros_message->ipk_target_check ? 1 : 0);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "ipk_target_check", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
 
   // ownership of _pymessage is transferred to the caller
   return _pymessage;

@@ -1,2 +1,0 @@
-
-bool ipk_target_check

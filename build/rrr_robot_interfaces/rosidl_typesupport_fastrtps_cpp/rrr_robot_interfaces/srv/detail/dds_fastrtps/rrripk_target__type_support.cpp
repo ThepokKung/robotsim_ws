@@ -281,8 +281,8 @@ cdr_serialize(
   const rrr_robot_interfaces::srv::RRRIPKTarget_Response & ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Member: ipk_target_check
-  cdr << (ros_message.ipk_target_check ? true : false);
+  // Member: structure_needs_at_least_one_member
+  cdr << ros_message.structure_needs_at_least_one_member;
   return true;
 }
 
@@ -292,12 +292,8 @@ cdr_deserialize(
   eprosima::fastcdr::Cdr & cdr,
   rrr_robot_interfaces::srv::RRRIPKTarget_Response & ros_message)
 {
-  // Member: ipk_target_check
-  {
-    uint8_t tmp;
-    cdr >> tmp;
-    ros_message.ipk_target_check = tmp ? true : false;
-  }
+  // Member: structure_needs_at_least_one_member
+  cdr >> ros_message.structure_needs_at_least_one_member;
 
   return true;
 }
@@ -315,9 +311,9 @@ get_serialized_size(
   (void)padding;
   (void)wchar_size;
 
-  // Member: ipk_target_check
+  // Member: structure_needs_at_least_one_member
   {
-    size_t item_size = sizeof(ros_message.ipk_target_check);
+    size_t item_size = sizeof(ros_message.structure_needs_at_least_one_member);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -345,7 +341,7 @@ max_serialized_size_RRRIPKTarget_Response(
   is_plain = true;
 
 
-  // Member: ipk_target_check
+  // Member: structure_needs_at_least_one_member
   {
     size_t array_size = 1;
 
@@ -361,7 +357,7 @@ max_serialized_size_RRRIPKTarget_Response(
     using DataType = rrr_robot_interfaces::srv::RRRIPKTarget_Response;
     is_plain =
       (
-      offsetof(DataType, ipk_target_check) +
+      offsetof(DataType, structure_needs_at_least_one_member) +
       last_member_size
       ) == ret_val;
   }

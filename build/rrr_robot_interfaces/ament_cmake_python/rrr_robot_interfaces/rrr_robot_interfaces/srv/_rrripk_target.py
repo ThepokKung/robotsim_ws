@@ -133,6 +133,9 @@ class RRRIPKTarget_Request(metaclass=Metaclass_RRRIPKTarget_Request):
 # Import statements for member types
 
 # already imported above
+# import builtins
+
+# already imported above
 # import rosidl_parser.definition
 
 
@@ -181,18 +184,22 @@ class RRRIPKTarget_Response(metaclass=Metaclass_RRRIPKTarget_Response):
     """Message class 'RRRIPKTarget_Response'."""
 
     __slots__ = [
+        '_ipk_target_check',
     ]
 
     _fields_and_field_types = {
+        'ipk_target_check': 'boolean',
     }
 
     SLOT_TYPES = (
+        rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
         assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
+        self.ipk_target_check = kwargs.get('ipk_target_check', bool())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -223,12 +230,27 @@ class RRRIPKTarget_Response(metaclass=Metaclass_RRRIPKTarget_Response):
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
             return False
+        if self.ipk_target_check != other.ipk_target_check:
+            return False
         return True
 
     @classmethod
     def get_fields_and_field_types(cls):
         from copy import copy
         return copy(cls._fields_and_field_types)
+
+    @builtins.property
+    def ipk_target_check(self):
+        """Message field 'ipk_target_check'."""
+        return self._ipk_target_check
+
+    @ipk_target_check.setter
+    def ipk_target_check(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, bool), \
+                "The 'ipk_target_check' field must be of type 'bool'"
+        self._ipk_target_check = value
 
 
 class Metaclass_RRRIPKTarget(type):
