@@ -6,6 +6,4 @@ rrr_robot_interfaces.egg-info/dependency_links.txt
 rrr_robot_interfaces.egg-info/top_level.txt
 rrr_robot_interfaces/srv/__init__.py
 rrr_robot_interfaces/srv/_rrr_mode.py
-rrr_robot_interfaces/srv/_rrr_service.py
 rrr_robot_interfaces/srv/_rrripk.py
-rrr_robot_interfaces/srv/_rrripk_target.py

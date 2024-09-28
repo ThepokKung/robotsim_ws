@@ -16,10 +16,6 @@
 #include "rrr_robot_interfaces/srv/detail/rrripk__struct.h"
 #include "rrr_robot_interfaces/srv/detail/rrripk__functions.h"
 
-ROSIDL_GENERATOR_C_IMPORT
-bool geometry_msgs__msg__pose_stamped__convert_from_py(PyObject * _pymsg, void * _ros_message);
-ROSIDL_GENERATOR_C_IMPORT
-PyObject * geometry_msgs__msg__pose_stamped__convert_to_py(void * raw_ros_message);
 
 ROSIDL_GENERATOR_C_EXPORT
 bool rrr_robot_interfaces__srv__rrripk__request__convert_from_py(PyObject * _pymsg, void * _ros_message)
@@ -54,15 +50,31 @@ bool rrr_robot_interfaces__srv__rrripk__request__convert_from_py(PyObject * _pym
     assert(strncmp("rrr_robot_interfaces.srv._rrripk.RRRIPK_Request", full_classname_dest, 47) == 0);
   }
   rrr_robot_interfaces__srv__RRRIPK_Request * ros_message = _ros_message;
-  {  // ipk_target
-    PyObject * field = PyObject_GetAttrString(_pymsg, "ipk_target");
+  {  // ipk_target_x
+    PyObject * field = PyObject_GetAttrString(_pymsg, "ipk_target_x");
     if (!field) {
       return false;
     }
-    if (!geometry_msgs__msg__pose_stamped__convert_from_py(field, &ros_message->ipk_target)) {
-      Py_DECREF(field);
+    assert(PyFloat_Check(field));
+    ros_message->ipk_target_x = PyFloat_AS_DOUBLE(field);
+    Py_DECREF(field);
+  }
+  {  // ipk_target_y
+    PyObject * field = PyObject_GetAttrString(_pymsg, "ipk_target_y");
+    if (!field) {
       return false;
     }
+    assert(PyFloat_Check(field));
+    ros_message->ipk_target_y = PyFloat_AS_DOUBLE(field);
+    Py_DECREF(field);
+  }
+  {  // ipk_target_z
+    PyObject * field = PyObject_GetAttrString(_pymsg, "ipk_target_z");
+    if (!field) {
+      return false;
+    }
+    assert(PyFloat_Check(field));
+    ros_message->ipk_target_z = PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
 
@@ -87,14 +99,33 @@ PyObject * rrr_robot_interfaces__srv__rrripk__request__convert_to_py(void * raw_
     }
   }
   rrr_robot_interfaces__srv__RRRIPK_Request * ros_message = (rrr_robot_interfaces__srv__RRRIPK_Request *)raw_ros_message;
-  {  // ipk_target
+  {  // ipk_target_x
     PyObject * field = NULL;
-    field = geometry_msgs__msg__pose_stamped__convert_to_py(&ros_message->ipk_target);
-    if (!field) {
-      return NULL;
-    }
+    field = PyFloat_FromDouble(ros_message->ipk_target_x);
     {
-      int rc = PyObject_SetAttrString(_pymessage, "ipk_target", field);
+      int rc = PyObject_SetAttrString(_pymessage, "ipk_target_x", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // ipk_target_y
+    PyObject * field = NULL;
+    field = PyFloat_FromDouble(ros_message->ipk_target_y);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "ipk_target_y", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // ipk_target_z
+    PyObject * field = NULL;
+    field = PyFloat_FromDouble(ros_message->ipk_target_z);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "ipk_target_z", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

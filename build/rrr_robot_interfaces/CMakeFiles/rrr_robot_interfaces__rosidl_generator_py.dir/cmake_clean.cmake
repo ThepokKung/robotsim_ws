@@ -3,8 +3,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_mode_s.c.o.d"
   "CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/rrr_robot_interfaces/srv/_rrripk_s.c.o"
   "CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/rrr_robot_interfaces/srv/_rrripk_s.c.o.d"
-  "CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/rrr_robot_interfaces/srv/_rrripk_target_s.c.o"
-  "CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/rrr_robot_interfaces/srv/_rrripk_target_s.c.o.d"
   "rosidl_generator_py/rrr_robot_interfaces/librrr_robot_interfaces__rosidl_generator_py.pdb"
   "rosidl_generator_py/rrr_robot_interfaces/librrr_robot_interfaces__rosidl_generator_py.so"
 )

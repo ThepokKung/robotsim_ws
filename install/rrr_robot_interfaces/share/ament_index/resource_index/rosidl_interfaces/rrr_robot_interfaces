@@ -1,9 +1,5 @@
 srv/RRRIPK.idl
 srv/RRRIPK.srv
-srv/RRRIPKTarget.idl
-srv/RRRIPKTarget.srv
-srv/RRRIPKTarget_Request.msg
-srv/RRRIPKTarget_Response.msg
 srv/RRRIPK_Request.msg
 srv/RRRIPK_Response.msg
 srv/RRRMode.idl
