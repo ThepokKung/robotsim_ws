@@ -1,0 +1,25 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from rrr_robot_interfaces/srv/RRRService.srv
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/PoseStamped.idl"
+#include "sensor_msgs/msg/JointState.idl"
+
+module rrr_robot_interfaces {
+  module srv {
+    struct RRRService_Request {
+      string mode_call;
+
+      geometry_msgs::msg::PoseStamped target;
+
+      geometry_msgs::msg::PoseStamped ipk_mode;
+    };
+    struct RRRService_Response {
+      boolean mode_change;
+
+      boolean ipk_check;
+
+      sensor_msgs::msg::JointState ipk_sol;
+    };
+  };
+};

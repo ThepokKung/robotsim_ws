@@ -1,0 +1,28 @@
+[0.007s] Invoking command in '/home/waritt/robotsim_ws/build/rrr_robot_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/waritt/robotsim_ws/src/rrr_robot_interfaces -DCMAKE_INSTALL_PREFIX=/home/waritt/robotsim_ws/install/rrr_robot_interfaces
+[0.015s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.099s] -- Found geometry_msgs: 4.2.4 (/opt/ros/humble/share/geometry_msgs/cmake)
+[0.114s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.115s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.119s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.124s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.132s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.159s] -- Configuring incomplete, errors occurred!
+[0.159s] See also "/home/waritt/robotsim_ws/build/rrr_robot_interfaces/CMakeFiles/CMakeOutput.log".
+[0.159s] [31mCMake Error at CMakeLists.txt:11 (find_package):
+[0.159s]   By not providing "Findsensor_msgs.msg.cmake" in CMAKE_MODULE_PATH this
+[0.159s]   project has asked CMake to find a package configuration file provided by
+[0.159s]   "sensor_msgs.msg", but CMake did not find one.
+[0.159s] 
+[0.159s]   Could not find a package configuration file provided by "sensor_msgs.msg"
+[0.159s]   with any of the following names:
+[0.159s] 
+[0.159s]     sensor_msgs.msgConfig.cmake
+[0.159s]     sensor_msgs.msg-config.cmake
+[0.159s] 
+[0.159s]   Add the installation prefix of "sensor_msgs.msg" to CMAKE_PREFIX_PATH or
+[0.159s]   set "sensor_msgs.msg_DIR" to a directory containing one of the above files.
+[0.159s]   If "sensor_msgs.msg" provides a separate development package or SDK, be
+[0.159s]   sure it has been installed.
+[0.159s] 
+[0.159s] [0m
+[0.162s] Invoked command in '/home/waritt/robotsim_ws/build/rrr_robot_interfaces' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/waritt/robotsim_ws/src/rrr_robot_interfaces -DCMAKE_INSTALL_PREFIX=/home/waritt/robotsim_ws/install/rrr_robot_interfaces

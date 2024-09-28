@@ -7,9 +7,9 @@ from math import pi
 from spatialmath import *
 import numpy as np
 
-class DummyNode(Node):
+class JointstatePublisher(Node):
     def __init__(self):
-        super().__init__('dummy_node')
+        super().__init__('jointstate_publisher')
         self.joint_pub = self.create_publisher(JointState, "/joint_states", 10)
         self.dt = 0.01
         self.create_timer(self.dt, self.sim_loop)
@@ -31,7 +31,7 @@ class DummyNode(Node):
         
 def main(args=None):
     rclpy.init(args=args)
-    node = DummyNode()
+    node = JointstatePublisher()
     rclpy.spin(node)
     node.destroy_node()
     rclpy.shutdown()

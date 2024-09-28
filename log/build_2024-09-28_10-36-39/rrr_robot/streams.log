@@ -1,0 +1,10 @@
+[0.009s] Invoking command in '/home/waritt/robotsim_ws/build/rrr_robot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/waritt/robotsim_ws/build/rrr_robot -- -j16 -l16
+[0.040s] [100%] Built target cpp_node_test
+[0.043s] [100%] Built target ament_cmake_python_copy_rrr_robot
+[0.199s] running egg_info
+[0.199s] writing rrr_robot.egg-info/PKG-INFO
+[0.199s] writing dependency_links to rrr_robot.egg-info/dependency_links.txt
+[0.199s] writing top-level names to rrr_robot.egg-info/top_level.txt
+[0.201s] reading manifest file 'rrr_robot.egg-info/SOURCES.txt'
+[0.201s] writing manifest file 'rrr_robot.egg-info/SOURCES.txt'
+[0.217s] [100%] Built target ament_cmake_python_build_rrr_robot_egg
