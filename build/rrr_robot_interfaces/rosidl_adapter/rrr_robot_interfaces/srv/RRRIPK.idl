@@ -2,14 +2,15 @@
 // with input from rrr_robot_interfaces/srv/RRRIPK.srv
 // generated code does not contain a copyright notice
 
-#include "geometry_msgs/msg/PoseStamped.idl"
 
 module rrr_robot_interfaces {
   module srv {
     struct RRRIPK_Request {
-      geometry_msgs::msg::PoseStamped ipk_mode;
+      double ipk_target_x;
 
-      geometry_msgs::msg::PoseStamped ipk_target;
+      double ipk_target_y;
+
+      double ipk_target_z;
     };
     struct RRRIPK_Response {
       boolean ipk_check;

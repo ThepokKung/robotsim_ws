@@ -59,17 +59,14 @@ class RRRIPK_Request(metaclass=Metaclass_RRRIPK_Request):
     """Message class 'RRRIPK_Request'."""
 
     __slots__ = [
-        '_ipk_mode',
         '_ipk_target',
     ]
 
     _fields_and_field_types = {
-        'ipk_mode': 'geometry_msgs/PoseStamped',
         'ipk_target': 'geometry_msgs/PoseStamped',
     }
 
     SLOT_TYPES = (
-        rosidl_parser.definition.NamespacedType(['geometry_msgs', 'msg'], 'PoseStamped'),  # noqa: E501
         rosidl_parser.definition.NamespacedType(['geometry_msgs', 'msg'], 'PoseStamped'),  # noqa: E501
     )
 
@@ -77,8 +74,6 @@ class RRRIPK_Request(metaclass=Metaclass_RRRIPK_Request):
         assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
-        from geometry_msgs.msg import PoseStamped
-        self.ipk_mode = kwargs.get('ipk_mode', PoseStamped())
         from geometry_msgs.msg import PoseStamped
         self.ipk_target = kwargs.get('ipk_target', PoseStamped())
 
@@ -111,8 +106,6 @@ class RRRIPK_Request(metaclass=Metaclass_RRRIPK_Request):
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
             return False
-        if self.ipk_mode != other.ipk_mode:
-            return False
         if self.ipk_target != other.ipk_target:
             return False
         return True
@@ -121,20 +114,6 @@ class RRRIPK_Request(metaclass=Metaclass_RRRIPK_Request):
     def get_fields_and_field_types(cls):
         from copy import copy
         return copy(cls._fields_and_field_types)
-
-    @builtins.property
-    def ipk_mode(self):
-        """Message field 'ipk_mode'."""
-        return self._ipk_mode
-
-    @ipk_mode.setter
-    def ipk_mode(self, value):
-        if __debug__:
-            from geometry_msgs.msg import PoseStamped
-            assert \
-                isinstance(value, PoseStamped), \
-                "The 'ipk_mode' field must be a sub message of type 'PoseStamped'"
-        self._ipk_mode = value
 
     @builtins.property
     def ipk_target(self):

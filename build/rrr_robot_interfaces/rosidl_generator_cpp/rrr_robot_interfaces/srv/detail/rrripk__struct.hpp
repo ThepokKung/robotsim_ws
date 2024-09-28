@@ -15,11 +15,6 @@
 #include "rosidl_runtime_cpp/message_initialization.hpp"
 
 
-// Include directives for member types
-// Member 'ipk_mode'
-// Member 'ipk_target'
-#include "geometry_msgs/msg/detail/pose_stamped__struct.hpp"
-
 #ifndef _WIN32
 # define DEPRECATED__rrr_robot_interfaces__srv__RRRIPK_Request __attribute__((deprecated))
 #else
@@ -39,38 +34,56 @@ struct RRRIPK_Request_
   using Type = RRRIPK_Request_<ContainerAllocator>;
 
   explicit RRRIPK_Request_(rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
-  : ipk_mode(_init),
-    ipk_target(_init)
   {
-    (void)_init;
+    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
+      rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
+    {
+      this->ipk_target_x = 0.0;
+      this->ipk_target_y = 0.0;
+      this->ipk_target_z = 0.0;
+    }
   }
 
   explicit RRRIPK_Request_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
-  : ipk_mode(_alloc, _init),
-    ipk_target(_alloc, _init)
   {
-    (void)_init;
+    (void)_alloc;
+    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
+      rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
+    {
+      this->ipk_target_x = 0.0;
+      this->ipk_target_y = 0.0;
+      this->ipk_target_z = 0.0;
+    }
   }
 
   // field types and members
-  using _ipk_mode_type =
-    geometry_msgs::msg::PoseStamped_<ContainerAllocator>;
-  _ipk_mode_type ipk_mode;
-  using _ipk_target_type =
-    geometry_msgs::msg::PoseStamped_<ContainerAllocator>;
-  _ipk_target_type ipk_target;
+  using _ipk_target_x_type =
+    double;
+  _ipk_target_x_type ipk_target_x;
+  using _ipk_target_y_type =
+    double;
+  _ipk_target_y_type ipk_target_y;
+  using _ipk_target_z_type =
+    double;
+  _ipk_target_z_type ipk_target_z;
 
   // setters for named parameter idiom
-  Type & set__ipk_mode(
-    const geometry_msgs::msg::PoseStamped_<ContainerAllocator> & _arg)
+  Type & set__ipk_target_x(
+    const double & _arg)
   {
-    this->ipk_mode = _arg;
+    this->ipk_target_x = _arg;
     return *this;
   }
-  Type & set__ipk_target(
-    const geometry_msgs::msg::PoseStamped_<ContainerAllocator> & _arg)
+  Type & set__ipk_target_y(
+    const double & _arg)
   {
-    this->ipk_target = _arg;
+    this->ipk_target_y = _arg;
+    return *this;
+  }
+  Type & set__ipk_target_z(
+    const double & _arg)
+  {
+    this->ipk_target_z = _arg;
     return *this;
   }
 
@@ -116,10 +129,13 @@ struct RRRIPK_Request_
   // comparison operators
   bool operator==(const RRRIPK_Request_ & other) const
   {
-    if (this->ipk_mode != other.ipk_mode) {
+    if (this->ipk_target_x != other.ipk_target_x) {
       return false;
     }
-    if (this->ipk_target != other.ipk_target) {
+    if (this->ipk_target_y != other.ipk_target_y) {
+      return false;
+    }
+    if (this->ipk_target_z != other.ipk_target_z) {
       return false;
     }
     return true;

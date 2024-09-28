@@ -20,10 +20,6 @@ ROSIDL_GENERATOR_C_IMPORT
 bool geometry_msgs__msg__pose_stamped__convert_from_py(PyObject * _pymsg, void * _ros_message);
 ROSIDL_GENERATOR_C_IMPORT
 PyObject * geometry_msgs__msg__pose_stamped__convert_to_py(void * raw_ros_message);
-ROSIDL_GENERATOR_C_IMPORT
-bool geometry_msgs__msg__pose_stamped__convert_from_py(PyObject * _pymsg, void * _ros_message);
-ROSIDL_GENERATOR_C_IMPORT
-PyObject * geometry_msgs__msg__pose_stamped__convert_to_py(void * raw_ros_message);
 
 ROSIDL_GENERATOR_C_EXPORT
 bool rrr_robot_interfaces__srv__rrripk__request__convert_from_py(PyObject * _pymsg, void * _ros_message)
@@ -58,17 +54,6 @@ bool rrr_robot_interfaces__srv__rrripk__request__convert_from_py(PyObject * _pym
     assert(strncmp("rrr_robot_interfaces.srv._rrripk.RRRIPK_Request", full_classname_dest, 47) == 0);
   }
   rrr_robot_interfaces__srv__RRRIPK_Request * ros_message = _ros_message;
-  {  // ipk_mode
-    PyObject * field = PyObject_GetAttrString(_pymsg, "ipk_mode");
-    if (!field) {
-      return false;
-    }
-    if (!geometry_msgs__msg__pose_stamped__convert_from_py(field, &ros_message->ipk_mode)) {
-      Py_DECREF(field);
-      return false;
-    }
-    Py_DECREF(field);
-  }
   {  // ipk_target
     PyObject * field = PyObject_GetAttrString(_pymsg, "ipk_target");
     if (!field) {
@@ -102,20 +87,6 @@ PyObject * rrr_robot_interfaces__srv__rrripk__request__convert_to_py(void * raw_
     }
   }
   rrr_robot_interfaces__srv__RRRIPK_Request * ros_message = (rrr_robot_interfaces__srv__RRRIPK_Request *)raw_ros_message;
-  {  // ipk_mode
-    PyObject * field = NULL;
-    field = geometry_msgs__msg__pose_stamped__convert_to_py(&ros_message->ipk_mode);
-    if (!field) {
-      return NULL;
-    }
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "ipk_mode", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
   {  // ipk_target
     PyObject * field = NULL;
     field = geometry_msgs__msg__pose_stamped__convert_to_py(&ros_message->ipk_target);

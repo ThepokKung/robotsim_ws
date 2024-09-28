@@ -10,27 +10,15 @@
 
 #include "rcutils/allocator.h"
 
-// Include directives for member types
-// Member `ipk_mode`
-// Member `ipk_target`
-#include "geometry_msgs/msg/detail/pose_stamped__functions.h"
-
 bool
 rrr_robot_interfaces__srv__RRRIPK_Request__init(rrr_robot_interfaces__srv__RRRIPK_Request * msg)
 {
   if (!msg) {
     return false;
   }
-  // ipk_mode
-  if (!geometry_msgs__msg__PoseStamped__init(&msg->ipk_mode)) {
-    rrr_robot_interfaces__srv__RRRIPK_Request__fini(msg);
-    return false;
-  }
-  // ipk_target
-  if (!geometry_msgs__msg__PoseStamped__init(&msg->ipk_target)) {
-    rrr_robot_interfaces__srv__RRRIPK_Request__fini(msg);
-    return false;
-  }
+  // ipk_target_x
+  // ipk_target_y
+  // ipk_target_z
   return true;
 }
 
@@ -40,10 +28,9 @@ rrr_robot_interfaces__srv__RRRIPK_Request__fini(rrr_robot_interfaces__srv__RRRIP
   if (!msg) {
     return;
   }
-  // ipk_mode
-  geometry_msgs__msg__PoseStamped__fini(&msg->ipk_mode);
-  // ipk_target
-  geometry_msgs__msg__PoseStamped__fini(&msg->ipk_target);
+  // ipk_target_x
+  // ipk_target_y
+  // ipk_target_z
 }
 
 bool
@@ -52,16 +39,16 @@ rrr_robot_interfaces__srv__RRRIPK_Request__are_equal(const rrr_robot_interfaces_
   if (!lhs || !rhs) {
     return false;
   }
-  // ipk_mode
-  if (!geometry_msgs__msg__PoseStamped__are_equal(
-      &(lhs->ipk_mode), &(rhs->ipk_mode)))
-  {
+  // ipk_target_x
+  if (lhs->ipk_target_x != rhs->ipk_target_x) {
     return false;
   }
-  // ipk_target
-  if (!geometry_msgs__msg__PoseStamped__are_equal(
-      &(lhs->ipk_target), &(rhs->ipk_target)))
-  {
+  // ipk_target_y
+  if (lhs->ipk_target_y != rhs->ipk_target_y) {
+    return false;
+  }
+  // ipk_target_z
+  if (lhs->ipk_target_z != rhs->ipk_target_z) {
     return false;
   }
   return true;
@@ -75,18 +62,12 @@ rrr_robot_interfaces__srv__RRRIPK_Request__copy(
   if (!input || !output) {
     return false;
   }
-  // ipk_mode
-  if (!geometry_msgs__msg__PoseStamped__copy(
-      &(input->ipk_mode), &(output->ipk_mode)))
-  {
-    return false;
-  }
-  // ipk_target
-  if (!geometry_msgs__msg__PoseStamped__copy(
-      &(input->ipk_target), &(output->ipk_target)))
-  {
-    return false;
-  }
+  // ipk_target_x
+  output->ipk_target_x = input->ipk_target_x;
+  // ipk_target_y
+  output->ipk_target_y = input->ipk_target_y;
+  // ipk_target_z
+  output->ipk_target_z = input->ipk_target_z;
   return true;
 }
 

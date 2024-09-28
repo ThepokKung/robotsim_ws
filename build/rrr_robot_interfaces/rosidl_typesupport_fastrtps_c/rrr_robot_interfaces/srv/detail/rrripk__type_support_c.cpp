@@ -34,23 +34,8 @@ extern "C"
 {
 #endif
 
-#include "geometry_msgs/msg/detail/pose_stamped__functions.h"  // ipk_mode, ipk_target
 
 // forward declare type support functions
-ROSIDL_TYPESUPPORT_FASTRTPS_C_IMPORT_rrr_robot_interfaces
-size_t get_serialized_size_geometry_msgs__msg__PoseStamped(
-  const void * untyped_ros_message,
-  size_t current_alignment);
-
-ROSIDL_TYPESUPPORT_FASTRTPS_C_IMPORT_rrr_robot_interfaces
-size_t max_serialized_size_geometry_msgs__msg__PoseStamped(
-  bool & full_bounded,
-  bool & is_plain,
-  size_t current_alignment);
-
-ROSIDL_TYPESUPPORT_FASTRTPS_C_IMPORT_rrr_robot_interfaces
-const rosidl_message_type_support_t *
-  ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_fastrtps_c, geometry_msgs, msg, PoseStamped)();
 
 
 using _RRRIPK_Request__ros_msg_type = rrr_robot_interfaces__srv__RRRIPK_Request;
@@ -64,32 +49,19 @@ static bool _RRRIPK_Request__cdr_serialize(
     return false;
   }
   const _RRRIPK_Request__ros_msg_type * ros_message = static_cast<const _RRRIPK_Request__ros_msg_type *>(untyped_ros_message);
-  // Field name: ipk_mode
+  // Field name: ipk_target_x
   {
-    const message_type_support_callbacks_t * callbacks =
-      static_cast<const message_type_support_callbacks_t *>(
-      ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
-        rosidl_typesupport_fastrtps_c, geometry_msgs, msg, PoseStamped
-      )()->data);
-    if (!callbacks->cdr_serialize(
-        &ros_message->ipk_mode, cdr))
-    {
-      return false;
-    }
+    cdr << ros_message->ipk_target_x;
   }
 
-  // Field name: ipk_target
+  // Field name: ipk_target_y
   {
-    const message_type_support_callbacks_t * callbacks =
-      static_cast<const message_type_support_callbacks_t *>(
-      ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
-        rosidl_typesupport_fastrtps_c, geometry_msgs, msg, PoseStamped
-      )()->data);
-    if (!callbacks->cdr_serialize(
-        &ros_message->ipk_target, cdr))
-    {
-      return false;
-    }
+    cdr << ros_message->ipk_target_y;
+  }
+
+  // Field name: ipk_target_z
+  {
+    cdr << ros_message->ipk_target_z;
   }
 
   return true;
@@ -104,32 +76,19 @@ static bool _RRRIPK_Request__cdr_deserialize(
     return false;
   }
   _RRRIPK_Request__ros_msg_type * ros_message = static_cast<_RRRIPK_Request__ros_msg_type *>(untyped_ros_message);
-  // Field name: ipk_mode
+  // Field name: ipk_target_x
   {
-    const message_type_support_callbacks_t * callbacks =
-      static_cast<const message_type_support_callbacks_t *>(
-      ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
-        rosidl_typesupport_fastrtps_c, geometry_msgs, msg, PoseStamped
-      )()->data);
-    if (!callbacks->cdr_deserialize(
-        cdr, &ros_message->ipk_mode))
-    {
-      return false;
-    }
+    cdr >> ros_message->ipk_target_x;
   }
 
-  // Field name: ipk_target
+  // Field name: ipk_target_y
   {
-    const message_type_support_callbacks_t * callbacks =
-      static_cast<const message_type_support_callbacks_t *>(
-      ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
-        rosidl_typesupport_fastrtps_c, geometry_msgs, msg, PoseStamped
-      )()->data);
-    if (!callbacks->cdr_deserialize(
-        cdr, &ros_message->ipk_target))
-    {
-      return false;
-    }
+    cdr >> ros_message->ipk_target_y;
+  }
+
+  // Field name: ipk_target_z
+  {
+    cdr >> ros_message->ipk_target_z;
   }
 
   return true;
@@ -149,14 +108,24 @@ size_t get_serialized_size_rrr_robot_interfaces__srv__RRRIPK_Request(
   (void)padding;
   (void)wchar_size;
 
-  // field.name ipk_mode
-
-  current_alignment += get_serialized_size_geometry_msgs__msg__PoseStamped(
-    &(ros_message->ipk_mode), current_alignment);
-  // field.name ipk_target
-
-  current_alignment += get_serialized_size_geometry_msgs__msg__PoseStamped(
-    &(ros_message->ipk_target), current_alignment);
+  // field.name ipk_target_x
+  {
+    size_t item_size = sizeof(ros_message->ipk_target_x);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name ipk_target_y
+  {
+    size_t item_size = sizeof(ros_message->ipk_target_y);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name ipk_target_z
+  {
+    size_t item_size = sizeof(ros_message->ipk_target_z);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
 
   return current_alignment - initial_alignment;
 }
@@ -186,43 +155,29 @@ size_t max_serialized_size_rrr_robot_interfaces__srv__RRRIPK_Request(
   full_bounded = true;
   is_plain = true;
 
-  // member: ipk_mode
+  // member: ipk_target_x
   {
     size_t array_size = 1;
 
-
-    last_member_size = 0;
-    for (size_t index = 0; index < array_size; ++index) {
-      bool inner_full_bounded;
-      bool inner_is_plain;
-      size_t inner_size;
-      inner_size =
-        max_serialized_size_geometry_msgs__msg__PoseStamped(
-        inner_full_bounded, inner_is_plain, current_alignment);
-      last_member_size += inner_size;
-      current_alignment += inner_size;
-      full_bounded &= inner_full_bounded;
-      is_plain &= inner_is_plain;
-    }
+    last_member_size = array_size * sizeof(uint64_t);
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
-  // member: ipk_target
+  // member: ipk_target_y
   {
     size_t array_size = 1;
 
+    last_member_size = array_size * sizeof(uint64_t);
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
+  // member: ipk_target_z
+  {
+    size_t array_size = 1;
 
-    last_member_size = 0;
-    for (size_t index = 0; index < array_size; ++index) {
-      bool inner_full_bounded;
-      bool inner_is_plain;
-      size_t inner_size;
-      inner_size =
-        max_serialized_size_geometry_msgs__msg__PoseStamped(
-        inner_full_bounded, inner_is_plain, current_alignment);
-      last_member_size += inner_size;
-      current_alignment += inner_size;
-      full_bounded &= inner_full_bounded;
-      is_plain &= inner_is_plain;
-    }
+    last_member_size = array_size * sizeof(uint64_t);
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
 
   size_t ret_val = current_alignment - initial_alignment;
@@ -233,7 +188,7 @@ size_t max_serialized_size_rrr_robot_interfaces__srv__RRRIPK_Request(
     using DataType = rrr_robot_interfaces__srv__RRRIPK_Request;
     is_plain =
       (
-      offsetof(DataType, ipk_target) +
+      offsetof(DataType, ipk_target_z) +
       last_member_size
       ) == ret_val;
   }

@@ -4,7 +4,7 @@ from rrr_robot.dummy_module import dummy_function, dummy_var
 import rclpy
 from rclpy.node import Node
 from rrr_robot_interfaces.srv import RRRMode , RRRIPK ,RRRIPKTarget
-from geometry_msgs.msg import PoseStamped
+from sensor_msgs.msg import JointState
 from functools import partial 
 
 
@@ -24,8 +24,17 @@ class ModeControl(Node):
         # Service client
         self.ipk = self.create_client(RRRIPK, '/ipk')
 
+        self.joint_pub = self.create_publisher(JointState, "/joint_states", 10)
+
+        self.dt = 0.01
+        self.create_timer(self.dt,self.sim_loop)
+
         self.mode = ''
         self.ipk_target = RRRIPK.Request()
+
+        self.q = [1.0, 1.5, 2.0]
+        self.q_goal = [0.0 , 0.0 , 0.0]
+        self.name = ["joint_1", "joint_2", "joint_3"]
 
     def call_mode_IPK(self):
         self.get_logger().info(f'Mode IPK Run')
@@ -42,12 +51,12 @@ class ModeControl(Node):
             q[1] = response.ipk_q2
             q[2] = response.ipk_q3
             self.get_logger().info(f'IPK Check : {check}')
-            self.get_logger().info(f'Q sol : {q}')
+            if check:
+                self.get_logger().info(f'Q sol : {q}')
+                self.q = q
         except Exception as e:
             self.get_logger().info(f'Service call failed {e}')
         return
-
-
 
     def ipk_target_callback(self,request:RRRIPKTarget.Request,  response:RRRIPKTarget.Response):
         if self.mode == 'IPK':
@@ -56,6 +65,15 @@ class ModeControl(Node):
         else:
             self.get_logger().info(f'IPK Mode not run')
         return response
+    
+    def sim_loop(self):
+        msg = JointState()
+        msg.header.stamp = self.get_clock().now().to_msg()
+
+        for i in range(len(self.q)):
+            msg.position.append(self.q[i])
+            msg.name.append(self.name[i])
+        self.joint_pub.publish(msg)
 
     def mode_callback(self, request:RRRMode.Request, response:RRRMode.Response):
         self.mode = request.mode_call

@@ -1,2 +1,3 @@
-geometry_msgs/PoseStamped ipk_mode
-geometry_msgs/PoseStamped ipk_target
+float64 ipk_target_x
+float64 ipk_target_y
+float64 ipk_target_z

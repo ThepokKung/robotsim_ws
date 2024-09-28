@@ -21,15 +21,15 @@ namespace srv
 namespace builder
 {
 
-class Init_RRRIPK_Request_ipk_target
+class Init_RRRIPK_Request_ipk_target_z
 {
 public:
-  explicit Init_RRRIPK_Request_ipk_target(::rrr_robot_interfaces::srv::RRRIPK_Request & msg)
+  explicit Init_RRRIPK_Request_ipk_target_z(::rrr_robot_interfaces::srv::RRRIPK_Request & msg)
   : msg_(msg)
   {}
-  ::rrr_robot_interfaces::srv::RRRIPK_Request ipk_target(::rrr_robot_interfaces::srv::RRRIPK_Request::_ipk_target_type arg)
+  ::rrr_robot_interfaces::srv::RRRIPK_Request ipk_target_z(::rrr_robot_interfaces::srv::RRRIPK_Request::_ipk_target_z_type arg)
   {
-    msg_.ipk_target = std::move(arg);
+    msg_.ipk_target_z = std::move(arg);
     return std::move(msg_);
   }
 
@@ -37,16 +37,32 @@ private:
   ::rrr_robot_interfaces::srv::RRRIPK_Request msg_;
 };
 
-class Init_RRRIPK_Request_ipk_mode
+class Init_RRRIPK_Request_ipk_target_y
 {
 public:
-  Init_RRRIPK_Request_ipk_mode()
+  explicit Init_RRRIPK_Request_ipk_target_y(::rrr_robot_interfaces::srv::RRRIPK_Request & msg)
+  : msg_(msg)
+  {}
+  Init_RRRIPK_Request_ipk_target_z ipk_target_y(::rrr_robot_interfaces::srv::RRRIPK_Request::_ipk_target_y_type arg)
+  {
+    msg_.ipk_target_y = std::move(arg);
+    return Init_RRRIPK_Request_ipk_target_z(msg_);
+  }
+
+private:
+  ::rrr_robot_interfaces::srv::RRRIPK_Request msg_;
+};
+
+class Init_RRRIPK_Request_ipk_target_x
+{
+public:
+  Init_RRRIPK_Request_ipk_target_x()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  Init_RRRIPK_Request_ipk_target ipk_mode(::rrr_robot_interfaces::srv::RRRIPK_Request::_ipk_mode_type arg)
+  Init_RRRIPK_Request_ipk_target_y ipk_target_x(::rrr_robot_interfaces::srv::RRRIPK_Request::_ipk_target_x_type arg)
   {
-    msg_.ipk_mode = std::move(arg);
-    return Init_RRRIPK_Request_ipk_target(msg_);
+    msg_.ipk_target_x = std::move(arg);
+    return Init_RRRIPK_Request_ipk_target_y(msg_);
   }
 
 private:
@@ -64,7 +80,7 @@ template<>
 inline
 auto build<::rrr_robot_interfaces::srv::RRRIPK_Request>()
 {
-  return rrr_robot_interfaces::srv::builder::Init_RRRIPK_Request_ipk_mode();
+  return rrr_robot_interfaces::srv::builder::Init_RRRIPK_Request_ipk_target_x();
 }
 
 }  // namespace rrr_robot_interfaces

@@ -17,16 +17,12 @@ extern "C"
 
 // Constants defined in the message
 
-// Include directives for member types
-// Member 'ipk_mode'
-// Member 'ipk_target'
-#include "geometry_msgs/msg/detail/pose_stamped__struct.h"
-
 /// Struct defined in srv/RRRIPK in the package rrr_robot_interfaces.
 typedef struct rrr_robot_interfaces__srv__RRRIPK_Request
 {
-  geometry_msgs__msg__PoseStamped ipk_mode;
-  geometry_msgs__msg__PoseStamped ipk_target;
+  double ipk_target_x;
+  double ipk_target_y;
+  double ipk_target_z;
 } rrr_robot_interfaces__srv__RRRIPK_Request;
 
 // Struct for a sequence of rrr_robot_interfaces__srv__RRRIPK_Request.

@@ -7,6 +7,8 @@
 
 import builtins  # noqa: E402, I100
 
+import math  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -42,10 +44,6 @@ class Metaclass_RRRIPK_Request(type):
             cls._TYPE_SUPPORT = module.type_support_msg__srv__rrripk__request
             cls._DESTROY_ROS_MESSAGE = module.destroy_ros_message_msg__srv__rrripk__request
 
-            from geometry_msgs.msg import PoseStamped
-            if PoseStamped.__class__._TYPE_SUPPORT is None:
-                PoseStamped.__class__.__import_type_support__()
-
     @classmethod
     def __prepare__(cls, name, bases, **kwargs):
         # list constant names here so that they appear in the help text of
@@ -59,28 +57,30 @@ class RRRIPK_Request(metaclass=Metaclass_RRRIPK_Request):
     """Message class 'RRRIPK_Request'."""
 
     __slots__ = [
-        '_ipk_mode',
-        '_ipk_target',
+        '_ipk_target_x',
+        '_ipk_target_y',
+        '_ipk_target_z',
     ]
 
     _fields_and_field_types = {
-        'ipk_mode': 'geometry_msgs/PoseStamped',
-        'ipk_target': 'geometry_msgs/PoseStamped',
+        'ipk_target_x': 'double',
+        'ipk_target_y': 'double',
+        'ipk_target_z': 'double',
     }
 
     SLOT_TYPES = (
-        rosidl_parser.definition.NamespacedType(['geometry_msgs', 'msg'], 'PoseStamped'),  # noqa: E501
-        rosidl_parser.definition.NamespacedType(['geometry_msgs', 'msg'], 'PoseStamped'),  # noqa: E501
+        rosidl_parser.definition.BasicType('double'),  # noqa: E501
+        rosidl_parser.definition.BasicType('double'),  # noqa: E501
+        rosidl_parser.definition.BasicType('double'),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
         assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
-        from geometry_msgs.msg import PoseStamped
-        self.ipk_mode = kwargs.get('ipk_mode', PoseStamped())
-        from geometry_msgs.msg import PoseStamped
-        self.ipk_target = kwargs.get('ipk_target', PoseStamped())
+        self.ipk_target_x = kwargs.get('ipk_target_x', float())
+        self.ipk_target_y = kwargs.get('ipk_target_y', float())
+        self.ipk_target_z = kwargs.get('ipk_target_z', float())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -111,9 +111,11 @@ class RRRIPK_Request(metaclass=Metaclass_RRRIPK_Request):
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
             return False
-        if self.ipk_mode != other.ipk_mode:
+        if self.ipk_target_x != other.ipk_target_x:
             return False
-        if self.ipk_target != other.ipk_target:
+        if self.ipk_target_y != other.ipk_target_y:
+            return False
+        if self.ipk_target_z != other.ipk_target_z:
             return False
         return True
 
@@ -123,32 +125,49 @@ class RRRIPK_Request(metaclass=Metaclass_RRRIPK_Request):
         return copy(cls._fields_and_field_types)
 
     @builtins.property
-    def ipk_mode(self):
-        """Message field 'ipk_mode'."""
-        return self._ipk_mode
+    def ipk_target_x(self):
+        """Message field 'ipk_target_x'."""
+        return self._ipk_target_x
 
-    @ipk_mode.setter
-    def ipk_mode(self, value):
+    @ipk_target_x.setter
+    def ipk_target_x(self, value):
         if __debug__:
-            from geometry_msgs.msg import PoseStamped
             assert \
-                isinstance(value, PoseStamped), \
-                "The 'ipk_mode' field must be a sub message of type 'PoseStamped'"
-        self._ipk_mode = value
+                isinstance(value, float), \
+                "The 'ipk_target_x' field must be of type 'float'"
+            assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
+                "The 'ipk_target_x' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
+        self._ipk_target_x = value
 
     @builtins.property
-    def ipk_target(self):
-        """Message field 'ipk_target'."""
-        return self._ipk_target
+    def ipk_target_y(self):
+        """Message field 'ipk_target_y'."""
+        return self._ipk_target_y
 
-    @ipk_target.setter
-    def ipk_target(self, value):
+    @ipk_target_y.setter
+    def ipk_target_y(self, value):
         if __debug__:
-            from geometry_msgs.msg import PoseStamped
             assert \
-                isinstance(value, PoseStamped), \
-                "The 'ipk_target' field must be a sub message of type 'PoseStamped'"
-        self._ipk_target = value
+                isinstance(value, float), \
+                "The 'ipk_target_y' field must be of type 'float'"
+            assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
+                "The 'ipk_target_y' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
+        self._ipk_target_y = value
+
+    @builtins.property
+    def ipk_target_z(self):
+        """Message field 'ipk_target_z'."""
+        return self._ipk_target_z
+
+    @ipk_target_z.setter
+    def ipk_target_z(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, float), \
+                "The 'ipk_target_z' field must be of type 'float'"
+            assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
+                "The 'ipk_target_z' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
+        self._ipk_target_z = value
 
 
 # Import statements for member types
@@ -156,7 +175,8 @@ class RRRIPK_Request(metaclass=Metaclass_RRRIPK_Request):
 # already imported above
 # import builtins
 
-import math  # noqa: E402, I100
+# already imported above
+# import math
 
 # already imported above
 # import rosidl_parser.definition

@@ -14,11 +14,6 @@
 #include "rrr_robot_interfaces/srv/detail/rrripk__struct.hpp"
 #include "rosidl_runtime_cpp/traits.hpp"
 
-// Include directives for member types
-// Member 'ipk_mode'
-// Member 'ipk_target'
-#include "geometry_msgs/msg/detail/pose_stamped__traits.hpp"
-
 namespace rrr_robot_interfaces
 {
 
@@ -30,17 +25,24 @@ inline void to_flow_style_yaml(
   std::ostream & out)
 {
   out << "{";
-  // member: ipk_mode
+  // member: ipk_target_x
   {
-    out << "ipk_mode: ";
-    to_flow_style_yaml(msg.ipk_mode, out);
+    out << "ipk_target_x: ";
+    rosidl_generator_traits::value_to_yaml(msg.ipk_target_x, out);
     out << ", ";
   }
 
-  // member: ipk_target
+  // member: ipk_target_y
   {
-    out << "ipk_target: ";
-    to_flow_style_yaml(msg.ipk_target, out);
+    out << "ipk_target_y: ";
+    rosidl_generator_traits::value_to_yaml(msg.ipk_target_y, out);
+    out << ", ";
+  }
+
+  // member: ipk_target_z
+  {
+    out << "ipk_target_z: ";
+    rosidl_generator_traits::value_to_yaml(msg.ipk_target_z, out);
   }
   out << "}";
 }  // NOLINT(readability/fn_size)
@@ -49,22 +51,34 @@ inline void to_block_style_yaml(
   const RRRIPK_Request & msg,
   std::ostream & out, size_t indentation = 0)
 {
-  // member: ipk_mode
+  // member: ipk_target_x
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "ipk_mode:\n";
-    to_block_style_yaml(msg.ipk_mode, out, indentation + 2);
+    out << "ipk_target_x: ";
+    rosidl_generator_traits::value_to_yaml(msg.ipk_target_x, out);
+    out << "\n";
   }
 
-  // member: ipk_target
+  // member: ipk_target_y
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "ipk_target:\n";
-    to_block_style_yaml(msg.ipk_target, out, indentation + 2);
+    out << "ipk_target_y: ";
+    rosidl_generator_traits::value_to_yaml(msg.ipk_target_y, out);
+    out << "\n";
+  }
+
+  // member: ipk_target_z
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "ipk_target_z: ";
+    rosidl_generator_traits::value_to_yaml(msg.ipk_target_z, out);
+    out << "\n";
   }
 }  // NOLINT(readability/fn_size)
 
@@ -114,11 +128,11 @@ inline const char * name<rrr_robot_interfaces::srv::RRRIPK_Request>()
 
 template<>
 struct has_fixed_size<rrr_robot_interfaces::srv::RRRIPK_Request>
-  : std::integral_constant<bool, has_fixed_size<geometry_msgs::msg::PoseStamped>::value> {};
+  : std::integral_constant<bool, true> {};
 
 template<>
 struct has_bounded_size<rrr_robot_interfaces::srv::RRRIPK_Request>
-  : std::integral_constant<bool, has_bounded_size<geometry_msgs::msg::PoseStamped>::value> {};
+  : std::integral_constant<bool, true> {};
 
 template<>
 struct is_message<rrr_robot_interfaces::srv::RRRIPK_Request>
