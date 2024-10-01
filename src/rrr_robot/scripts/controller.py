@@ -117,15 +117,20 @@ class ControllerNode(Node):
         return response
 
     def random_target_callback(self,msg :PoseStamped):
-        if self.mode == 'Auto':
+        if self.mode == 'Auto' and self.run == False:
+            self.call_random_target()
             goal_x = msg.pose.position.x * 1000
             goal_y = msg.pose.position.y * 1000
             goal_z = msg.pose.position.z * 1000
             auto_check = self.invert_kinematic(goal_x,goal_y,goal_z)
-            if auto_check :
-                call_random = RRRAuto.Request()
-                call_random.target_call = True
-                self.random.call_async(call_random)
+            if auto_check:
+                self.run = True
+                self.get_logger().info(f'Start Run')
+
+    def call_random_target(self):
+        call_random = RRRAuto.Request()
+        call_random.target_call = True
+        self.random.call_async(call_random)
     
     def mode_callback(self, request:RRRMode.Request, response:RRRMode.Response):
         self.mode = request.mode_call
@@ -136,13 +141,11 @@ class ControllerNode(Node):
             self.get_logger().info(f'Mode call : {self.mode}')
             response.mode_change = True
         elif self.mode == 'Auto':
-            self.get_logger().info(f'Mode call : {self.mode}')
+            self.get_logger().info(f'Mode call : {self.mode}')    
             response.mode_change = True
-            call_random = RRRAuto.Request()
-            call_random.target_call = True
-            self.random.call_async(call_random)
         else:
             self.get_logger().info(f'Mode call : {self.mode} not found')
+            self.mode = ''
         return response
 
 def main(args=None):
