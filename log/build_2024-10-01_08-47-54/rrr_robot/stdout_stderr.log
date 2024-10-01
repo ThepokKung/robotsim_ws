@@ -34,6 +34,7 @@
 -- Build files have been written to: /home/waritt/robotsim_ws/build/rrr_robot
 [ 50%] [32mBuilding CXX object CMakeFiles/cpp_node_test.dir/src/cpp_node.cpp.o[0m
 [ 50%] Built target ament_cmake_python_copy_rrr_robot
+[100%] [32m[1mLinking CXX executable cpp_node_test[0m
 running egg_info
 creating rrr_robot.egg-info
 writing rrr_robot.egg-info/PKG-INFO
@@ -42,7 +43,6 @@ writing top-level names to rrr_robot.egg-info/top_level.txt
 writing manifest file 'rrr_robot.egg-info/SOURCES.txt'
 reading manifest file 'rrr_robot.egg-info/SOURCES.txt'
 writing manifest file 'rrr_robot.egg-info/SOURCES.txt'
-[100%] [32m[1mLinking CXX executable cpp_node_test[0m
 [100%] Built target ament_cmake_python_build_rrr_robot_egg
 [100%] Built target cpp_node_test
 -- Install configuration: ""

@@ -103,14 +103,15 @@ class ControllerNode(Node):
         return response
 
     def random_target_callback(self,msg :PoseStamped):
-        goal_x = msg.pose.position.x
-        goal_y = msg.pose.position.y
-        goal_z = msg.pose.position.z
-        inpk_check = self.invert_kinematic(goal_x,goal_y,goal_z)
-        if inpk_check:
-            call_random = RRRAuto.Request()
-            call_random.target_call = True
-            self.random.call_async(call_random)
+        if self.mode == 'Auto':
+            goal_x = msg.pose.position.x
+            goal_y = msg.pose.position.y
+            goal_z = msg.pose.position.z
+            inpk_check = self.invert_kinematic(goal_x,goal_y,goal_z)
+            if inpk_check:
+                call_random = RRRAuto.Request()
+                call_random.target_call = True
+                self.random.call_async(call_random)
     
     def mode_callback(self, request:RRRMode.Request, response:RRRMode.Response):
         self.mode = request.mode_call
