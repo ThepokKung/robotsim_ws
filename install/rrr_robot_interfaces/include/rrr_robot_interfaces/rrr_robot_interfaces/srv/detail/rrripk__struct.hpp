@@ -38,6 +38,7 @@ struct RRRIPK_Request_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
+      this->ipk_call = false;
       this->ipk_target_x = 0.0;
       this->ipk_target_y = 0.0;
       this->ipk_target_z = 0.0;
@@ -50,6 +51,7 @@ struct RRRIPK_Request_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
+      this->ipk_call = false;
       this->ipk_target_x = 0.0;
       this->ipk_target_y = 0.0;
       this->ipk_target_z = 0.0;
@@ -57,6 +59,9 @@ struct RRRIPK_Request_
   }
 
   // field types and members
+  using _ipk_call_type =
+    bool;
+  _ipk_call_type ipk_call;
   using _ipk_target_x_type =
     double;
   _ipk_target_x_type ipk_target_x;
@@ -68,6 +73,12 @@ struct RRRIPK_Request_
   _ipk_target_z_type ipk_target_z;
 
   // setters for named parameter idiom
+  Type & set__ipk_call(
+    const bool & _arg)
+  {
+    this->ipk_call = _arg;
+    return *this;
+  }
   Type & set__ipk_target_x(
     const double & _arg)
   {
@@ -129,6 +140,9 @@ struct RRRIPK_Request_
   // comparison operators
   bool operator==(const RRRIPK_Request_ & other) const
   {
+    if (this->ipk_call != other.ipk_call) {
+      return false;
+    }
     if (this->ipk_target_x != other.ipk_target_x) {
       return false;
     }

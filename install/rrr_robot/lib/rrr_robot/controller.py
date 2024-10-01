@@ -46,10 +46,12 @@ class ControllerNode(Node):
         )
 
         self.mode = ''
+        self.run = False
 
         self.name = ["joint_1", "joint_2", "joint_3"]
         self.q = [1.0, 1.5, 2.0]
         self.q_goal = [0.0 , 0.0 , 0.0]
+        self.pos_goal = [0.0 , 0.0 , 0.0]
         self.k = 1
 
         self.get_logger().info(f'Mode key :\n Inverse Pose Kinematics Mode : IPK\n Tele-operation Mode : Teleop\n Autonomous Mode : Auto')
@@ -72,8 +74,15 @@ class ControllerNode(Node):
 
             msg.position.append(self.q[i])
             msg.name.append(self.name[i])
-
+        
         self.joint_pub.publish(msg)
+        current_pos = self.robot.fkine([self.q[0],self.q[1],self.q[2],0])
+        # self.get_logger().info(f'Current Pos : {current_pos.t}')
+        pos_check = self.pos_goal - current_pos.t
+        if pos_check[0] <= 0.1 and pos_check[1] <= 0.1 and pos_check[2] <= 0.1 and self.mode != '' and self.run:
+            self.run = False
+            self.get_logger().info(f'Stop Run')
+
 
     def invert_kinematic(self,goal_x,goal_y,goal_z):
         T_goal = SE3(goal_x,goal_y,goal_z)
@@ -85,33 +94,43 @@ class ControllerNode(Node):
                 self.q_goal[0] = q_sol.q[0]
                 self.q_goal[1] = q_sol.q[1]
                 self.q_goal[2] = q_sol.q[2]
-                self.get_logger().info(f'q : {self.q }')
+                self.pos_goal [0] = goal_x
+                self.pos_goal [1] = goal_y
+                self.pos_goal [2] = goal_z
+                # self.get_logger().info(f'q : {self.q }')
         
         return q_sol.success
 
     def ipk_callback(self, request:RRRIPK.Request, response:RRRIPK.Response):
-        if self.mode == 'IPK':
+        if self.mode == 'IPK' and self.run == False:
             goal_x = request.ipk_target_x
             goal_y = request.ipk_target_y
             goal_z = request.ipk_target_z
             inpk_check = self.invert_kinematic(goal_x,goal_y,goal_z)
             if inpk_check:
+                self.run = True
                 response.ipk_check = inpk_check
                 response.ipk_q1 = self.q_goal[0]
                 response.ipk_q2 = self.q_goal[1]
                 response.ipk_q3 = self.q_goal[2]
+                self.get_logger().info(f'Start Run')
         return response
 
     def random_target_callback(self,msg :PoseStamped):
-        if self.mode == 'Auto':
-            goal_x = msg.pose.position.x
-            goal_y = msg.pose.position.y
-            goal_z = msg.pose.position.z
-            inpk_check = self.invert_kinematic(goal_x,goal_y,goal_z)
-            if inpk_check:
-                call_random = RRRAuto.Request()
-                call_random.target_call = True
-                self.random.call_async(call_random)
+        if self.mode == 'Auto' and self.run == False:
+            self.call_random_target()
+            goal_x = msg.pose.position.x * 1000
+            goal_y = msg.pose.position.y * 1000
+            goal_z = msg.pose.position.z * 1000
+            auto_check = self.invert_kinematic(goal_x,goal_y,goal_z)
+            if auto_check:
+                self.run = True
+                self.get_logger().info(f'Start Run')
+
+    def call_random_target(self):
+        call_random = RRRAuto.Request()
+        call_random.target_call = True
+        self.random.call_async(call_random)
     
     def mode_callback(self, request:RRRMode.Request, response:RRRMode.Response):
         self.mode = request.mode_call
@@ -122,13 +141,11 @@ class ControllerNode(Node):
             self.get_logger().info(f'Mode call : {self.mode}')
             response.mode_change = True
         elif self.mode == 'Auto':
-            self.get_logger().info(f'Mode call : {self.mode}')
+            self.get_logger().info(f'Mode call : {self.mode}')    
             response.mode_change = True
-            call_random = RRRAuto.Request()
-            call_random.target_call = True
-            self.random.call_async(call_random)
         else:
             self.get_logger().info(f'Mode call : {self.mode} not found')
+            self.mode = ''
         return response
 
 def main(args=None):

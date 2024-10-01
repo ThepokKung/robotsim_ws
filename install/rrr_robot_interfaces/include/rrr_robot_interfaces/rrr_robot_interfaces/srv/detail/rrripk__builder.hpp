@@ -56,13 +56,29 @@ private:
 class Init_RRRIPK_Request_ipk_target_x
 {
 public:
-  Init_RRRIPK_Request_ipk_target_x()
-  : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
+  explicit Init_RRRIPK_Request_ipk_target_x(::rrr_robot_interfaces::srv::RRRIPK_Request & msg)
+  : msg_(msg)
   {}
   Init_RRRIPK_Request_ipk_target_y ipk_target_x(::rrr_robot_interfaces::srv::RRRIPK_Request::_ipk_target_x_type arg)
   {
     msg_.ipk_target_x = std::move(arg);
     return Init_RRRIPK_Request_ipk_target_y(msg_);
+  }
+
+private:
+  ::rrr_robot_interfaces::srv::RRRIPK_Request msg_;
+};
+
+class Init_RRRIPK_Request_ipk_call
+{
+public:
+  Init_RRRIPK_Request_ipk_call()
+  : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
+  {}
+  Init_RRRIPK_Request_ipk_target_x ipk_call(::rrr_robot_interfaces::srv::RRRIPK_Request::_ipk_call_type arg)
+  {
+    msg_.ipk_call = std::move(arg);
+    return Init_RRRIPK_Request_ipk_target_x(msg_);
   }
 
 private:
@@ -80,7 +96,7 @@ template<>
 inline
 auto build<::rrr_robot_interfaces::srv::RRRIPK_Request>()
 {
-  return rrr_robot_interfaces::srv::builder::Init_RRRIPK_Request_ipk_target_x();
+  return rrr_robot_interfaces::srv::builder::Init_RRRIPK_Request_ipk_call();
 }
 
 }  // namespace rrr_robot_interfaces

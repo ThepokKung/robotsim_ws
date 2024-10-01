@@ -31,7 +31,24 @@ void rrr_robot_interfaces__srv__RRRIPK_Request__rosidl_typesupport_introspection
   rrr_robot_interfaces__srv__RRRIPK_Request__fini(message_memory);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember rrr_robot_interfaces__srv__RRRIPK_Request__rosidl_typesupport_introspection_c__RRRIPK_Request_message_member_array[3] = {
+static rosidl_typesupport_introspection_c__MessageMember rrr_robot_interfaces__srv__RRRIPK_Request__rosidl_typesupport_introspection_c__RRRIPK_Request_message_member_array[4] = {
+  {
+    "ipk_call",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_BOOLEAN,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(rrr_robot_interfaces__srv__RRRIPK_Request, ipk_call),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
+  },
   {
     "ipk_target_x",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
@@ -88,7 +105,7 @@ static rosidl_typesupport_introspection_c__MessageMember rrr_robot_interfaces__s
 static const rosidl_typesupport_introspection_c__MessageMembers rrr_robot_interfaces__srv__RRRIPK_Request__rosidl_typesupport_introspection_c__RRRIPK_Request_message_members = {
   "rrr_robot_interfaces__srv",  // message namespace
   "RRRIPK_Request",  // message name
-  3,  // number of fields
+  4,  // number of fields
   sizeof(rrr_robot_interfaces__srv__RRRIPK_Request),
   rrr_robot_interfaces__srv__RRRIPK_Request__rosidl_typesupport_introspection_c__RRRIPK_Request_message_member_array,  // message members
   rrr_robot_interfaces__srv__RRRIPK_Request__rosidl_typesupport_introspection_c__RRRIPK_Request_init_function,  // function to initialize message memory (memory has to be allocated)

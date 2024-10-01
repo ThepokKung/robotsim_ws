@@ -37,7 +37,24 @@ void RRRIPK_Request_fini_function(void * message_memory)
   typed_message->~RRRIPK_Request();
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember RRRIPK_Request_message_member_array[3] = {
+static const ::rosidl_typesupport_introspection_cpp::MessageMember RRRIPK_Request_message_member_array[4] = {
+  {
+    "ipk_call",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_BOOLEAN,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(rrr_robot_interfaces::srv::RRRIPK_Request, ipk_call),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
+    nullptr  // resize(index) function pointer
+  },
   {
     "ipk_target_x",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_DOUBLE,  // type
@@ -94,7 +111,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember RRRIPK_Reques
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers RRRIPK_Request_message_members = {
   "rrr_robot_interfaces::srv",  // message namespace
   "RRRIPK_Request",  // message name
-  3,  // number of fields
+  4,  // number of fields
   sizeof(rrr_robot_interfaces::srv::RRRIPK_Request),
   RRRIPK_Request_message_member_array,  // message members
   RRRIPK_Request_init_function,  // function to initialize message memory (memory has to be allocated)

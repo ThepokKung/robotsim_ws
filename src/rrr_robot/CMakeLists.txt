@@ -30,6 +30,8 @@ install(PROGRAMS
   scripts/jointstate_script.py
   scripts/controller.py
   scripts/random_target.py
+  scripts/mode_control.py
+  scripts/ipk_node.py
   DESTINATION lib/${PROJECT_NAME}
 )
 

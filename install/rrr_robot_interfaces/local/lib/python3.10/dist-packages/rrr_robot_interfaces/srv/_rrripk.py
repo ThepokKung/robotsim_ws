@@ -57,18 +57,21 @@ class RRRIPK_Request(metaclass=Metaclass_RRRIPK_Request):
     """Message class 'RRRIPK_Request'."""
 
     __slots__ = [
+        '_ipk_call',
         '_ipk_target_x',
         '_ipk_target_y',
         '_ipk_target_z',
     ]
 
     _fields_and_field_types = {
+        'ipk_call': 'boolean',
         'ipk_target_x': 'double',
         'ipk_target_y': 'double',
         'ipk_target_z': 'double',
     }
 
     SLOT_TYPES = (
+        rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
@@ -78,6 +81,7 @@ class RRRIPK_Request(metaclass=Metaclass_RRRIPK_Request):
         assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
+        self.ipk_call = kwargs.get('ipk_call', bool())
         self.ipk_target_x = kwargs.get('ipk_target_x', float())
         self.ipk_target_y = kwargs.get('ipk_target_y', float())
         self.ipk_target_z = kwargs.get('ipk_target_z', float())
@@ -111,6 +115,8 @@ class RRRIPK_Request(metaclass=Metaclass_RRRIPK_Request):
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
             return False
+        if self.ipk_call != other.ipk_call:
+            return False
         if self.ipk_target_x != other.ipk_target_x:
             return False
         if self.ipk_target_y != other.ipk_target_y:
@@ -123,6 +129,19 @@ class RRRIPK_Request(metaclass=Metaclass_RRRIPK_Request):
     def get_fields_and_field_types(cls):
         from copy import copy
         return copy(cls._fields_and_field_types)
+
+    @builtins.property
+    def ipk_call(self):
+        """Message field 'ipk_call'."""
+        return self._ipk_call
+
+    @ipk_call.setter
+    def ipk_call(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, bool), \
+                "The 'ipk_call' field must be of type 'bool'"
+        self._ipk_call = value
 
     @builtins.property
     def ipk_target_x(self):

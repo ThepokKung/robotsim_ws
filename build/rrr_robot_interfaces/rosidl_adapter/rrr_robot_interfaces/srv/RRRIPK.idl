@@ -6,6 +6,8 @@
 module rrr_robot_interfaces {
   module srv {
     struct RRRIPK_Request {
+      boolean ipk_call;
+
       double ipk_target_x;
 
       double ipk_target_y;

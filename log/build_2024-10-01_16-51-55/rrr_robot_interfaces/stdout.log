@@ -2,18 +2,18 @@
 [  2%] Built target rrr_robot_interfaces__cpp
 [ 12%] Built target rrr_robot_interfaces__rosidl_generator_c
 [ 12%] Built target ament_cmake_python_copy_rrr_robot_interfaces
-[35m[1mConsolidate compiler generated dependencies of target rrr_robot_interfaces__rosidl_typesupport_cpp[0m
 [35m[1mConsolidate compiler generated dependencies of target rrr_robot_interfaces__rosidl_typesupport_introspection_cpp[0m
 [35m[1mConsolidate compiler generated dependencies of target rrr_robot_interfaces__rosidl_typesupport_fastrtps_cpp[0m
+[35m[1mConsolidate compiler generated dependencies of target rrr_robot_interfaces__rosidl_typesupport_cpp[0m
 [35m[1mConsolidate compiler generated dependencies of target rrr_robot_interfaces__rosidl_typesupport_introspection_c[0m
-[35m[1mConsolidate compiler generated dependencies of target rrr_robot_interfaces__rosidl_typesupport_c[0m
 [35m[1mConsolidate compiler generated dependencies of target rrr_robot_interfaces__rosidl_typesupport_fastrtps_c[0m
-[ 29%] Built target rrr_robot_interfaces__rosidl_typesupport_introspection_c
-[ 34%] Built target rrr_robot_interfaces__rosidl_typesupport_cpp
-[ 44%] Built target rrr_robot_interfaces__rosidl_typesupport_introspection_cpp
-[ 55%] Built target rrr_robot_interfaces__rosidl_typesupport_fastrtps_cpp
-[ 65%] Built target rrr_robot_interfaces__rosidl_typesupport_c
-[ 76%] Built target rrr_robot_interfaces__rosidl_typesupport_fastrtps_c
+[35m[1mConsolidate compiler generated dependencies of target rrr_robot_interfaces__rosidl_typesupport_c[0m
+[ 34%] Built target rrr_robot_interfaces__rosidl_typesupport_introspection_c
+[ 34%] Built target rrr_robot_interfaces__rosidl_typesupport_c
+[ 55%] Built target rrr_robot_interfaces__rosidl_typesupport_introspection_cpp
+[ 55%] Built target rrr_robot_interfaces__rosidl_typesupport_cpp
+[ 65%] Built target rrr_robot_interfaces__rosidl_typesupport_fastrtps_c
+[ 76%] Built target rrr_robot_interfaces__rosidl_typesupport_fastrtps_cpp
 [ 76%] Built target rrr_robot_interfaces
 [ 78%] Built target rrr_robot_interfaces__py
 [35m[1mConsolidate compiler generated dependencies of target rrr_robot_interfaces__rosidl_generator_py[0m
@@ -21,9 +21,9 @@
 [35m[1mConsolidate compiler generated dependencies of target rrr_robot_interfaces__rosidl_typesupport_fastrtps_c__pyext[0m
 [35m[1mConsolidate compiler generated dependencies of target rrr_robot_interfaces__rosidl_typesupport_introspection_c__pyext[0m
 [35m[1mConsolidate compiler generated dependencies of target rrr_robot_interfaces__rosidl_typesupport_c__pyext[0m
-[100%] Built target rrr_robot_interfaces__rosidl_typesupport_fastrtps_c__pyext
 [100%] Built target rrr_robot_interfaces__rosidl_typesupport_c__pyext
 [100%] Built target rrr_robot_interfaces__rosidl_typesupport_introspection_c__pyext
+[100%] Built target rrr_robot_interfaces__rosidl_typesupport_fastrtps_c__pyext
 running egg_info
 writing rrr_robot_interfaces.egg-info/PKG-INFO
 writing dependency_links to rrr_robot_interfaces.egg-info/dependency_links.txt

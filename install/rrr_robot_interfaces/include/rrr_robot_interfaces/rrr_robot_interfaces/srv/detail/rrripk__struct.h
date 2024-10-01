@@ -20,6 +20,7 @@ extern "C"
 /// Struct defined in srv/RRRIPK in the package rrr_robot_interfaces.
 typedef struct rrr_robot_interfaces__srv__RRRIPK_Request
 {
+  bool ipk_call;
   double ipk_target_x;
   double ipk_target_y;
   double ipk_target_z;
