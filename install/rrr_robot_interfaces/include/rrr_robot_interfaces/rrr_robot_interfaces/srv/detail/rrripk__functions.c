@@ -10,6 +10,10 @@
 
 #include "rcutils/allocator.h"
 
+// Include directives for member types
+// Member `ipk_target`
+#include "geometry_msgs/msg/detail/point__functions.h"
+
 bool
 rrr_robot_interfaces__srv__RRRIPK_Request__init(rrr_robot_interfaces__srv__RRRIPK_Request * msg)
 {
@@ -17,9 +21,11 @@ rrr_robot_interfaces__srv__RRRIPK_Request__init(rrr_robot_interfaces__srv__RRRIP
     return false;
   }
   // ipk_call
-  // ipk_target_x
-  // ipk_target_y
-  // ipk_target_z
+  // ipk_target
+  if (!geometry_msgs__msg__Point__init(&msg->ipk_target)) {
+    rrr_robot_interfaces__srv__RRRIPK_Request__fini(msg);
+    return false;
+  }
   return true;
 }
 
@@ -30,9 +36,8 @@ rrr_robot_interfaces__srv__RRRIPK_Request__fini(rrr_robot_interfaces__srv__RRRIP
     return;
   }
   // ipk_call
-  // ipk_target_x
-  // ipk_target_y
-  // ipk_target_z
+  // ipk_target
+  geometry_msgs__msg__Point__fini(&msg->ipk_target);
 }
 
 bool
@@ -45,16 +50,10 @@ rrr_robot_interfaces__srv__RRRIPK_Request__are_equal(const rrr_robot_interfaces_
   if (lhs->ipk_call != rhs->ipk_call) {
     return false;
   }
-  // ipk_target_x
-  if (lhs->ipk_target_x != rhs->ipk_target_x) {
-    return false;
-  }
-  // ipk_target_y
-  if (lhs->ipk_target_y != rhs->ipk_target_y) {
-    return false;
-  }
-  // ipk_target_z
-  if (lhs->ipk_target_z != rhs->ipk_target_z) {
+  // ipk_target
+  if (!geometry_msgs__msg__Point__are_equal(
+      &(lhs->ipk_target), &(rhs->ipk_target)))
+  {
     return false;
   }
   return true;
@@ -70,12 +69,12 @@ rrr_robot_interfaces__srv__RRRIPK_Request__copy(
   }
   // ipk_call
   output->ipk_call = input->ipk_call;
-  // ipk_target_x
-  output->ipk_target_x = input->ipk_target_x;
-  // ipk_target_y
-  output->ipk_target_y = input->ipk_target_y;
-  // ipk_target_z
-  output->ipk_target_z = input->ipk_target_z;
+  // ipk_target
+  if (!geometry_msgs__msg__Point__copy(
+      &(input->ipk_target), &(output->ipk_target)))
+  {
+    return false;
+  }
   return true;
 }
 

@@ -17,13 +17,15 @@ extern "C"
 
 // Constants defined in the message
 
+// Include directives for member types
+// Member 'ipk_target'
+#include "geometry_msgs/msg/detail/point__struct.h"
+
 /// Struct defined in srv/RRRIPK in the package rrr_robot_interfaces.
 typedef struct rrr_robot_interfaces__srv__RRRIPK_Request
 {
   bool ipk_call;
-  double ipk_target_x;
-  double ipk_target_y;
-  double ipk_target_z;
+  geometry_msgs__msg__Point ipk_target;
 } rrr_robot_interfaces__srv__RRRIPK_Request;
 
 // Struct for a sequence of rrr_robot_interfaces__srv__RRRIPK_Request.

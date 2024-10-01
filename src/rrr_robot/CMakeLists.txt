@@ -32,6 +32,7 @@ install(PROGRAMS
   scripts/random_target.py
   scripts/mode_control.py
   scripts/ipk_node.py
+  scripts/invert_kinematics.py
   DESTINATION lib/${PROJECT_NAME}
 )
 

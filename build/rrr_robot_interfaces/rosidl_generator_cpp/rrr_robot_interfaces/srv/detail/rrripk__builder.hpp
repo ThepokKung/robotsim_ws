@@ -21,48 +21,16 @@ namespace srv
 namespace builder
 {
 
-class Init_RRRIPK_Request_ipk_target_z
+class Init_RRRIPK_Request_ipk_target
 {
 public:
-  explicit Init_RRRIPK_Request_ipk_target_z(::rrr_robot_interfaces::srv::RRRIPK_Request & msg)
+  explicit Init_RRRIPK_Request_ipk_target(::rrr_robot_interfaces::srv::RRRIPK_Request & msg)
   : msg_(msg)
   {}
-  ::rrr_robot_interfaces::srv::RRRIPK_Request ipk_target_z(::rrr_robot_interfaces::srv::RRRIPK_Request::_ipk_target_z_type arg)
+  ::rrr_robot_interfaces::srv::RRRIPK_Request ipk_target(::rrr_robot_interfaces::srv::RRRIPK_Request::_ipk_target_type arg)
   {
-    msg_.ipk_target_z = std::move(arg);
+    msg_.ipk_target = std::move(arg);
     return std::move(msg_);
-  }
-
-private:
-  ::rrr_robot_interfaces::srv::RRRIPK_Request msg_;
-};
-
-class Init_RRRIPK_Request_ipk_target_y
-{
-public:
-  explicit Init_RRRIPK_Request_ipk_target_y(::rrr_robot_interfaces::srv::RRRIPK_Request & msg)
-  : msg_(msg)
-  {}
-  Init_RRRIPK_Request_ipk_target_z ipk_target_y(::rrr_robot_interfaces::srv::RRRIPK_Request::_ipk_target_y_type arg)
-  {
-    msg_.ipk_target_y = std::move(arg);
-    return Init_RRRIPK_Request_ipk_target_z(msg_);
-  }
-
-private:
-  ::rrr_robot_interfaces::srv::RRRIPK_Request msg_;
-};
-
-class Init_RRRIPK_Request_ipk_target_x
-{
-public:
-  explicit Init_RRRIPK_Request_ipk_target_x(::rrr_robot_interfaces::srv::RRRIPK_Request & msg)
-  : msg_(msg)
-  {}
-  Init_RRRIPK_Request_ipk_target_y ipk_target_x(::rrr_robot_interfaces::srv::RRRIPK_Request::_ipk_target_x_type arg)
-  {
-    msg_.ipk_target_x = std::move(arg);
-    return Init_RRRIPK_Request_ipk_target_y(msg_);
   }
 
 private:
@@ -75,10 +43,10 @@ public:
   Init_RRRIPK_Request_ipk_call()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  Init_RRRIPK_Request_ipk_target_x ipk_call(::rrr_robot_interfaces::srv::RRRIPK_Request::_ipk_call_type arg)
+  Init_RRRIPK_Request_ipk_target ipk_call(::rrr_robot_interfaces::srv::RRRIPK_Request::_ipk_call_type arg)
   {
     msg_.ipk_call = std::move(arg);
-    return Init_RRRIPK_Request_ipk_target_x(msg_);
+    return Init_RRRIPK_Request_ipk_target(msg_);
   }
 
 private:

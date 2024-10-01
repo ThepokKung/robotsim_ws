@@ -15,6 +15,10 @@
 #include "rosidl_runtime_cpp/message_initialization.hpp"
 
 
+// Include directives for member types
+// Member 'ipk_target'
+#include "geometry_msgs/msg/detail/point__struct.hpp"
+
 #ifndef _WIN32
 # define DEPRECATED__rrr_robot_interfaces__srv__RRRIPK_Request __attribute__((deprecated))
 #else
@@ -34,27 +38,22 @@ struct RRRIPK_Request_
   using Type = RRRIPK_Request_<ContainerAllocator>;
 
   explicit RRRIPK_Request_(rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
+  : ipk_target(_init)
   {
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       this->ipk_call = false;
-      this->ipk_target_x = 0.0;
-      this->ipk_target_y = 0.0;
-      this->ipk_target_z = 0.0;
     }
   }
 
   explicit RRRIPK_Request_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
+  : ipk_target(_alloc, _init)
   {
-    (void)_alloc;
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       this->ipk_call = false;
-      this->ipk_target_x = 0.0;
-      this->ipk_target_y = 0.0;
-      this->ipk_target_z = 0.0;
     }
   }
 
@@ -62,15 +61,9 @@ struct RRRIPK_Request_
   using _ipk_call_type =
     bool;
   _ipk_call_type ipk_call;
-  using _ipk_target_x_type =
-    double;
-  _ipk_target_x_type ipk_target_x;
-  using _ipk_target_y_type =
-    double;
-  _ipk_target_y_type ipk_target_y;
-  using _ipk_target_z_type =
-    double;
-  _ipk_target_z_type ipk_target_z;
+  using _ipk_target_type =
+    geometry_msgs::msg::Point_<ContainerAllocator>;
+  _ipk_target_type ipk_target;
 
   // setters for named parameter idiom
   Type & set__ipk_call(
@@ -79,22 +72,10 @@ struct RRRIPK_Request_
     this->ipk_call = _arg;
     return *this;
   }
-  Type & set__ipk_target_x(
-    const double & _arg)
+  Type & set__ipk_target(
+    const geometry_msgs::msg::Point_<ContainerAllocator> & _arg)
   {
-    this->ipk_target_x = _arg;
-    return *this;
-  }
-  Type & set__ipk_target_y(
-    const double & _arg)
-  {
-    this->ipk_target_y = _arg;
-    return *this;
-  }
-  Type & set__ipk_target_z(
-    const double & _arg)
-  {
-    this->ipk_target_z = _arg;
+    this->ipk_target = _arg;
     return *this;
   }
 
@@ -143,13 +124,7 @@ struct RRRIPK_Request_
     if (this->ipk_call != other.ipk_call) {
       return false;
     }
-    if (this->ipk_target_x != other.ipk_target_x) {
-      return false;
-    }
-    if (this->ipk_target_y != other.ipk_target_y) {
-      return false;
-    }
-    if (this->ipk_target_z != other.ipk_target_z) {
+    if (this->ipk_target != other.ipk_target) {
       return false;
     }
     return true;

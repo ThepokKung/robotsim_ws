@@ -3,6 +3,9 @@ file(REMOVE_RECURSE
   "rosidl_generator_cpp/rrr_robot_interfaces/srv/detail/rrr_auto__builder.hpp"
   "rosidl_generator_cpp/rrr_robot_interfaces/srv/detail/rrr_auto__struct.hpp"
   "rosidl_generator_cpp/rrr_robot_interfaces/srv/detail/rrr_auto__traits.hpp"
+  "rosidl_generator_cpp/rrr_robot_interfaces/srv/detail/rrr_invert_kinematics__builder.hpp"
+  "rosidl_generator_cpp/rrr_robot_interfaces/srv/detail/rrr_invert_kinematics__struct.hpp"
+  "rosidl_generator_cpp/rrr_robot_interfaces/srv/detail/rrr_invert_kinematics__traits.hpp"
   "rosidl_generator_cpp/rrr_robot_interfaces/srv/detail/rrr_mode__builder.hpp"
   "rosidl_generator_cpp/rrr_robot_interfaces/srv/detail/rrr_mode__struct.hpp"
   "rosidl_generator_cpp/rrr_robot_interfaces/srv/detail/rrr_mode__traits.hpp"
@@ -10,6 +13,7 @@ file(REMOVE_RECURSE
   "rosidl_generator_cpp/rrr_robot_interfaces/srv/detail/rrripk__struct.hpp"
   "rosidl_generator_cpp/rrr_robot_interfaces/srv/detail/rrripk__traits.hpp"
   "rosidl_generator_cpp/rrr_robot_interfaces/srv/rrr_auto.hpp"
+  "rosidl_generator_cpp/rrr_robot_interfaces/srv/rrr_invert_kinematics.hpp"
   "rosidl_generator_cpp/rrr_robot_interfaces/srv/rrr_mode.hpp"
   "rosidl_generator_cpp/rrr_robot_interfaces/srv/rrripk.hpp"
 )

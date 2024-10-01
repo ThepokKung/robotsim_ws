@@ -2,17 +2,14 @@
 // with input from rrr_robot_interfaces/srv/RRRIPK.srv
 // generated code does not contain a copyright notice
 
+#include "geometry_msgs/msg/Point.idl"
 
 module rrr_robot_interfaces {
   module srv {
     struct RRRIPK_Request {
       boolean ipk_call;
 
-      double ipk_target_x;
-
-      double ipk_target_y;
-
-      double ipk_target_z;
+      geometry_msgs::msg::Point ipk_target;
     };
     struct RRRIPK_Response {
       boolean ipk_check;

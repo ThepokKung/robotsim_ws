@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_auto__type_support.cpp.o"
   "CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_auto__type_support.cpp.o.d"
+  "CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_invert_kinematics__type_support.cpp.o"
+  "CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_invert_kinematics__type_support.cpp.o.d"
   "CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_mode__type_support.cpp.o"
   "CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_mode__type_support.cpp.o.d"
   "CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrripk__type_support.cpp.o"
@@ -8,6 +10,7 @@ file(REMOVE_RECURSE
   "librrr_robot_interfaces__rosidl_typesupport_cpp.pdb"
   "librrr_robot_interfaces__rosidl_typesupport_cpp.so"
   "rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_auto__type_support.cpp"
+  "rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_invert_kinematics__type_support.cpp"
   "rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_mode__type_support.cpp"
   "rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrripk__type_support.cpp"
 )

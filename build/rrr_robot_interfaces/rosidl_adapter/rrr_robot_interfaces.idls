@@ -1,3 +1,4 @@
 /home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_adapter/rrr_robot_interfaces:srv/RRRMode.idl
 /home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_adapter/rrr_robot_interfaces:srv/RRRIPK.idl
 /home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_adapter/rrr_robot_interfaces:srv/RRRAuto.idl
+/home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_adapter/rrr_robot_interfaces:srv/RRRInvertKinematics.idl

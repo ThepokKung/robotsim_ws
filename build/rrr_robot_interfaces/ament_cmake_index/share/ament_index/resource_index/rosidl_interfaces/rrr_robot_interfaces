@@ -6,6 +6,10 @@ srv/RRRIPK.idl
 srv/RRRIPK.srv
 srv/RRRIPK_Request.msg
 srv/RRRIPK_Response.msg
+srv/RRRInvertKinematics.idl
+srv/RRRInvertKinematics.srv
+srv/RRRInvertKinematics_Request.msg
+srv/RRRInvertKinematics_Response.msg
 srv/RRRMode.idl
 srv/RRRMode.srv
 srv/RRRMode_Request.msg

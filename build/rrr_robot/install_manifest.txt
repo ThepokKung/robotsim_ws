@@ -11,6 +11,7 @@
 /home/waritt/robotsim_ws/install/rrr_robot/lib/rrr_robot/random_target.py
 /home/waritt/robotsim_ws/install/rrr_robot/lib/rrr_robot/mode_control.py
 /home/waritt/robotsim_ws/install/rrr_robot/lib/rrr_robot/ipk_node.py
+/home/waritt/robotsim_ws/install/rrr_robot/lib/rrr_robot/invert_kinematics.py
 /home/waritt/robotsim_ws/install/rrr_robot/lib/rrr_robot/cpp_node_test
 /home/waritt/robotsim_ws/install/rrr_robot/share/rrr_robot/config/workspace_pos.npy
 /home/waritt/robotsim_ws/install/rrr_robot/share/rrr_robot/config/display.rviz
