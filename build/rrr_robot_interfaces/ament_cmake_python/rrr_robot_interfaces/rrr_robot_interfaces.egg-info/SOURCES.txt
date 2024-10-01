@@ -4,7 +4,3 @@ rrr_robot_interfaces.egg-info/PKG-INFO
 rrr_robot_interfaces.egg-info/SOURCES.txt
 rrr_robot_interfaces.egg-info/dependency_links.txt
 rrr_robot_interfaces.egg-info/top_level.txt
-rrr_robot_interfaces/srv/__init__.py
-rrr_robot_interfaces/srv/_rrr_auto.py
-rrr_robot_interfaces/srv/_rrr_mode.py
-rrr_robot_interfaces/srv/_rrripk.py

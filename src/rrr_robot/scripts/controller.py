@@ -102,7 +102,7 @@ class ControllerNode(Node):
                 response.ipk_q3 = self.q_goal[2]
         return response
 
-    def andom_target_callback(self,msg :PoseStamped):
+    def random_target_callback(self,msg :PoseStamped):
         goal_x = msg.pose.position.x
         goal_y = msg.pose.position.y
         goal_z = msg.pose.position.z

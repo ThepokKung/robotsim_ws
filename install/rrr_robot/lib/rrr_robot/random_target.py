@@ -13,11 +13,16 @@ class RandomTarget(Node):
     def __init__(self):
         super().__init__('random_target')
         
-        # load target in workspace
-        my_path = os.path.abspath(os.path.dirname(__package__))
-        path = os.path.join(my_path, "workspace_pos.npy")
-        # print('path -> ',path)
+        # # Find the path to the package
+        path = os.path.join(
+            get_package_share_directory('rrr_robot'),
+            'config',
+            'workspace_pos.npy'
+        )
+
+        # Load the numpy file
         self.workspace = np.load(path)
+        print(self.workspace)
 
         # Service server
         self.create_service(RRRAuto, '/random', self.random_target_callback)
