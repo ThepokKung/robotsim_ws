@@ -79,7 +79,7 @@ class ControllerNode(Node):
         current_pos = self.robot.fkine([self.q[0],self.q[1],self.q[2],0])
         # self.get_logger().info(f'Current Pos : {current_pos.t}')
         pos_check = self.pos_goal - current_pos.t
-        if pos_check[0] <= 0.1 and pos_check[1] <= 0.1 and pos_check[2] <= 0.1 and self.mode != '':
+        if pos_check[0] <= 0.1 and pos_check[1] <= 0.1 and pos_check[2] <= 0.1 and self.mode != '' and self.run:
             self.run = False
             self.get_logger().info(f'Stop Run')
 
