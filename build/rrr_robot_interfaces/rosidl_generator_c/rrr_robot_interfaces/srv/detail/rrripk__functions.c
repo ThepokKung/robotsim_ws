@@ -20,7 +20,6 @@ rrr_robot_interfaces__srv__RRRIPK_Request__init(rrr_robot_interfaces__srv__RRRIP
   if (!msg) {
     return false;
   }
-  // ipk_call
   // ipk_target
   if (!geometry_msgs__msg__Point__init(&msg->ipk_target)) {
     rrr_robot_interfaces__srv__RRRIPK_Request__fini(msg);
@@ -35,7 +34,6 @@ rrr_robot_interfaces__srv__RRRIPK_Request__fini(rrr_robot_interfaces__srv__RRRIP
   if (!msg) {
     return;
   }
-  // ipk_call
   // ipk_target
   geometry_msgs__msg__Point__fini(&msg->ipk_target);
 }
@@ -44,10 +42,6 @@ bool
 rrr_robot_interfaces__srv__RRRIPK_Request__are_equal(const rrr_robot_interfaces__srv__RRRIPK_Request * lhs, const rrr_robot_interfaces__srv__RRRIPK_Request * rhs)
 {
   if (!lhs || !rhs) {
-    return false;
-  }
-  // ipk_call
-  if (lhs->ipk_call != rhs->ipk_call) {
     return false;
   }
   // ipk_target
@@ -67,8 +61,6 @@ rrr_robot_interfaces__srv__RRRIPK_Request__copy(
   if (!input || !output) {
     return false;
   }
-  // ipk_call
-  output->ipk_call = input->ipk_call;
   // ipk_target
   if (!geometry_msgs__msg__Point__copy(
       &(input->ipk_target), &(output->ipk_target)))

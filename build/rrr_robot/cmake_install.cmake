@@ -67,7 +67,10 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/rrr_robot" TYPE PROGRAM FILES "/home/waritt/robotsim_ws/src/rrr_robot/scripts/controller.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/rrr_robot" TYPE PROGRAM FILES
+    "/home/waritt/robotsim_ws/src/rrr_robot/scripts/controller.py"
+    "/home/waritt/robotsim_ws/src/rrr_robot/scripts/invert_kinematics.py"
+    )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)

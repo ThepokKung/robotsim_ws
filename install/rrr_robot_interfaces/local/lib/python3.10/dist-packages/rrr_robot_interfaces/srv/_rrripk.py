@@ -59,17 +59,14 @@ class RRRIPK_Request(metaclass=Metaclass_RRRIPK_Request):
     """Message class 'RRRIPK_Request'."""
 
     __slots__ = [
-        '_ipk_call',
         '_ipk_target',
     ]
 
     _fields_and_field_types = {
-        'ipk_call': 'boolean',
         'ipk_target': 'geometry_msgs/Point',
     }
 
     SLOT_TYPES = (
-        rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
         rosidl_parser.definition.NamespacedType(['geometry_msgs', 'msg'], 'Point'),  # noqa: E501
     )
 
@@ -77,7 +74,6 @@ class RRRIPK_Request(metaclass=Metaclass_RRRIPK_Request):
         assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
-        self.ipk_call = kwargs.get('ipk_call', bool())
         from geometry_msgs.msg import Point
         self.ipk_target = kwargs.get('ipk_target', Point())
 
@@ -110,8 +106,6 @@ class RRRIPK_Request(metaclass=Metaclass_RRRIPK_Request):
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
             return False
-        if self.ipk_call != other.ipk_call:
-            return False
         if self.ipk_target != other.ipk_target:
             return False
         return True
@@ -120,19 +114,6 @@ class RRRIPK_Request(metaclass=Metaclass_RRRIPK_Request):
     def get_fields_and_field_types(cls):
         from copy import copy
         return copy(cls._fields_and_field_types)
-
-    @builtins.property
-    def ipk_call(self):
-        """Message field 'ipk_call'."""
-        return self._ipk_call
-
-    @ipk_call.setter
-    def ipk_call(self, value):
-        if __debug__:
-            assert \
-                isinstance(value, bool), \
-                "The 'ipk_call' field must be of type 'bool'"
-        self._ipk_call = value
 
     @builtins.property
     def ipk_target(self):

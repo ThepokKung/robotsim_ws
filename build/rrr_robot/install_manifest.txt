@@ -7,6 +7,7 @@
 /home/waritt/robotsim_ws/install/rrr_robot/local/lib/python3.10/dist-packages/rrr_robot/__init__.py
 /home/waritt/robotsim_ws/install/rrr_robot/local/lib/python3.10/dist-packages/rrr_robot/dummy_module.py
 /home/waritt/robotsim_ws/install/rrr_robot/lib/rrr_robot/controller.py
+/home/waritt/robotsim_ws/install/rrr_robot/lib/rrr_robot/invert_kinematics.py
 /home/waritt/robotsim_ws/install/rrr_robot/lib/rrr_robot/cpp_node_test
 /home/waritt/robotsim_ws/install/rrr_robot/share/rrr_robot/config/workspace_pos.npy
 /home/waritt/robotsim_ws/install/rrr_robot/share/rrr_robot/config/display.rviz

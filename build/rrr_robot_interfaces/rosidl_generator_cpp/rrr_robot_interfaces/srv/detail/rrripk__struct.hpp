@@ -40,38 +40,21 @@ struct RRRIPK_Request_
   explicit RRRIPK_Request_(rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
   : ipk_target(_init)
   {
-    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
-      rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
-    {
-      this->ipk_call = false;
-    }
+    (void)_init;
   }
 
   explicit RRRIPK_Request_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
   : ipk_target(_alloc, _init)
   {
-    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
-      rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
-    {
-      this->ipk_call = false;
-    }
+    (void)_init;
   }
 
   // field types and members
-  using _ipk_call_type =
-    bool;
-  _ipk_call_type ipk_call;
   using _ipk_target_type =
     geometry_msgs::msg::Point_<ContainerAllocator>;
   _ipk_target_type ipk_target;
 
   // setters for named parameter idiom
-  Type & set__ipk_call(
-    const bool & _arg)
-  {
-    this->ipk_call = _arg;
-    return *this;
-  }
   Type & set__ipk_target(
     const geometry_msgs::msg::Point_<ContainerAllocator> & _arg)
   {
@@ -121,9 +104,6 @@ struct RRRIPK_Request_
   // comparison operators
   bool operator==(const RRRIPK_Request_ & other) const
   {
-    if (this->ipk_call != other.ipk_call) {
-      return false;
-    }
     if (this->ipk_target != other.ipk_target) {
       return false;
     }
