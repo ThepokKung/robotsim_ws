@@ -86,7 +86,7 @@ rosidl_generator_c/rrr_robot_interfaces/srv/rrr_mode.h: rosidl_adapter/rrr_robot
 rosidl_generator_c/rrr_robot_interfaces/srv/rrr_mode.h: rosidl_adapter/rrr_robot_interfaces/srv/RRRIPK.idl
 rosidl_generator_c/rrr_robot_interfaces/srv/rrr_mode.h: rosidl_adapter/rrr_robot_interfaces/srv/RRRAuto.idl
 rosidl_generator_c/rrr_robot_interfaces/srv/rrr_mode.h: rosidl_adapter/rrr_robot_interfaces/srv/RRRInvertKinematics.idl
-rosidl_generator_c/rrr_robot_interfaces/srv/rrr_mode.h: rosidl_adapter/rrr_robot_interfaces/srv/RRRPubq.idl
+rosidl_generator_c/rrr_robot_interfaces/srv/rrr_mode.h: rosidl_adapter/rrr_robot_interfaces/srv/RRRTargetPub.idl
 rosidl_generator_c/rrr_robot_interfaces/srv/rrr_mode.h: /opt/ros/humble/share/geometry_msgs/msg/Accel.idl
 rosidl_generator_c/rrr_robot_interfaces/srv/rrr_mode.h: /opt/ros/humble/share/geometry_msgs/msg/AccelStamped.idl
 rosidl_generator_c/rrr_robot_interfaces/srv/rrr_mode.h: /opt/ros/humble/share/geometry_msgs/msg/AccelWithCovariance.idl
@@ -225,17 +225,17 @@ rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_invert_kinematics__struct
 rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_invert_kinematics__type_support.h: rosidl_generator_c/rrr_robot_interfaces/srv/rrr_mode.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_invert_kinematics__type_support.h
 
-rosidl_generator_c/rrr_robot_interfaces/srv/rrr_pubq.h: rosidl_generator_c/rrr_robot_interfaces/srv/rrr_mode.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/rrr_robot_interfaces/srv/rrr_pubq.h
+rosidl_generator_c/rrr_robot_interfaces/srv/rrr_target_pub.h: rosidl_generator_c/rrr_robot_interfaces/srv/rrr_mode.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/rrr_robot_interfaces/srv/rrr_target_pub.h
 
-rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_pubq__functions.h: rosidl_generator_c/rrr_robot_interfaces/srv/rrr_mode.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_pubq__functions.h
+rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_target_pub__functions.h: rosidl_generator_c/rrr_robot_interfaces/srv/rrr_mode.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_target_pub__functions.h
 
-rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_pubq__struct.h: rosidl_generator_c/rrr_robot_interfaces/srv/rrr_mode.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_pubq__struct.h
+rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_target_pub__struct.h: rosidl_generator_c/rrr_robot_interfaces/srv/rrr_mode.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_target_pub__struct.h
 
-rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_pubq__type_support.h: rosidl_generator_c/rrr_robot_interfaces/srv/rrr_mode.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_pubq__type_support.h
+rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_target_pub__type_support.h: rosidl_generator_c/rrr_robot_interfaces/srv/rrr_mode.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_target_pub__type_support.h
 
 rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_mode__functions.c: rosidl_generator_c/rrr_robot_interfaces/srv/rrr_mode.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_mode__functions.c
@@ -249,8 +249,8 @@ rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_auto__functions.c: rosidl
 rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_invert_kinematics__functions.c: rosidl_generator_c/rrr_robot_interfaces/srv/rrr_mode.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_invert_kinematics__functions.c
 
-rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_pubq__functions.c: rosidl_generator_c/rrr_robot_interfaces/srv/rrr_mode.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_pubq__functions.c
+rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_target_pub__functions.c: rosidl_generator_c/rrr_robot_interfaces/srv/rrr_mode.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_target_pub__functions.c
 
 CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_mode__functions.c.o: CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/flags.make
 CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_mode__functions.c.o: rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_mode__functions.c
@@ -308,19 +308,19 @@ CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rrr_r
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_invert_kinematics__functions.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_invert_kinematics__functions.c -o CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_invert_kinematics__functions.c.s
 
-CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_pubq__functions.c.o: CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/flags.make
-CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_pubq__functions.c.o: rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_pubq__functions.c
-CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_pubq__functions.c.o: CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/waritt/robotsim_ws/build/rrr_robot_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_pubq__functions.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_pubq__functions.c.o -MF CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_pubq__functions.c.o.d -o CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_pubq__functions.c.o -c /home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_pubq__functions.c
+CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_target_pub__functions.c.o: CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/flags.make
+CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_target_pub__functions.c.o: rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_target_pub__functions.c
+CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_target_pub__functions.c.o: CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/waritt/robotsim_ws/build/rrr_robot_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_target_pub__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_target_pub__functions.c.o -MF CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_target_pub__functions.c.o.d -o CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_target_pub__functions.c.o -c /home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_target_pub__functions.c
 
-CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_pubq__functions.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_pubq__functions.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_pubq__functions.c > CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_pubq__functions.c.i
+CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_target_pub__functions.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_target_pub__functions.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_target_pub__functions.c > CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_target_pub__functions.c.i
 
-CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_pubq__functions.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_pubq__functions.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_pubq__functions.c -o CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_pubq__functions.c.s
+CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_target_pub__functions.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_target_pub__functions.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_target_pub__functions.c -o CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_target_pub__functions.c.s
 
 # Object files for target rrr_robot_interfaces__rosidl_generator_c
 rrr_robot_interfaces__rosidl_generator_c_OBJECTS = \
@@ -328,7 +328,7 @@ rrr_robot_interfaces__rosidl_generator_c_OBJECTS = \
 "CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrripk__functions.c.o" \
 "CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_auto__functions.c.o" \
 "CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_invert_kinematics__functions.c.o" \
-"CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_pubq__functions.c.o"
+"CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_target_pub__functions.c.o"
 
 # External object files for target rrr_robot_interfaces__rosidl_generator_c
 rrr_robot_interfaces__rosidl_generator_c_EXTERNAL_OBJECTS =
@@ -337,7 +337,7 @@ librrr_robot_interfaces__rosidl_generator_c.so: CMakeFiles/rrr_robot_interfaces_
 librrr_robot_interfaces__rosidl_generator_c.so: CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrripk__functions.c.o
 librrr_robot_interfaces__rosidl_generator_c.so: CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_auto__functions.c.o
 librrr_robot_interfaces__rosidl_generator_c.so: CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_invert_kinematics__functions.c.o
-librrr_robot_interfaces__rosidl_generator_c.so: CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_pubq__functions.c.o
+librrr_robot_interfaces__rosidl_generator_c.so: CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_target_pub__functions.c.o
 librrr_robot_interfaces__rosidl_generator_c.so: CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/build.make
 librrr_robot_interfaces__rosidl_generator_c.so: /opt/ros/humble/lib/libsensor_msgs__rosidl_generator_c.so
 librrr_robot_interfaces__rosidl_generator_c.so: /opt/ros/humble/lib/libgeometry_msgs__rosidl_generator_c.so
@@ -369,10 +369,10 @@ CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/depend: rosidl_generator
 CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_mode__functions.h
 CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_mode__struct.h
 CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_mode__type_support.h
-CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_pubq__functions.c
-CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_pubq__functions.h
-CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_pubq__struct.h
-CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_pubq__type_support.h
+CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_target_pub__functions.c
+CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_target_pub__functions.h
+CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_target_pub__struct.h
+CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_target_pub__type_support.h
 CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrripk__functions.c
 CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrripk__functions.h
 CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrripk__struct.h
@@ -380,7 +380,7 @@ CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/depend: rosidl_generator
 CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/rrr_robot_interfaces/srv/rrr_auto.h
 CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/rrr_robot_interfaces/srv/rrr_invert_kinematics.h
 CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/rrr_robot_interfaces/srv/rrr_mode.h
-CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/rrr_robot_interfaces/srv/rrr_pubq.h
+CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/rrr_robot_interfaces/srv/rrr_target_pub.h
 CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/rrr_robot_interfaces/srv/rrripk.h
 	cd /home/waritt/robotsim_ws/build/rrr_robot_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/waritt/robotsim_ws/src/rrr_robot_interfaces /home/waritt/robotsim_ws/src/rrr_robot_interfaces /home/waritt/robotsim_ws/build/rrr_robot_interfaces /home/waritt/robotsim_ws/build/rrr_robot_interfaces /home/waritt/robotsim_ws/build/rrr_robot_interfaces/CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/depend

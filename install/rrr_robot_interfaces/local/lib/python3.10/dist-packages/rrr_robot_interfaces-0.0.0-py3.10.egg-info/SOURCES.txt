@@ -9,4 +9,5 @@ rrr_robot_interfaces/srv/_rrr_auto.py
 rrr_robot_interfaces/srv/_rrr_invert_kinematics.py
 rrr_robot_interfaces/srv/_rrr_mode.py
 rrr_robot_interfaces/srv/_rrr_pubq.py
+rrr_robot_interfaces/srv/_rrr_target_pub.py
 rrr_robot_interfaces/srv/_rrripk.py

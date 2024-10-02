@@ -5,6 +5,6 @@
     "/home/waritt/robotsim_ws/src/rrr_robot_interfaces:srv/RRRIPK.srv",
     "/home/waritt/robotsim_ws/src/rrr_robot_interfaces:srv/RRRAuto.srv",
     "/home/waritt/robotsim_ws/src/rrr_robot_interfaces:srv/RRRInvertKinematics.srv",
-    "/home/waritt/robotsim_ws/src/rrr_robot_interfaces:srv/RRRPubq.srv"
+    "/home/waritt/robotsim_ws/src/rrr_robot_interfaces:srv/RRRTargetPub.srv"
   ]
 }

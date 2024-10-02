@@ -28,6 +28,7 @@ class InvertKinmatics(Node):
             name = "3R_Robot"
         )
 
+        # Display Node Start
         self.get_logger().info(f'Invert Kinematics Start Node')
 
 

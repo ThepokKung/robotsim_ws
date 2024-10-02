@@ -611,7 +611,7 @@ CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_c
   /opt/ros/humble/include/rosidl_runtime_cpp/rosidl_typesupport_cpp/service_type_support.hpp \
   /opt/ros/humble/include/rosidl_typesupport_cpp/rosidl_typesupport_cpp/service_type_support_dispatch.hpp
 
-CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_pubq__type_support.cpp.o: rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_pubq__type_support.cpp \
+CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_target_pub__type_support.cpp.o: rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_target_pub__type_support.cpp \
   /usr/include/stdc-predef.h \
   /usr/include/c++/11/cstddef \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
@@ -629,7 +629,7 @@ CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_c
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/message_type_support_struct.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/visibility_control.h \
   /opt/ros/humble/include/rosidl_typesupport_interface/rosidl_typesupport_interface/macros.h \
-  rosidl_generator_cpp/rrr_robot_interfaces/srv/detail/rrr_pubq__struct.hpp \
+  rosidl_generator_cpp/rrr_robot_interfaces/srv/detail/rrr_target_pub__struct.hpp \
   /usr/include/c++/11/algorithm \
   /usr/include/c++/11/utility \
   /usr/include/c++/11/bits/stl_relops.h \
@@ -1022,6 +1022,8 @@ CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_c
 
 rosidl_generator_cpp/rrr_robot_interfaces/srv/detail/rrripk__struct.hpp:
 
+rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_target_pub__type_support.cpp:
+
 rosidl_generator_cpp/rrr_robot_interfaces/srv/detail/rrr_mode__struct.hpp:
 
 rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_invert_kinematics__type_support.cpp:
@@ -1128,8 +1130,6 @@ rosidl_generator_cpp/rrr_robot_interfaces/srv/detail/rrr_invert_kinematics__stru
 
 /usr/include/x86_64-linux-gnu/bits/typesizes.h:
 
-rosidl_generator_cpp/rrr_robot_interfaces/srv/detail/rrr_pubq__struct.hpp:
-
 /usr/include/c++/11/bits/stl_algo.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/time_t.h:
@@ -1211,8 +1211,6 @@ rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrripk__type_support.cpp:
 /usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
 
 /usr/include/x86_64-linux-gnu/bits/types.h:
-
-rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_pubq__type_support.cpp:
 
 /opt/ros/humble/include/rosidl_typesupport_cpp/rosidl_typesupport_cpp/message_type_support_dispatch.hpp:
 
@@ -1361,6 +1359,8 @@ rosidl_generator_cpp/rrr_robot_interfaces/srv/detail/rrr_auto__struct.hpp:
 /usr/include/c++/11/bits/refwrap.h:
 
 /usr/include/alloca.h:
+
+rosidl_generator_cpp/rrr_robot_interfaces/srv/detail/rrr_target_pub__struct.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
 

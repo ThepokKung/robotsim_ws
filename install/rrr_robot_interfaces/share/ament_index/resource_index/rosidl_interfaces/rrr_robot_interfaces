@@ -14,7 +14,7 @@ srv/RRRMode.idl
 srv/RRRMode.srv
 srv/RRRMode_Request.msg
 srv/RRRMode_Response.msg
-srv/RRRPubq.idl
-srv/RRRPubq.srv
-srv/RRRPubq_Request.msg
-srv/RRRPubq_Response.msg
+srv/RRRTargetPub.idl
+srv/RRRTargetPub.srv
+srv/RRRTargetPub_Request.msg
+srv/RRRTargetPub_Response.msg

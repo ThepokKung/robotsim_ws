@@ -31,7 +31,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "srv/RRRIPK.srv"
   "srv/RRRAuto.srv"
   "srv/RRRInvertKinematics.srv"
-  "srv/RRRPubq.srv"
+  "srv/RRRTargetPub.srv"
   DEPENDENCIES geometry_msgs sensor_msgs
 )
 
