@@ -16,6 +16,7 @@ rrr_robot_interfaces__srv__RRRAuto_Request__init(rrr_robot_interfaces__srv__RRRA
   if (!msg) {
     return false;
   }
+  // auto_call
   // target_call
   return true;
 }
@@ -26,6 +27,7 @@ rrr_robot_interfaces__srv__RRRAuto_Request__fini(rrr_robot_interfaces__srv__RRRA
   if (!msg) {
     return;
   }
+  // auto_call
   // target_call
 }
 
@@ -33,6 +35,10 @@ bool
 rrr_robot_interfaces__srv__RRRAuto_Request__are_equal(const rrr_robot_interfaces__srv__RRRAuto_Request * lhs, const rrr_robot_interfaces__srv__RRRAuto_Request * rhs)
 {
   if (!lhs || !rhs) {
+    return false;
+  }
+  // auto_call
+  if (lhs->auto_call != rhs->auto_call) {
     return false;
   }
   // target_call
@@ -50,6 +56,8 @@ rrr_robot_interfaces__srv__RRRAuto_Request__copy(
   if (!input || !output) {
     return false;
   }
+  // auto_call
+  output->auto_call = input->auto_call;
   // target_call
   output->target_call = input->target_call;
   return true;
@@ -244,7 +252,6 @@ rrr_robot_interfaces__srv__RRRAuto_Response__init(rrr_robot_interfaces__srv__RRR
   // random_target_x
   // random_target_y
   // random_target_z
-  // move_end
   return true;
 }
 
@@ -257,7 +264,6 @@ rrr_robot_interfaces__srv__RRRAuto_Response__fini(rrr_robot_interfaces__srv__RRR
   // random_target_x
   // random_target_y
   // random_target_z
-  // move_end
 }
 
 bool
@@ -278,10 +284,6 @@ rrr_robot_interfaces__srv__RRRAuto_Response__are_equal(const rrr_robot_interface
   if (lhs->random_target_z != rhs->random_target_z) {
     return false;
   }
-  // move_end
-  if (lhs->move_end != rhs->move_end) {
-    return false;
-  }
   return true;
 }
 
@@ -299,8 +301,6 @@ rrr_robot_interfaces__srv__RRRAuto_Response__copy(
   output->random_target_y = input->random_target_y;
   // random_target_z
   output->random_target_z = input->random_target_z;
-  // move_end
-  output->move_end = input->move_end;
   return true;
 }
 

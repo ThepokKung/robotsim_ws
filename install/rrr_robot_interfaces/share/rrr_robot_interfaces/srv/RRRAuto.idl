@@ -6,6 +6,8 @@
 module rrr_robot_interfaces {
   module srv {
     struct RRRAuto_Request {
+      boolean auto_call;
+
       boolean target_call;
     };
     struct RRRAuto_Response {
@@ -14,8 +16,6 @@ module rrr_robot_interfaces {
       double random_target_y;
 
       double random_target_z;
-
-      boolean move_end;
     };
   };
 };

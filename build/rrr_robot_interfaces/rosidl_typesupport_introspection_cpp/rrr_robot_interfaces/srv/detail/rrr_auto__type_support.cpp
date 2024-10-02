@@ -37,7 +37,24 @@ void RRRAuto_Request_fini_function(void * message_memory)
   typed_message->~RRRAuto_Request();
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember RRRAuto_Request_message_member_array[1] = {
+static const ::rosidl_typesupport_introspection_cpp::MessageMember RRRAuto_Request_message_member_array[2] = {
+  {
+    "auto_call",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_BOOLEAN,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(rrr_robot_interfaces::srv::RRRAuto_Request, auto_call),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
+    nullptr  // resize(index) function pointer
+  },
   {
     "target_call",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_BOOLEAN,  // type
@@ -60,7 +77,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember RRRAuto_Reque
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers RRRAuto_Request_message_members = {
   "rrr_robot_interfaces::srv",  // message namespace
   "RRRAuto_Request",  // message name
-  1,  // number of fields
+  2,  // number of fields
   sizeof(rrr_robot_interfaces::srv::RRRAuto_Request),
   RRRAuto_Request_message_member_array,  // message members
   RRRAuto_Request_init_function,  // function to initialize message memory (memory has to be allocated)
@@ -156,7 +173,7 @@ void RRRAuto_Response_fini_function(void * message_memory)
   typed_message->~RRRAuto_Response();
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember RRRAuto_Response_message_member_array[4] = {
+static const ::rosidl_typesupport_introspection_cpp::MessageMember RRRAuto_Response_message_member_array[3] = {
   {
     "random_target_x",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_DOUBLE,  // type
@@ -207,30 +224,13 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember RRRAuto_Respo
     nullptr,  // fetch(index, &value) function pointer
     nullptr,  // assign(index, value) function pointer
     nullptr  // resize(index) function pointer
-  },
-  {
-    "move_end",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_BOOLEAN,  // type
-    0,  // upper bound of string
-    nullptr,  // members of sub message
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(rrr_robot_interfaces::srv::RRRAuto_Response, move_end),  // bytes offset in struct
-    nullptr,  // default value
-    nullptr,  // size() function pointer
-    nullptr,  // get_const(index) function pointer
-    nullptr,  // get(index) function pointer
-    nullptr,  // fetch(index, &value) function pointer
-    nullptr,  // assign(index, value) function pointer
-    nullptr  // resize(index) function pointer
   }
 };
 
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers RRRAuto_Response_message_members = {
   "rrr_robot_interfaces::srv",  // message namespace
   "RRRAuto_Response",  // message name
-  4,  // number of fields
+  3,  // number of fields
   sizeof(rrr_robot_interfaces::srv::RRRAuto_Response),
   RRRAuto_Response_message_member_array,  // message members
   RRRAuto_Response_init_function,  // function to initialize message memory (memory has to be allocated)

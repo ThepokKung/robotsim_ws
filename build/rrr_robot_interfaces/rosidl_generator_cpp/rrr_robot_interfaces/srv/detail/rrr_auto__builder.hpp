@@ -24,13 +24,29 @@ namespace builder
 class Init_RRRAuto_Request_target_call
 {
 public:
-  Init_RRRAuto_Request_target_call()
-  : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
+  explicit Init_RRRAuto_Request_target_call(::rrr_robot_interfaces::srv::RRRAuto_Request & msg)
+  : msg_(msg)
   {}
   ::rrr_robot_interfaces::srv::RRRAuto_Request target_call(::rrr_robot_interfaces::srv::RRRAuto_Request::_target_call_type arg)
   {
     msg_.target_call = std::move(arg);
     return std::move(msg_);
+  }
+
+private:
+  ::rrr_robot_interfaces::srv::RRRAuto_Request msg_;
+};
+
+class Init_RRRAuto_Request_auto_call
+{
+public:
+  Init_RRRAuto_Request_auto_call()
+  : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
+  {}
+  Init_RRRAuto_Request_target_call auto_call(::rrr_robot_interfaces::srv::RRRAuto_Request::_auto_call_type arg)
+  {
+    msg_.auto_call = std::move(arg);
+    return Init_RRRAuto_Request_target_call(msg_);
   }
 
 private:
@@ -48,7 +64,7 @@ template<>
 inline
 auto build<::rrr_robot_interfaces::srv::RRRAuto_Request>()
 {
-  return rrr_robot_interfaces::srv::builder::Init_RRRAuto_Request_target_call();
+  return rrr_robot_interfaces::srv::builder::Init_RRRAuto_Request_auto_call();
 }
 
 }  // namespace rrr_robot_interfaces
@@ -63,32 +79,16 @@ namespace srv
 namespace builder
 {
 
-class Init_RRRAuto_Response_move_end
-{
-public:
-  explicit Init_RRRAuto_Response_move_end(::rrr_robot_interfaces::srv::RRRAuto_Response & msg)
-  : msg_(msg)
-  {}
-  ::rrr_robot_interfaces::srv::RRRAuto_Response move_end(::rrr_robot_interfaces::srv::RRRAuto_Response::_move_end_type arg)
-  {
-    msg_.move_end = std::move(arg);
-    return std::move(msg_);
-  }
-
-private:
-  ::rrr_robot_interfaces::srv::RRRAuto_Response msg_;
-};
-
 class Init_RRRAuto_Response_random_target_z
 {
 public:
   explicit Init_RRRAuto_Response_random_target_z(::rrr_robot_interfaces::srv::RRRAuto_Response & msg)
   : msg_(msg)
   {}
-  Init_RRRAuto_Response_move_end random_target_z(::rrr_robot_interfaces::srv::RRRAuto_Response::_random_target_z_type arg)
+  ::rrr_robot_interfaces::srv::RRRAuto_Response random_target_z(::rrr_robot_interfaces::srv::RRRAuto_Response::_random_target_z_type arg)
   {
     msg_.random_target_z = std::move(arg);
-    return Init_RRRAuto_Response_move_end(msg_);
+    return std::move(msg_);
   }
 
 private:

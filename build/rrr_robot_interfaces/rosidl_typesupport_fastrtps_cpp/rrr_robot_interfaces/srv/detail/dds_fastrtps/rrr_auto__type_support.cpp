@@ -32,6 +32,8 @@ cdr_serialize(
   const rrr_robot_interfaces::srv::RRRAuto_Request & ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
+  // Member: auto_call
+  cdr << (ros_message.auto_call ? true : false);
   // Member: target_call
   cdr << (ros_message.target_call ? true : false);
   return true;
@@ -43,6 +45,13 @@ cdr_deserialize(
   eprosima::fastcdr::Cdr & cdr,
   rrr_robot_interfaces::srv::RRRAuto_Request & ros_message)
 {
+  // Member: auto_call
+  {
+    uint8_t tmp;
+    cdr >> tmp;
+    ros_message.auto_call = tmp ? true : false;
+  }
+
   // Member: target_call
   {
     uint8_t tmp;
@@ -66,6 +75,12 @@ get_serialized_size(
   (void)padding;
   (void)wchar_size;
 
+  // Member: auto_call
+  {
+    size_t item_size = sizeof(ros_message.auto_call);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
   // Member: target_call
   {
     size_t item_size = sizeof(ros_message.target_call);
@@ -95,6 +110,14 @@ max_serialized_size_RRRAuto_Request(
   full_bounded = true;
   is_plain = true;
 
+
+  // Member: auto_call
+  {
+    size_t array_size = 1;
+
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
+  }
 
   // Member: target_call
   {
@@ -254,8 +277,6 @@ cdr_serialize(
   cdr << ros_message.random_target_y;
   // Member: random_target_z
   cdr << ros_message.random_target_z;
-  // Member: move_end
-  cdr << (ros_message.move_end ? true : false);
   return true;
 }
 
@@ -273,13 +294,6 @@ cdr_deserialize(
 
   // Member: random_target_z
   cdr >> ros_message.random_target_z;
-
-  // Member: move_end
-  {
-    uint8_t tmp;
-    cdr >> tmp;
-    ros_message.move_end = tmp ? true : false;
-  }
 
   return true;
 }
@@ -312,12 +326,6 @@ get_serialized_size(
   // Member: random_target_z
   {
     size_t item_size = sizeof(ros_message.random_target_z);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-  // Member: move_end
-  {
-    size_t item_size = sizeof(ros_message.move_end);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -372,14 +380,6 @@ max_serialized_size_RRRAuto_Response(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
 
-  // Member: move_end
-  {
-    size_t array_size = 1;
-
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
-  }
-
   size_t ret_val = current_alignment - initial_alignment;
   if (is_plain) {
     // All members are plain, and type is not empty.
@@ -388,7 +388,7 @@ max_serialized_size_RRRAuto_Response(
     using DataType = rrr_robot_interfaces::srv::RRRAuto_Response;
     is_plain =
       (
-      offsetof(DataType, move_end) +
+      offsetof(DataType, random_target_z) +
       last_member_size
       ) == ret_val;
   }

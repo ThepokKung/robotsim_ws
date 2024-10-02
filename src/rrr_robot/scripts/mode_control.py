@@ -4,7 +4,7 @@ from rrr_robot.dummy_module import dummy_function, dummy_var
 import rclpy
 from rclpy.node import Node
 
-from rrr_robot_interfaces.srv import RRRMode , RRRIPK
+from rrr_robot_interfaces.srv import RRRMode , RRRIPK ,RRRAuto
 
 
 class ModeNode(Node):
@@ -16,6 +16,7 @@ class ModeNode(Node):
 
         # Service client
         self.call_ipk = self.create_client(RRRIPK, '/ipk_call')
+        self.call_auto = self.create_client(RRRAuto, '/auto_call')
 
         # Variable
         self.mode = ''
@@ -30,6 +31,7 @@ class ModeNode(Node):
 
         # Defind msg for call Mode
         msg_ipk = RRRIPK.Request()
+        msg_auto = RRRAuto.Request()
 
         if self.mode == 'IPK':
             self.get_logger().info(f'Mode call : {self.mode}')
@@ -39,6 +41,10 @@ class ModeNode(Node):
             msg_ipk.ipk_call = True
             self.call_ipk.call_async(msg_ipk)
 
+            # Stop Auto Mode
+            msg_auto.auto_call = False
+            self.call_auto.call_async(msg_auto)
+
         elif self.mode == 'Teleop':
             self.get_logger().info(f'Mode call : {self.mode}')
             response.mode_change = True
@@ -47,10 +53,18 @@ class ModeNode(Node):
             msg_ipk.ipk_call = False
             self.call_ipk.call_async(msg_ipk)
 
+            # Stop Auto Mode
+            msg_auto.auto_call = False
+            self.call_auto.call_async(msg_auto)
+
 
         elif self.mode == 'Auto':
             self.get_logger().info(f'Mode call : {self.mode}')    
             response.mode_change = True
+
+            # Start Auto Mode
+            msg_auto.auto_call = True
+            self.call_auto.call_async(msg_auto)
 
             # Stop IPK Node
             msg_ipk.ipk_call = False

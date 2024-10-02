@@ -170,28 +170,17 @@ inline void to_flow_style_yaml(
   const RRRPubq_Response & msg,
   std::ostream & out)
 {
-  out << "{";
-  // member: run_check
-  {
-    out << "run_check: ";
-    rosidl_generator_traits::value_to_yaml(msg.run_check, out);
-  }
-  out << "}";
+  (void)msg;
+  out << "null";
 }  // NOLINT(readability/fn_size)
 
 inline void to_block_style_yaml(
   const RRRPubq_Response & msg,
   std::ostream & out, size_t indentation = 0)
 {
-  // member: run_check
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    out << "run_check: ";
-    rosidl_generator_traits::value_to_yaml(msg.run_check, out);
-    out << "\n";
-  }
+  (void)msg;
+  (void)indentation;
+  out << "null\n";
 }  // NOLINT(readability/fn_size)
 
 inline std::string to_yaml(const RRRPubq_Response & msg, bool use_flow_style = false)

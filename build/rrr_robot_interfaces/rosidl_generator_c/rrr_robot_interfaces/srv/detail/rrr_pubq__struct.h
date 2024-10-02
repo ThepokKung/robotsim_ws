@@ -46,7 +46,7 @@ typedef struct rrr_robot_interfaces__srv__RRRPubq_Request__Sequence
 /// Struct defined in srv/RRRPubq in the package rrr_robot_interfaces.
 typedef struct rrr_robot_interfaces__srv__RRRPubq_Response
 {
-  bool run_check;
+  uint8_t structure_needs_at_least_one_member;
 } rrr_robot_interfaces__srv__RRRPubq_Response;
 
 // Struct for a sequence of rrr_robot_interfaces__srv__RRRPubq_Response.

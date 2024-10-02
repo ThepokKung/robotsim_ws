@@ -108,26 +108,6 @@ namespace rrr_robot_interfaces
 namespace srv
 {
 
-namespace builder
-{
-
-class Init_RRRPubq_Response_run_check
-{
-public:
-  Init_RRRPubq_Response_run_check()
-  : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
-  {}
-  ::rrr_robot_interfaces::srv::RRRPubq_Response run_check(::rrr_robot_interfaces::srv::RRRPubq_Response::_run_check_type arg)
-  {
-    msg_.run_check = std::move(arg);
-    return std::move(msg_);
-  }
-
-private:
-  ::rrr_robot_interfaces::srv::RRRPubq_Response msg_;
-};
-
-}  // namespace builder
 
 }  // namespace srv
 
@@ -138,7 +118,7 @@ template<>
 inline
 auto build<::rrr_robot_interfaces::srv::RRRPubq_Response>()
 {
-  return rrr_robot_interfaces::srv::builder::Init_RRRPubq_Response_run_check();
+  return ::rrr_robot_interfaces::srv::RRRPubq_Response(rosidl_runtime_cpp::MessageInitialization::ZERO);
 }
 
 }  // namespace rrr_robot_interfaces

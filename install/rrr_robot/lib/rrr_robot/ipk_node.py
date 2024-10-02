@@ -42,6 +42,7 @@ class IPKNode(Node):
 
 
     def ipk_target_callback(self ,request:RRRIPK.Request ,response:RRRIPK.Response):
+        # self.get_logger().info(f'Robot ready : {self.ready}')
         if self.mode_call and self.ready:
             self.ipk_target[0] = request.ipk_target.x
             self.ipk_target[1] = request.ipk_target.y
@@ -62,25 +63,15 @@ class IPKNode(Node):
             response.ipk_q2 = result.q2
             response.ipk_q3 = result.q3
 
-            # q_pub = RRRPubq.Request()
-            # q_pub.goal_pos.x = self.ipk_target[0]
-            # q_pub.goal_pos.y = self.ipk_target[1]
-            # q_pub.goal_pos.z = self.ipk_target[2]
-            # q_pub.q1 = result.q1
-            # q_pub.q2 = result.q2
-            # q_pub.q3 = result.q3
+            q_pub = RRRPubq.Request()
+            q_pub.goal_pos.x = self.ipk_target[0]
+            q_pub.goal_pos.y = self.ipk_target[1]
+            q_pub.goal_pos.z = self.ipk_target[2]
+            q_pub.q1 = result.q1
+            q_pub.q2 = result.q2
+            q_pub.q3 = result.q3
 
-            # robot_state = self.q_call.call(q_pub)
-            # self.get_logger().info(f'Ready : {robot_state.run_check}')          
-
-            # if robot_state.run_check:
-            #     self.get_logger().info(f'response : {result.ikn_check}')
-
-            #     response.ipk_check = result.ikn_check
-            #     response.ipk_q1 = result.q1
-            #     response.ipk_q2 = result.q2
-            #     response.ipk_q3 = result.q3
-                # self.get_logger().info(f'q_response : {result}')  
+            self.q_call.call_async(q_pub) 
 
         return response
 
@@ -89,7 +80,7 @@ class IPKNode(Node):
         if request.ipk_call:
             self.mode_call = True
             self.get_logger().info(f'Mode IPK Start')
-        else :
+        elif self.mode_call:
             self.mode_call = False
             self.get_logger().info(f'Mode IPK Stop')
         return response

@@ -55,14 +55,17 @@ class RRRAuto_Request(metaclass=Metaclass_RRRAuto_Request):
     """Message class 'RRRAuto_Request'."""
 
     __slots__ = [
+        '_auto_call',
         '_target_call',
     ]
 
     _fields_and_field_types = {
+        'auto_call': 'boolean',
         'target_call': 'boolean',
     }
 
     SLOT_TYPES = (
+        rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
         rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
     )
 
@@ -70,6 +73,7 @@ class RRRAuto_Request(metaclass=Metaclass_RRRAuto_Request):
         assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
+        self.auto_call = kwargs.get('auto_call', bool())
         self.target_call = kwargs.get('target_call', bool())
 
     def __repr__(self):
@@ -101,6 +105,8 @@ class RRRAuto_Request(metaclass=Metaclass_RRRAuto_Request):
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
             return False
+        if self.auto_call != other.auto_call:
+            return False
         if self.target_call != other.target_call:
             return False
         return True
@@ -109,6 +115,19 @@ class RRRAuto_Request(metaclass=Metaclass_RRRAuto_Request):
     def get_fields_and_field_types(cls):
         from copy import copy
         return copy(cls._fields_and_field_types)
+
+    @builtins.property
+    def auto_call(self):
+        """Message field 'auto_call'."""
+        return self._auto_call
+
+    @auto_call.setter
+    def auto_call(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, bool), \
+                "The 'auto_call' field must be of type 'bool'"
+        self._auto_call = value
 
     @builtins.property
     def target_call(self):
@@ -183,21 +202,18 @@ class RRRAuto_Response(metaclass=Metaclass_RRRAuto_Response):
         '_random_target_x',
         '_random_target_y',
         '_random_target_z',
-        '_move_end',
     ]
 
     _fields_and_field_types = {
         'random_target_x': 'double',
         'random_target_y': 'double',
         'random_target_z': 'double',
-        'move_end': 'boolean',
     }
 
     SLOT_TYPES = (
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
-        rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
@@ -207,7 +223,6 @@ class RRRAuto_Response(metaclass=Metaclass_RRRAuto_Response):
         self.random_target_x = kwargs.get('random_target_x', float())
         self.random_target_y = kwargs.get('random_target_y', float())
         self.random_target_z = kwargs.get('random_target_z', float())
-        self.move_end = kwargs.get('move_end', bool())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -243,8 +258,6 @@ class RRRAuto_Response(metaclass=Metaclass_RRRAuto_Response):
         if self.random_target_y != other.random_target_y:
             return False
         if self.random_target_z != other.random_target_z:
-            return False
-        if self.move_end != other.move_end:
             return False
         return True
 
@@ -297,19 +310,6 @@ class RRRAuto_Response(metaclass=Metaclass_RRRAuto_Response):
             assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
                 "The 'random_target_z' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
         self._random_target_z = value
-
-    @builtins.property
-    def move_end(self):
-        """Message field 'move_end'."""
-        return self._move_end
-
-    @move_end.setter
-    def move_end(self, value):
-        if __debug__:
-            assert \
-                isinstance(value, bool), \
-                "The 'move_end' field must be of type 'bool'"
-        self._move_end = value
 
 
 class Metaclass_RRRAuto(type):

@@ -95,8 +95,6 @@ class JointstatePublisher(Node):
             self.ready = False
             self.get_logger().info(f'Start Run')
 
-            # response.run_check = True
-
         return response
 
 def main(args=None):

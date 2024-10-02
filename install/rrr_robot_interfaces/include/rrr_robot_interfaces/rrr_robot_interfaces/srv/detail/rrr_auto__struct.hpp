@@ -38,6 +38,7 @@ struct RRRAuto_Request_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
+      this->auto_call = false;
       this->target_call = false;
     }
   }
@@ -48,16 +49,26 @@ struct RRRAuto_Request_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
+      this->auto_call = false;
       this->target_call = false;
     }
   }
 
   // field types and members
+  using _auto_call_type =
+    bool;
+  _auto_call_type auto_call;
   using _target_call_type =
     bool;
   _target_call_type target_call;
 
   // setters for named parameter idiom
+  Type & set__auto_call(
+    const bool & _arg)
+  {
+    this->auto_call = _arg;
+    return *this;
+  }
   Type & set__target_call(
     const bool & _arg)
   {
@@ -107,6 +118,9 @@ struct RRRAuto_Request_
   // comparison operators
   bool operator==(const RRRAuto_Request_ & other) const
   {
+    if (this->auto_call != other.auto_call) {
+      return false;
+    }
     if (this->target_call != other.target_call) {
       return false;
     }
@@ -155,7 +169,6 @@ struct RRRAuto_Response_
       this->random_target_x = 0.0;
       this->random_target_y = 0.0;
       this->random_target_z = 0.0;
-      this->move_end = false;
     }
   }
 
@@ -168,7 +181,6 @@ struct RRRAuto_Response_
       this->random_target_x = 0.0;
       this->random_target_y = 0.0;
       this->random_target_z = 0.0;
-      this->move_end = false;
     }
   }
 
@@ -182,9 +194,6 @@ struct RRRAuto_Response_
   using _random_target_z_type =
     double;
   _random_target_z_type random_target_z;
-  using _move_end_type =
-    bool;
-  _move_end_type move_end;
 
   // setters for named parameter idiom
   Type & set__random_target_x(
@@ -203,12 +212,6 @@ struct RRRAuto_Response_
     const double & _arg)
   {
     this->random_target_z = _arg;
-    return *this;
-  }
-  Type & set__move_end(
-    const bool & _arg)
-  {
-    this->move_end = _arg;
     return *this;
   }
 
@@ -261,9 +264,6 @@ struct RRRAuto_Response_
       return false;
     }
     if (this->random_target_z != other.random_target_z) {
-      return false;
-    }
-    if (this->move_end != other.move_end) {
       return false;
     }
     return true;

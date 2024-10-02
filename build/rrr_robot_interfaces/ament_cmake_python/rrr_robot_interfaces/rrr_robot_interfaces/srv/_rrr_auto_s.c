@@ -50,6 +50,15 @@ bool rrr_robot_interfaces__srv__rrr_auto__request__convert_from_py(PyObject * _p
     assert(strncmp("rrr_robot_interfaces.srv._rrr_auto.RRRAuto_Request", full_classname_dest, 50) == 0);
   }
   rrr_robot_interfaces__srv__RRRAuto_Request * ros_message = _ros_message;
+  {  // auto_call
+    PyObject * field = PyObject_GetAttrString(_pymsg, "auto_call");
+    if (!field) {
+      return false;
+    }
+    assert(PyBool_Check(field));
+    ros_message->auto_call = (Py_True == field);
+    Py_DECREF(field);
+  }
   {  // target_call
     PyObject * field = PyObject_GetAttrString(_pymsg, "target_call");
     if (!field) {
@@ -57,6 +66,33 @@ bool rrr_robot_interfaces__srv__rrr_auto__request__convert_from_py(PyObject * _p
     }
     assert(PyBool_Check(field));
     ros_message->target_call = (Py_True == field);
+    Py_DECREF(field);
+  }
+  {  // random_target_x
+    PyObject * field = PyObject_GetAttrString(_pymsg, "random_target_x");
+    if (!field) {
+      return false;
+    }
+    assert(PyFloat_Check(field));
+    ros_message->random_target_x = PyFloat_AS_DOUBLE(field);
+    Py_DECREF(field);
+  }
+  {  // random_target_y
+    PyObject * field = PyObject_GetAttrString(_pymsg, "random_target_y");
+    if (!field) {
+      return false;
+    }
+    assert(PyFloat_Check(field));
+    ros_message->random_target_y = PyFloat_AS_DOUBLE(field);
+    Py_DECREF(field);
+  }
+  {  // random_target_z
+    PyObject * field = PyObject_GetAttrString(_pymsg, "random_target_z");
+    if (!field) {
+      return false;
+    }
+    assert(PyFloat_Check(field));
+    ros_message->random_target_z = PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
 
@@ -81,11 +117,55 @@ PyObject * rrr_robot_interfaces__srv__rrr_auto__request__convert_to_py(void * ra
     }
   }
   rrr_robot_interfaces__srv__RRRAuto_Request * ros_message = (rrr_robot_interfaces__srv__RRRAuto_Request *)raw_ros_message;
+  {  // auto_call
+    PyObject * field = NULL;
+    field = PyBool_FromLong(ros_message->auto_call ? 1 : 0);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "auto_call", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
   {  // target_call
     PyObject * field = NULL;
     field = PyBool_FromLong(ros_message->target_call ? 1 : 0);
     {
       int rc = PyObject_SetAttrString(_pymessage, "target_call", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // random_target_x
+    PyObject * field = NULL;
+    field = PyFloat_FromDouble(ros_message->random_target_x);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "random_target_x", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // random_target_y
+    PyObject * field = NULL;
+    field = PyFloat_FromDouble(ros_message->random_target_y);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "random_target_y", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // random_target_z
+    PyObject * field = NULL;
+    field = PyFloat_FromDouble(ros_message->random_target_z);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "random_target_z", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;
@@ -145,33 +225,6 @@ bool rrr_robot_interfaces__srv__rrr_auto__response__convert_from_py(PyObject * _
     assert(strncmp("rrr_robot_interfaces.srv._rrr_auto.RRRAuto_Response", full_classname_dest, 51) == 0);
   }
   rrr_robot_interfaces__srv__RRRAuto_Response * ros_message = _ros_message;
-  {  // random_target_x
-    PyObject * field = PyObject_GetAttrString(_pymsg, "random_target_x");
-    if (!field) {
-      return false;
-    }
-    assert(PyFloat_Check(field));
-    ros_message->random_target_x = PyFloat_AS_DOUBLE(field);
-    Py_DECREF(field);
-  }
-  {  // random_target_y
-    PyObject * field = PyObject_GetAttrString(_pymsg, "random_target_y");
-    if (!field) {
-      return false;
-    }
-    assert(PyFloat_Check(field));
-    ros_message->random_target_y = PyFloat_AS_DOUBLE(field);
-    Py_DECREF(field);
-  }
-  {  // random_target_z
-    PyObject * field = PyObject_GetAttrString(_pymsg, "random_target_z");
-    if (!field) {
-      return false;
-    }
-    assert(PyFloat_Check(field));
-    ros_message->random_target_z = PyFloat_AS_DOUBLE(field);
-    Py_DECREF(field);
-  }
   {  // move_end
     PyObject * field = PyObject_GetAttrString(_pymsg, "move_end");
     if (!field) {
@@ -203,39 +256,6 @@ PyObject * rrr_robot_interfaces__srv__rrr_auto__response__convert_to_py(void * r
     }
   }
   rrr_robot_interfaces__srv__RRRAuto_Response * ros_message = (rrr_robot_interfaces__srv__RRRAuto_Response *)raw_ros_message;
-  {  // random_target_x
-    PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->random_target_x);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "random_target_x", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // random_target_y
-    PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->random_target_y);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "random_target_y", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // random_target_z
-    PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->random_target_z);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "random_target_z", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
   {  // move_end
     PyObject * field = NULL;
     field = PyBool_FromLong(ros_message->move_end ? 1 : 0);

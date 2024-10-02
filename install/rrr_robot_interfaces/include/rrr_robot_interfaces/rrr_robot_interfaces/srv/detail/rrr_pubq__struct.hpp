@@ -197,7 +197,7 @@ struct RRRPubq_Response_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->run_check = false;
+      this->structure_needs_at_least_one_member = 0;
     }
   }
 
@@ -207,22 +207,15 @@ struct RRRPubq_Response_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->run_check = false;
+      this->structure_needs_at_least_one_member = 0;
     }
   }
 
   // field types and members
-  using _run_check_type =
-    bool;
-  _run_check_type run_check;
+  using _structure_needs_at_least_one_member_type =
+    uint8_t;
+  _structure_needs_at_least_one_member_type structure_needs_at_least_one_member;
 
-  // setters for named parameter idiom
-  Type & set__run_check(
-    const bool & _arg)
-  {
-    this->run_check = _arg;
-    return *this;
-  }
 
   // constant declarations
 
@@ -266,7 +259,7 @@ struct RRRPubq_Response_
   // comparison operators
   bool operator==(const RRRPubq_Response_ & other) const
   {
-    if (this->run_check != other.run_check) {
+    if (this->structure_needs_at_least_one_member != other.structure_needs_at_least_one_member) {
       return false;
     }
     return true;

@@ -42,7 +42,7 @@ class IPKNode(Node):
 
 
     def ipk_target_callback(self ,request:RRRIPK.Request ,response:RRRIPK.Response):
-        self.get_logger().info(f'Robot ready : {self.ready}')
+        # self.get_logger().info(f'Robot ready : {self.ready}')
         if self.mode_call and self.ready:
             self.ipk_target[0] = request.ipk_target.x
             self.ipk_target[1] = request.ipk_target.y
@@ -80,7 +80,7 @@ class IPKNode(Node):
         if request.ipk_call:
             self.mode_call = True
             self.get_logger().info(f'Mode IPK Start')
-        else :
+        elif self.mode_call:
             self.mode_call = False
             self.get_logger().info(f'Mode IPK Stop')
         return response

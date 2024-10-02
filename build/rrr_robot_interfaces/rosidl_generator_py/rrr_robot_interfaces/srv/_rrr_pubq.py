@@ -198,9 +198,6 @@ class RRRPubq_Request(metaclass=Metaclass_RRRPubq_Request):
 # Import statements for member types
 
 # already imported above
-# import builtins
-
-# already imported above
 # import rosidl_parser.definition
 
 
@@ -249,22 +246,18 @@ class RRRPubq_Response(metaclass=Metaclass_RRRPubq_Response):
     """Message class 'RRRPubq_Response'."""
 
     __slots__ = [
-        '_run_check',
     ]
 
     _fields_and_field_types = {
-        'run_check': 'boolean',
     }
 
     SLOT_TYPES = (
-        rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
         assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
-        self.run_check = kwargs.get('run_check', bool())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -295,27 +288,12 @@ class RRRPubq_Response(metaclass=Metaclass_RRRPubq_Response):
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
             return False
-        if self.run_check != other.run_check:
-            return False
         return True
 
     @classmethod
     def get_fields_and_field_types(cls):
         from copy import copy
         return copy(cls._fields_and_field_types)
-
-    @builtins.property
-    def run_check(self):
-        """Message field 'run_check'."""
-        return self._run_check
-
-    @run_check.setter
-    def run_check(self, value):
-        if __debug__:
-            assert \
-                isinstance(value, bool), \
-                "The 'run_check' field must be of type 'bool'"
-        self._run_check = value
 
 
 class Metaclass_RRRPubq(type):

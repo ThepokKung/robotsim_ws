@@ -20,6 +20,7 @@ extern "C"
 /// Struct defined in srv/RRRAuto in the package rrr_robot_interfaces.
 typedef struct rrr_robot_interfaces__srv__RRRAuto_Request
 {
+  bool auto_call;
   bool target_call;
 } rrr_robot_interfaces__srv__RRRAuto_Request;
 
@@ -42,7 +43,6 @@ typedef struct rrr_robot_interfaces__srv__RRRAuto_Response
   double random_target_x;
   double random_target_y;
   double random_target_z;
-  bool move_end;
 } rrr_robot_interfaces__srv__RRRAuto_Response;
 
 // Struct for a sequence of rrr_robot_interfaces__srv__RRRAuto_Response.

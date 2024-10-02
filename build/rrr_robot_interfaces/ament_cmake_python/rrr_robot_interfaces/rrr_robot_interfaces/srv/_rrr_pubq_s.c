@@ -214,15 +214,7 @@ bool rrr_robot_interfaces__srv__rrr_pubq__response__convert_from_py(PyObject * _
     assert(strncmp("rrr_robot_interfaces.srv._rrr_pubq.RRRPubq_Response", full_classname_dest, 51) == 0);
   }
   rrr_robot_interfaces__srv__RRRPubq_Response * ros_message = _ros_message;
-  {  // run_check
-    PyObject * field = PyObject_GetAttrString(_pymsg, "run_check");
-    if (!field) {
-      return false;
-    }
-    assert(PyBool_Check(field));
-    ros_message->run_check = (Py_True == field);
-    Py_DECREF(field);
-  }
+  ros_message->structure_needs_at_least_one_member = 0;
 
   return true;
 }
@@ -244,18 +236,7 @@ PyObject * rrr_robot_interfaces__srv__rrr_pubq__response__convert_to_py(void * r
       return NULL;
     }
   }
-  rrr_robot_interfaces__srv__RRRPubq_Response * ros_message = (rrr_robot_interfaces__srv__RRRPubq_Response *)raw_ros_message;
-  {  // run_check
-    PyObject * field = NULL;
-    field = PyBool_FromLong(ros_message->run_check ? 1 : 0);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "run_check", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
+  (void)raw_ros_message;
 
   // ownership of _pymessage is transferred to the caller
   return _pymessage;

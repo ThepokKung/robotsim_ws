@@ -40,11 +40,10 @@ class RandomTarget(Node):
         if request.target_call:
             workspace_index = np.random.randint(len(self.workspace))
             target = self.workspace[workspace_index]
-            print('index : ',workspace_index)
-            print('target : ',target)
-            # response.random_target_x = target[0]/1000
-            # response.random_target_y = target[1]/1000
-            # response.random_target_z = target[2]/1000
+            self.get_logger().info(f'target : {target}')
+            response.random_target_x = target[0]
+            response.random_target_y = target[1]
+            response.random_target_z = target[2]
 
             self.target.header.frame_id = 'link_0'
             self.target.pose.position.x = target[0]/1000

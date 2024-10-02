@@ -16,7 +16,7 @@ module rrr_robot_interfaces {
       double q3;
     };
     struct RRRPubq_Response {
-      boolean run_check;
+      uint8 structure_needs_at_least_one_member;
     };
   };
 };
