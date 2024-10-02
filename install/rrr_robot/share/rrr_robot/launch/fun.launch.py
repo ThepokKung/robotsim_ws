@@ -24,7 +24,7 @@ import xacro
 def generate_launch_description():
     
     pkg = get_package_share_directory('rrr_robot')
-    rviz_path = os.path.join(pkg,'config','display.rviz')
+    rviz_path = os.path.join(pkg,'config','custom_display.rviz')
     rviz = Node(
         package='rviz2',
         executable='rviz2',

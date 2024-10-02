@@ -36,12 +36,14 @@ typedef struct rrr_robot_interfaces__srv__RRRRandomTarget_Request__Sequence
 
 // Constants defined in the message
 
+// Include directives for member types
+// Member 'random_target'
+#include "geometry_msgs/msg/detail/point__struct.h"
+
 /// Struct defined in srv/RRRRandomTarget in the package rrr_robot_interfaces.
 typedef struct rrr_robot_interfaces__srv__RRRRandomTarget_Response
 {
-  double random_target_x;
-  double random_target_y;
-  double random_target_z;
+  geometry_msgs__msg__Point random_target;
 } rrr_robot_interfaces__srv__RRRRandomTarget_Response;
 
 // Struct for a sequence of rrr_robot_interfaces__srv__RRRRandomTarget_Response.

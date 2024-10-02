@@ -235,15 +235,21 @@ rrr_robot_interfaces__srv__RRRRandomTarget_Request__Sequence__copy(
 }
 
 
+// Include directives for member types
+// Member `random_target`
+#include "geometry_msgs/msg/detail/point__functions.h"
+
 bool
 rrr_robot_interfaces__srv__RRRRandomTarget_Response__init(rrr_robot_interfaces__srv__RRRRandomTarget_Response * msg)
 {
   if (!msg) {
     return false;
   }
-  // random_target_x
-  // random_target_y
-  // random_target_z
+  // random_target
+  if (!geometry_msgs__msg__Point__init(&msg->random_target)) {
+    rrr_robot_interfaces__srv__RRRRandomTarget_Response__fini(msg);
+    return false;
+  }
   return true;
 }
 
@@ -253,9 +259,8 @@ rrr_robot_interfaces__srv__RRRRandomTarget_Response__fini(rrr_robot_interfaces__
   if (!msg) {
     return;
   }
-  // random_target_x
-  // random_target_y
-  // random_target_z
+  // random_target
+  geometry_msgs__msg__Point__fini(&msg->random_target);
 }
 
 bool
@@ -264,16 +269,10 @@ rrr_robot_interfaces__srv__RRRRandomTarget_Response__are_equal(const rrr_robot_i
   if (!lhs || !rhs) {
     return false;
   }
-  // random_target_x
-  if (lhs->random_target_x != rhs->random_target_x) {
-    return false;
-  }
-  // random_target_y
-  if (lhs->random_target_y != rhs->random_target_y) {
-    return false;
-  }
-  // random_target_z
-  if (lhs->random_target_z != rhs->random_target_z) {
+  // random_target
+  if (!geometry_msgs__msg__Point__are_equal(
+      &(lhs->random_target), &(rhs->random_target)))
+  {
     return false;
   }
   return true;
@@ -287,12 +286,12 @@ rrr_robot_interfaces__srv__RRRRandomTarget_Response__copy(
   if (!input || !output) {
     return false;
   }
-  // random_target_x
-  output->random_target_x = input->random_target_x;
-  // random_target_y
-  output->random_target_y = input->random_target_y;
-  // random_target_z
-  output->random_target_z = input->random_target_z;
+  // random_target
+  if (!geometry_msgs__msg__Point__copy(
+      &(input->random_target), &(output->random_target)))
+  {
+    return false;
+  }
   return true;
 }
 

@@ -47,6 +47,7 @@ class JointstatePublisher(Node):
         self.cmd_vel = [0.0 ,0.0 ,0.0]
 
         self.name = ["joint_1" ,"joint_2" ,"joint_3"]
+        self.kp = 1.5
 
         self.ready = True
 
@@ -66,9 +67,9 @@ class JointstatePublisher(Node):
         q_d[1] = self.q_goal[1] - self.q[1]
         q_d[2] = self.q_goal[2] - self.q[2]
 
-        self.q[0] = self.q[0] + (q_d[0] * self.dt)
-        self.q[1] = self.q[1] + (q_d[1] * self.dt)
-        self.q[2] = self.q[2] + (q_d[2] * self.dt)
+        self.q[0] = self.q[0] + (q_d[0] * self.dt * self.kp)
+        self.q[1] = self.q[1] + (q_d[1] * self.dt * self.kp)
+        self.q[2] = self.q[2] + (q_d[2] * self.dt * self.kp)
 
         for i in range(len(self.q)):
             joint_msg.position.append(self.q[i])

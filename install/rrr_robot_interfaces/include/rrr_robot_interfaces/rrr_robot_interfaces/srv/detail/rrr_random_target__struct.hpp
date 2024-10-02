@@ -129,6 +129,10 @@ using RRRRandomTarget_Request =
 }  // namespace rrr_robot_interfaces
 
 
+// Include directives for member types
+// Member 'random_target'
+#include "geometry_msgs/msg/detail/point__struct.hpp"
+
 #ifndef _WIN32
 # define DEPRECATED__rrr_robot_interfaces__srv__RRRRandomTarget_Response __attribute__((deprecated))
 #else
@@ -148,56 +152,27 @@ struct RRRRandomTarget_Response_
   using Type = RRRRandomTarget_Response_<ContainerAllocator>;
 
   explicit RRRRandomTarget_Response_(rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
+  : random_target(_init)
   {
-    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
-      rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
-    {
-      this->random_target_x = 0.0;
-      this->random_target_y = 0.0;
-      this->random_target_z = 0.0;
-    }
+    (void)_init;
   }
 
   explicit RRRRandomTarget_Response_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
+  : random_target(_alloc, _init)
   {
-    (void)_alloc;
-    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
-      rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
-    {
-      this->random_target_x = 0.0;
-      this->random_target_y = 0.0;
-      this->random_target_z = 0.0;
-    }
+    (void)_init;
   }
 
   // field types and members
-  using _random_target_x_type =
-    double;
-  _random_target_x_type random_target_x;
-  using _random_target_y_type =
-    double;
-  _random_target_y_type random_target_y;
-  using _random_target_z_type =
-    double;
-  _random_target_z_type random_target_z;
+  using _random_target_type =
+    geometry_msgs::msg::Point_<ContainerAllocator>;
+  _random_target_type random_target;
 
   // setters for named parameter idiom
-  Type & set__random_target_x(
-    const double & _arg)
+  Type & set__random_target(
+    const geometry_msgs::msg::Point_<ContainerAllocator> & _arg)
   {
-    this->random_target_x = _arg;
-    return *this;
-  }
-  Type & set__random_target_y(
-    const double & _arg)
-  {
-    this->random_target_y = _arg;
-    return *this;
-  }
-  Type & set__random_target_z(
-    const double & _arg)
-  {
-    this->random_target_z = _arg;
+    this->random_target = _arg;
     return *this;
   }
 
@@ -243,13 +218,7 @@ struct RRRRandomTarget_Response_
   // comparison operators
   bool operator==(const RRRRandomTarget_Response_ & other) const
   {
-    if (this->random_target_x != other.random_target_x) {
-      return false;
-    }
-    if (this->random_target_y != other.random_target_y) {
-      return false;
-    }
-    if (this->random_target_z != other.random_target_z) {
+    if (this->random_target != other.random_target) {
       return false;
     }
     return true;

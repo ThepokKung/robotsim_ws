@@ -106,6 +106,10 @@ struct is_message<rrr_robot_interfaces::srv::RRRRandomTarget_Request>
 
 }  // namespace rosidl_generator_traits
 
+// Include directives for member types
+// Member 'random_target'
+#include "geometry_msgs/msg/detail/point__traits.hpp"
+
 namespace rrr_robot_interfaces
 {
 
@@ -117,24 +121,10 @@ inline void to_flow_style_yaml(
   std::ostream & out)
 {
   out << "{";
-  // member: random_target_x
+  // member: random_target
   {
-    out << "random_target_x: ";
-    rosidl_generator_traits::value_to_yaml(msg.random_target_x, out);
-    out << ", ";
-  }
-
-  // member: random_target_y
-  {
-    out << "random_target_y: ";
-    rosidl_generator_traits::value_to_yaml(msg.random_target_y, out);
-    out << ", ";
-  }
-
-  // member: random_target_z
-  {
-    out << "random_target_z: ";
-    rosidl_generator_traits::value_to_yaml(msg.random_target_z, out);
+    out << "random_target: ";
+    to_flow_style_yaml(msg.random_target, out);
   }
   out << "}";
 }  // NOLINT(readability/fn_size)
@@ -143,34 +133,13 @@ inline void to_block_style_yaml(
   const RRRRandomTarget_Response & msg,
   std::ostream & out, size_t indentation = 0)
 {
-  // member: random_target_x
+  // member: random_target
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "random_target_x: ";
-    rosidl_generator_traits::value_to_yaml(msg.random_target_x, out);
-    out << "\n";
-  }
-
-  // member: random_target_y
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    out << "random_target_y: ";
-    rosidl_generator_traits::value_to_yaml(msg.random_target_y, out);
-    out << "\n";
-  }
-
-  // member: random_target_z
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    out << "random_target_z: ";
-    rosidl_generator_traits::value_to_yaml(msg.random_target_z, out);
-    out << "\n";
+    out << "random_target:\n";
+    to_block_style_yaml(msg.random_target, out, indentation + 2);
   }
 }  // NOLINT(readability/fn_size)
 
@@ -220,11 +189,11 @@ inline const char * name<rrr_robot_interfaces::srv::RRRRandomTarget_Response>()
 
 template<>
 struct has_fixed_size<rrr_robot_interfaces::srv::RRRRandomTarget_Response>
-  : std::integral_constant<bool, true> {};
+  : std::integral_constant<bool, has_fixed_size<geometry_msgs::msg::Point>::value> {};
 
 template<>
 struct has_bounded_size<rrr_robot_interfaces::srv::RRRRandomTarget_Response>
-  : std::integral_constant<bool, true> {};
+  : std::integral_constant<bool, has_bounded_size<geometry_msgs::msg::Point>::value> {};
 
 template<>
 struct is_message<rrr_robot_interfaces::srv::RRRRandomTarget_Response>

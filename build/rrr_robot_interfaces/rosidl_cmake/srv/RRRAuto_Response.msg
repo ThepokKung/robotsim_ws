@@ -1,4 +1,0 @@
-
-float64 random_target_x
-float64 random_target_y
-float64 random_target_z

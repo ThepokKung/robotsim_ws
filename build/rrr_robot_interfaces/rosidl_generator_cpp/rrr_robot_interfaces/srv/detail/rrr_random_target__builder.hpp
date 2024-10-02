@@ -63,48 +63,16 @@ namespace srv
 namespace builder
 {
 
-class Init_RRRRandomTarget_Response_random_target_z
+class Init_RRRRandomTarget_Response_random_target
 {
 public:
-  explicit Init_RRRRandomTarget_Response_random_target_z(::rrr_robot_interfaces::srv::RRRRandomTarget_Response & msg)
-  : msg_(msg)
-  {}
-  ::rrr_robot_interfaces::srv::RRRRandomTarget_Response random_target_z(::rrr_robot_interfaces::srv::RRRRandomTarget_Response::_random_target_z_type arg)
-  {
-    msg_.random_target_z = std::move(arg);
-    return std::move(msg_);
-  }
-
-private:
-  ::rrr_robot_interfaces::srv::RRRRandomTarget_Response msg_;
-};
-
-class Init_RRRRandomTarget_Response_random_target_y
-{
-public:
-  explicit Init_RRRRandomTarget_Response_random_target_y(::rrr_robot_interfaces::srv::RRRRandomTarget_Response & msg)
-  : msg_(msg)
-  {}
-  Init_RRRRandomTarget_Response_random_target_z random_target_y(::rrr_robot_interfaces::srv::RRRRandomTarget_Response::_random_target_y_type arg)
-  {
-    msg_.random_target_y = std::move(arg);
-    return Init_RRRRandomTarget_Response_random_target_z(msg_);
-  }
-
-private:
-  ::rrr_robot_interfaces::srv::RRRRandomTarget_Response msg_;
-};
-
-class Init_RRRRandomTarget_Response_random_target_x
-{
-public:
-  Init_RRRRandomTarget_Response_random_target_x()
+  Init_RRRRandomTarget_Response_random_target()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  Init_RRRRandomTarget_Response_random_target_y random_target_x(::rrr_robot_interfaces::srv::RRRRandomTarget_Response::_random_target_x_type arg)
+  ::rrr_robot_interfaces::srv::RRRRandomTarget_Response random_target(::rrr_robot_interfaces::srv::RRRRandomTarget_Response::_random_target_type arg)
   {
-    msg_.random_target_x = std::move(arg);
-    return Init_RRRRandomTarget_Response_random_target_y(msg_);
+    msg_.random_target = std::move(arg);
+    return std::move(msg_);
   }
 
 private:
@@ -122,7 +90,7 @@ template<>
 inline
 auto build<::rrr_robot_interfaces::srv::RRRRandomTarget_Response>()
 {
-  return rrr_robot_interfaces::srv::builder::Init_RRRRandomTarget_Response_random_target_x();
+  return rrr_robot_interfaces::srv::builder::Init_RRRRandomTarget_Response_random_target();
 }
 
 }  // namespace rrr_robot_interfaces

@@ -229,8 +229,23 @@ extern "C"
 {
 #endif
 
+#include "geometry_msgs/msg/detail/point__functions.h"  // random_target
 
 // forward declare type support functions
+ROSIDL_TYPESUPPORT_FASTRTPS_C_IMPORT_rrr_robot_interfaces
+size_t get_serialized_size_geometry_msgs__msg__Point(
+  const void * untyped_ros_message,
+  size_t current_alignment);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_IMPORT_rrr_robot_interfaces
+size_t max_serialized_size_geometry_msgs__msg__Point(
+  bool & full_bounded,
+  bool & is_plain,
+  size_t current_alignment);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_IMPORT_rrr_robot_interfaces
+const rosidl_message_type_support_t *
+  ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_fastrtps_c, geometry_msgs, msg, Point)();
 
 
 using _RRRRandomTarget_Response__ros_msg_type = rrr_robot_interfaces__srv__RRRRandomTarget_Response;
@@ -244,19 +259,18 @@ static bool _RRRRandomTarget_Response__cdr_serialize(
     return false;
   }
   const _RRRRandomTarget_Response__ros_msg_type * ros_message = static_cast<const _RRRRandomTarget_Response__ros_msg_type *>(untyped_ros_message);
-  // Field name: random_target_x
+  // Field name: random_target
   {
-    cdr << ros_message->random_target_x;
-  }
-
-  // Field name: random_target_y
-  {
-    cdr << ros_message->random_target_y;
-  }
-
-  // Field name: random_target_z
-  {
-    cdr << ros_message->random_target_z;
+    const message_type_support_callbacks_t * callbacks =
+      static_cast<const message_type_support_callbacks_t *>(
+      ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
+        rosidl_typesupport_fastrtps_c, geometry_msgs, msg, Point
+      )()->data);
+    if (!callbacks->cdr_serialize(
+        &ros_message->random_target, cdr))
+    {
+      return false;
+    }
   }
 
   return true;
@@ -271,19 +285,18 @@ static bool _RRRRandomTarget_Response__cdr_deserialize(
     return false;
   }
   _RRRRandomTarget_Response__ros_msg_type * ros_message = static_cast<_RRRRandomTarget_Response__ros_msg_type *>(untyped_ros_message);
-  // Field name: random_target_x
+  // Field name: random_target
   {
-    cdr >> ros_message->random_target_x;
-  }
-
-  // Field name: random_target_y
-  {
-    cdr >> ros_message->random_target_y;
-  }
-
-  // Field name: random_target_z
-  {
-    cdr >> ros_message->random_target_z;
+    const message_type_support_callbacks_t * callbacks =
+      static_cast<const message_type_support_callbacks_t *>(
+      ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
+        rosidl_typesupport_fastrtps_c, geometry_msgs, msg, Point
+      )()->data);
+    if (!callbacks->cdr_deserialize(
+        cdr, &ros_message->random_target))
+    {
+      return false;
+    }
   }
 
   return true;
@@ -303,24 +316,10 @@ size_t get_serialized_size_rrr_robot_interfaces__srv__RRRRandomTarget_Response(
   (void)padding;
   (void)wchar_size;
 
-  // field.name random_target_x
-  {
-    size_t item_size = sizeof(ros_message->random_target_x);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-  // field.name random_target_y
-  {
-    size_t item_size = sizeof(ros_message->random_target_y);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-  // field.name random_target_z
-  {
-    size_t item_size = sizeof(ros_message->random_target_z);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
+  // field.name random_target
+
+  current_alignment += get_serialized_size_geometry_msgs__msg__Point(
+    &(ros_message->random_target), current_alignment);
 
   return current_alignment - initial_alignment;
 }
@@ -350,29 +349,24 @@ size_t max_serialized_size_rrr_robot_interfaces__srv__RRRRandomTarget_Response(
   full_bounded = true;
   is_plain = true;
 
-  // member: random_target_x
+  // member: random_target
   {
     size_t array_size = 1;
 
-    last_member_size = array_size * sizeof(uint64_t);
-    current_alignment += array_size * sizeof(uint64_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
-  }
-  // member: random_target_y
-  {
-    size_t array_size = 1;
 
-    last_member_size = array_size * sizeof(uint64_t);
-    current_alignment += array_size * sizeof(uint64_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
-  }
-  // member: random_target_z
-  {
-    size_t array_size = 1;
-
-    last_member_size = array_size * sizeof(uint64_t);
-    current_alignment += array_size * sizeof(uint64_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+    last_member_size = 0;
+    for (size_t index = 0; index < array_size; ++index) {
+      bool inner_full_bounded;
+      bool inner_is_plain;
+      size_t inner_size;
+      inner_size =
+        max_serialized_size_geometry_msgs__msg__Point(
+        inner_full_bounded, inner_is_plain, current_alignment);
+      last_member_size += inner_size;
+      current_alignment += inner_size;
+      full_bounded &= inner_full_bounded;
+      is_plain &= inner_is_plain;
+    }
   }
 
   size_t ret_val = current_alignment - initial_alignment;
@@ -383,7 +377,7 @@ size_t max_serialized_size_rrr_robot_interfaces__srv__RRRRandomTarget_Response(
     using DataType = rrr_robot_interfaces__srv__RRRRandomTarget_Response;
     is_plain =
       (
-      offsetof(DataType, random_target_z) +
+      offsetof(DataType, random_target) +
       last_member_size
       ) == ret_val;
   }

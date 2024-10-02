@@ -2,6 +2,7 @@
 // with input from rrr_robot_interfaces/srv/RRRRandomTarget.srv
 // generated code does not contain a copyright notice
 
+#include "geometry_msgs/msg/Point.idl"
 
 module rrr_robot_interfaces {
   module srv {
@@ -9,11 +10,7 @@ module rrr_robot_interfaces {
       boolean target_call;
     };
     struct RRRRandomTarget_Response {
-      double random_target_x;
-
-      double random_target_y;
-
-      double random_target_z;
+      geometry_msgs::msg::Point random_target;
     };
   };
 };

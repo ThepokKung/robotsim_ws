@@ -5,7 +5,9 @@ from rclpy.node import Node
 from rclpy.executors import MultiThreadedExecutor
 from rclpy.callback_groups import MutuallyExclusiveCallbackGroup
 
-from rrr_robot_interfaces.srv import RRRMode ,RRRIPK ,RRRInvertKinematics ,RRRTargetPub
+from rrr_robot_interfaces.srv import RRRMode ,RRRIPK ,RRRInvertKinematics ,RRRTargetPub ,RRRRandomTarget
+
+from geometry_msgs.msg import PoseStamped
 
 import roboticstoolbox as rtb
 from spatialmath import SE3
@@ -29,6 +31,12 @@ class ControllerNode(Node):
         self.taget_pub_call_group = MutuallyExclusiveCallbackGroup()
         self.target_send = self.create_client(RRRTargetPub ,'/target_send' ,callback_group = self.taget_pub_call_group )
 
+        self.random_taget_call_group = MutuallyExclusiveCallbackGroup()
+        self.random_target_call = self.create_client(RRRRandomTarget ,'/random' ,callback_group = self.random_taget_call_group )
+
+         # Sub Topic
+        self.create_subscription(PoseStamped, '/target', self.random_target_callback, 10)
+
         # Variable
         self.mode = ''
         self.robot_ready = True
@@ -37,6 +45,45 @@ class ControllerNode(Node):
 
         # Display key for call mode
         self.get_logger().info(f'Mode key :\n Inverse Pose Kinematics Mode : IPK\n Tele-operation Mode : Teleop\n Autonomous Mode : Auto')
+
+    def random_target_callback(self,msg :PoseStamped):
+        if self.mode == 'Auto' and self.robot_ready:
+            self.call_random_target()
+
+            self.get_logger().info(f'Random Goal_pos : {self.goal_pos}')
+
+            ink_target = RRRInvertKinematics.Request()
+            ink_target.goal_pos.x = self.goal_pos[0]
+            ink_target.goal_pos.y = self.goal_pos[1]
+            ink_target.goal_pos.z = self.goal_pos[2]
+
+            result = self.ink_calcalate.call(ink_target)
+
+            self.get_logger().info(f'Invert Kinematic check : {result.ikn_check}')
+
+            if result.ikn_check:
+                # self.get_logger().info(f'q1 : {result.q1} , q2 : {result.q2} , q3 : {result.q3}')
+                
+                target = RRRTargetPub.Request()
+                target.goal_pos.x = self.goal_pos[0]
+                target.goal_pos.y = self.goal_pos[1]
+                target.goal_pos.z = self.goal_pos[2]
+                target.q1 = result.q1
+                target.q2 = result.q2
+                target.q3 = result.q3
+
+                self.robot_ready = False
+                self.start_time = self.get_clock().now().nanoseconds
+                self.target_send.call(target)            
+    
+    def call_random_target(self):
+        call_random = RRRRandomTarget.Request()
+        call_random.target_call = True
+        target = self.random_target_call.call(call_random)
+
+        self.goal_pos[0] = target.random_target.x
+        self.goal_pos[1] = target.random_target.y
+        self.goal_pos[2] = target.random_target.z
 
     def ipk_target_callback(self ,request:RRRIPK.Request ,response:RRRIPK.Response):
         if self.mode == 'IPK' and self.robot_ready:
@@ -58,7 +105,7 @@ class ControllerNode(Node):
             response.ipk_check = result.ikn_check
 
             if result.ikn_check:
-                self.get_logger().info(f'q1 : {result.q1} , q2 : {result.q2} , q3 : {result.q3}')
+                # self.get_logger().info(f'q1 : {result.q1} , q2 : {result.q2} , q3 : {result.q3}')
 
                 response.ipk_q1 = result.q1
                 response.ipk_q2 = result.q2
@@ -73,6 +120,7 @@ class ControllerNode(Node):
                 target.q3 = result.q3
 
                 self.robot_ready = False
+                self.start_time = self.get_clock().now().nanoseconds
                 self.target_send.call(target)
 
         elif self.mode == 'IPK':
@@ -84,28 +132,33 @@ class ControllerNode(Node):
         if request.run_end:
             self.robot_ready = request.run_end
             self.get_logger().info(f'Robot run end')
-        
+            self.get_logger().info(f'Robot run time : {round((self.get_clock().now().nanoseconds - self.start_time) * 10**-9,4)} sec')
+
         return response
     
     def mode_callback(self, request:RRRMode.Request, response:RRRMode.Response):
         self.mode = request.mode_call
 
-        if self.mode == 'IPK':
-            self.get_logger().info(f'Mode call : {self.mode}')
-            response.mode_change = True
+        if self.robot_ready:
+            if self.mode == 'IPK':
+                self.get_logger().info(f'Mode call : {self.mode}')
+                response.mode_change = True
 
-        elif self.mode == 'Teleop':
-            self.get_logger().info(f'Mode call : {self.mode}')
-            response.mode_change = True
+            elif self.mode == 'Teleop':
+                self.get_logger().info(f'Mode call : {self.mode}')
+                response.mode_change = True
 
-        elif self.mode == 'Auto':
-            self.get_logger().info(f'Mode call : {self.mode}')    
-            response.mode_change = True
-            
+            elif self.mode == 'Auto':
+                self.get_logger().info(f'Mode call : {self.mode}')    
+                response.mode_change = True
+                
+            else:
+                self.get_logger().info(f'Mode call : {self.mode} not found')
+                response.mode_change = False
+                self.mode = ''
         else:
-            self.get_logger().info(f'Mode call : {self.mode} not found')
+            self.get_logger().info(f'Chnage mode to {self.mode} after robot run end')
             response.mode_change = False
-            self.mode = ''
 
         return response
 

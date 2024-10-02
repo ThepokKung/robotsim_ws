@@ -156,50 +156,16 @@ void RRRRandomTarget_Response_fini_function(void * message_memory)
   typed_message->~RRRRandomTarget_Response();
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember RRRRandomTarget_Response_message_member_array[3] = {
+static const ::rosidl_typesupport_introspection_cpp::MessageMember RRRRandomTarget_Response_message_member_array[1] = {
   {
-    "random_target_x",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_DOUBLE,  // type
+    "random_target",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_MESSAGE,  // type
     0,  // upper bound of string
-    nullptr,  // members of sub message
+    ::rosidl_typesupport_introspection_cpp::get_message_type_support_handle<geometry_msgs::msg::Point>(),  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(rrr_robot_interfaces::srv::RRRRandomTarget_Response, random_target_x),  // bytes offset in struct
-    nullptr,  // default value
-    nullptr,  // size() function pointer
-    nullptr,  // get_const(index) function pointer
-    nullptr,  // get(index) function pointer
-    nullptr,  // fetch(index, &value) function pointer
-    nullptr,  // assign(index, value) function pointer
-    nullptr  // resize(index) function pointer
-  },
-  {
-    "random_target_y",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_DOUBLE,  // type
-    0,  // upper bound of string
-    nullptr,  // members of sub message
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(rrr_robot_interfaces::srv::RRRRandomTarget_Response, random_target_y),  // bytes offset in struct
-    nullptr,  // default value
-    nullptr,  // size() function pointer
-    nullptr,  // get_const(index) function pointer
-    nullptr,  // get(index) function pointer
-    nullptr,  // fetch(index, &value) function pointer
-    nullptr,  // assign(index, value) function pointer
-    nullptr  // resize(index) function pointer
-  },
-  {
-    "random_target_z",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_DOUBLE,  // type
-    0,  // upper bound of string
-    nullptr,  // members of sub message
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(rrr_robot_interfaces::srv::RRRRandomTarget_Response, random_target_z),  // bytes offset in struct
+    offsetof(rrr_robot_interfaces::srv::RRRRandomTarget_Response, random_target),  // bytes offset in struct
     nullptr,  // default value
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
@@ -213,7 +179,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember RRRRandomTarg
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers RRRRandomTarget_Response_message_members = {
   "rrr_robot_interfaces::srv",  // message namespace
   "RRRRandomTarget_Response",  // message name
-  3,  // number of fields
+  1,  // number of fields
   sizeof(rrr_robot_interfaces::srv::RRRRandomTarget_Response),
   RRRRandomTarget_Response_message_member_array,  // message members
   RRRRandomTarget_Response_init_function,  // function to initialize message memory (memory has to be allocated)
