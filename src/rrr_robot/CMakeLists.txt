@@ -28,7 +28,7 @@ ament_python_install_package(${PROJECT_NAME})
 # Install Python executables
 install(PROGRAMS
   # scripts/jointstate_script.py
-  # scripts/controller.py
+  scripts/controller.py
   # scripts/random_target.py
   # scripts/mode_control.py
   # scripts/ipk_node.py
