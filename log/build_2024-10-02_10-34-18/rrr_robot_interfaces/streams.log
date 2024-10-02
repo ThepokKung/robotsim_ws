@@ -1,0 +1,243 @@
+[0.008s] Invoking command in '/home/waritt/robotsim_ws/build/rrr_robot_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/waritt/robotsim_ws/build/rrr_robot_interfaces -- -j16 -l16
+[0.034s] [35m[1mConsolidate compiler generated dependencies of target rrr_robot_interfaces__rosidl_generator_c[0m
+[0.039s] [  1%] Built target rrr_robot_interfaces__cpp
+[0.041s] [ 12%] Built target rrr_robot_interfaces__rosidl_generator_c
+[0.045s] [ 12%] Built target ament_cmake_python_copy_rrr_robot_interfaces
+[0.048s] [35m[1mConsolidate compiler generated dependencies of target rrr_robot_interfaces__rosidl_typesupport_cpp[0m
+[0.048s] [35m[1mConsolidate compiler generated dependencies of target rrr_robot_interfaces__rosidl_typesupport_introspection_cpp[0m
+[0.048s] [35m[1mConsolidate compiler generated dependencies of target rrr_robot_interfaces__rosidl_typesupport_fastrtps_cpp[0m
+[0.050s] [35m[1mConsolidate compiler generated dependencies of target rrr_robot_interfaces__rosidl_typesupport_introspection_c[0m
+[0.050s] [35m[1mConsolidate compiler generated dependencies of target rrr_robot_interfaces__rosidl_typesupport_c[0m
+[0.051s] [35m[1mConsolidate compiler generated dependencies of target rrr_robot_interfaces__rosidl_typesupport_fastrtps_c[0m
+[0.061s] [ 23%] Built target rrr_robot_interfaces__rosidl_typesupport_cpp
+[0.061s] [ 38%] Built target rrr_robot_interfaces__rosidl_typesupport_c
+[0.061s] [ 46%] Built target rrr_robot_interfaces__rosidl_typesupport_introspection_c
+[0.063s] [ 57%] Built target rrr_robot_interfaces__rosidl_typesupport_introspection_cpp
+[0.065s] [ 68%] Built target rrr_robot_interfaces__rosidl_typesupport_fastrtps_c
+[0.065s] [ 79%] Built target rrr_robot_interfaces__rosidl_typesupport_fastrtps_cpp
+[0.078s] [ 79%] Built target rrr_robot_interfaces
+[0.092s] [ 80%] Built target rrr_robot_interfaces__py
+[0.100s] [35m[1mConsolidate compiler generated dependencies of target rrr_robot_interfaces__rosidl_generator_py[0m
+[0.110s] [ 90%] Built target rrr_robot_interfaces__rosidl_generator_py
+[0.118s] [35m[1mConsolidate compiler generated dependencies of target rrr_robot_interfaces__rosidl_typesupport_fastrtps_c__pyext[0m
+[0.118s] [35m[1mConsolidate compiler generated dependencies of target rrr_robot_interfaces__rosidl_typesupport_introspection_c__pyext[0m
+[0.118s] [35m[1mConsolidate compiler generated dependencies of target rrr_robot_interfaces__rosidl_typesupport_c__pyext[0m
+[0.128s] [100%] Built target rrr_robot_interfaces__rosidl_typesupport_fastrtps_c__pyext
+[0.128s] [100%] Built target rrr_robot_interfaces__rosidl_typesupport_c__pyext
+[0.128s] [100%] Built target rrr_robot_interfaces__rosidl_typesupport_introspection_c__pyext
+[0.218s] running egg_info
+[0.218s] writing rrr_robot_interfaces.egg-info/PKG-INFO
+[0.218s] writing dependency_links to rrr_robot_interfaces.egg-info/dependency_links.txt
+[0.219s] writing top-level names to rrr_robot_interfaces.egg-info/top_level.txt
+[0.220s] reading manifest file 'rrr_robot_interfaces.egg-info/SOURCES.txt'
+[0.220s] writing manifest file 'rrr_robot_interfaces.egg-info/SOURCES.txt'
+[0.237s] [100%] Built target ament_cmake_python_build_rrr_robot_interfaces_egg
+[0.245s] Invoked command in '/home/waritt/robotsim_ws/build/rrr_robot_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/waritt/robotsim_ws/build/rrr_robot_interfaces -- -j16 -l16
+[0.338s] Invoking command in '/home/waritt/robotsim_ws/build/rrr_robot_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/waritt/robotsim_ws/build/rrr_robot_interfaces
+[0.343s] -- Install configuration: ""
+[0.343s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/share/ament_index/resource_index/rosidl_interfaces/rrr_robot_interfaces
+[0.343s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces
+[0.343s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/msg
+[0.343s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/msg/rosidl_generator_c__visibility_control.h
+[0.344s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv
+[0.344s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/rrr_invert_kinematics.h
+[0.344s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/rrr_pubq.h
+[0.344s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/rrr_mode.h
+[0.344s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/rrripk.h
+[0.344s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/detail
+[0.344s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/detail/rrr_pubq__functions.h
+[0.344s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/detail/rrr_pubq__type_support.h
+[0.344s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/detail/rrr_mode__type_support.h
+[0.344s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/detail/rrr_auto__struct.h
+[0.344s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/detail/rrr_mode__struct.h
+[0.344s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/detail/rrr_auto__type_support.h
+[0.344s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/detail/rrr_invert_kinematics__struct.h
+[0.344s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/detail/rrripk__functions.h
+[0.345s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/detail/rrr_pubq__functions.c
+[0.345s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/detail/rrripk__functions.c
+[0.345s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/detail/rrripk__type_support.h
+[0.345s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/detail/rrr_pubq__struct.h
+[0.345s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/detail/rrr_auto__functions.h
+[0.345s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/detail/rrr_auto__functions.c
+[0.345s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/detail/rrr_invert_kinematics__functions.h
+[0.345s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/detail/rrr_mode__functions.c
+[0.345s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/detail/rrripk__struct.h
+[0.345s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/detail/rrr_invert_kinematics__functions.c
+[0.345s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/detail/rrr_mode__functions.h
+[0.345s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/detail/rrr_invert_kinematics__type_support.h
+[0.345s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/rrr_auto.h
+[0.345s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/share/rrr_robot_interfaces/environment/library_path.sh
+[0.345s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/share/rrr_robot_interfaces/environment/library_path.dsv
+[0.346s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/lib/librrr_robot_interfaces__rosidl_generator_c.so
+[0.346s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces
+[0.346s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/msg
+[0.346s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[0.346s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv
+[0.346s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/detail
+[0.346s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/detail/rrr_pubq__rosidl_typesupport_fastrtps_c.h
+[0.346s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/detail/rrr_invert_kinematics__rosidl_typesupport_fastrtps_c.h
+[0.346s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/detail/rrripk__rosidl_typesupport_fastrtps_c.h
+[0.346s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/detail/rrr_auto__rosidl_typesupport_fastrtps_c.h
+[0.346s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/detail/rrr_mode__rosidl_typesupport_fastrtps_c.h
+[0.346s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/lib/librrr_robot_interfaces__rosidl_typesupport_fastrtps_c.so
+[0.346s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces
+[0.346s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv
+[0.347s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/rrripk.hpp
+[0.347s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/rrr_auto.hpp
+[0.347s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/rrr_pubq.hpp
+[0.347s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/rrr_invert_kinematics.hpp
+[0.347s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/detail
+[0.347s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/detail/rrripk__struct.hpp
+[0.347s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/detail/rrr_auto__traits.hpp
+[0.347s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/detail/rrr_auto__builder.hpp
+[0.347s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/detail/rrr_pubq__struct.hpp
+[0.347s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/detail/rrr_pubq__builder.hpp
+[0.347s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/detail/rrripk__builder.hpp
+[0.347s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/detail/rrripk__traits.hpp
+[0.347s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/detail/rrr_pubq__traits.hpp
+[0.347s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/detail/rrr_invert_kinematics__traits.hpp
+[0.347s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/detail/rrr_invert_kinematics__builder.hpp
+[0.347s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/detail/rrr_invert_kinematics__struct.hpp
+[0.347s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/detail/rrr_mode__builder.hpp
+[0.348s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/detail/rrr_mode__struct.hpp
+[0.348s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/detail/rrr_mode__traits.hpp
+[0.348s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/detail/rrr_auto__struct.hpp
+[0.348s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/rrr_mode.hpp
+[0.348s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces
+[0.348s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/msg
+[0.348s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[0.348s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv
+[0.348s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/detail
+[0.348s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/detail/rrr_pubq__rosidl_typesupport_fastrtps_cpp.hpp
+[0.348s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/detail/rrr_invert_kinematics__rosidl_typesupport_fastrtps_cpp.hpp
+[0.348s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/detail/rrr_auto__rosidl_typesupport_fastrtps_cpp.hpp
+[0.348s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/detail/rrripk__rosidl_typesupport_fastrtps_cpp.hpp
+[0.348s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/detail/dds_fastrtps
+[0.348s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/detail/rrr_mode__rosidl_typesupport_fastrtps_cpp.hpp
+[0.348s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/lib/librrr_robot_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[0.348s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces
+[0.349s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/msg
+[0.349s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[0.349s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv
+[0.349s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/detail
+[0.349s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/detail/rrr_pubq__type_support.c
+[0.349s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/detail/rrr_auto__rosidl_typesupport_introspection_c.h
+[0.349s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/detail/rrr_auto__type_support.c
+[0.349s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/detail/rrr_invert_kinematics__type_support.c
+[0.349s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/detail/rrr_mode__type_support.c
+[0.349s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/detail/rrripk__rosidl_typesupport_introspection_c.h
+[0.349s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/detail/rrr_pubq__rosidl_typesupport_introspection_c.h
+[0.349s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/detail/rrr_mode__rosidl_typesupport_introspection_c.h
+[0.349s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/detail/rrr_invert_kinematics__rosidl_typesupport_introspection_c.h
+[0.349s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/detail/rrripk__type_support.c
+[0.349s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/lib/librrr_robot_interfaces__rosidl_typesupport_introspection_c.so
+[0.349s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/lib/librrr_robot_interfaces__rosidl_typesupport_c.so
+[0.349s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces
+[0.350s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv
+[0.350s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/detail
+[0.350s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/detail/rrr_auto__type_support.cpp
+[0.350s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/detail/rrripk__rosidl_typesupport_introspection_cpp.hpp
+[0.350s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/detail/rrr_pubq__rosidl_typesupport_introspection_cpp.hpp
+[0.350s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/detail/rrr_invert_kinematics__rosidl_typesupport_introspection_cpp.hpp
+[0.350s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/detail/rrr_pubq__type_support.cpp
+[0.350s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/detail/rrripk__type_support.cpp
+[0.350s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/detail/rrr_auto__rosidl_typesupport_introspection_cpp.hpp
+[0.350s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/detail/rrr_invert_kinematics__type_support.cpp
+[0.350s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/detail/rrr_mode__type_support.cpp
+[0.350s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/include/rrr_robot_interfaces/rrr_robot_interfaces/srv/detail/rrr_mode__rosidl_typesupport_introspection_cpp.hpp
+[0.350s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/lib/librrr_robot_interfaces__rosidl_typesupport_introspection_cpp.so
+[0.350s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/lib/librrr_robot_interfaces__rosidl_typesupport_cpp.so
+[0.350s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/share/rrr_robot_interfaces/environment/pythonpath.sh
+[0.350s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/share/rrr_robot_interfaces/environment/pythonpath.dsv
+[0.350s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/local/lib/python3.10/dist-packages/rrr_robot_interfaces-0.0.0-py3.10.egg-info
+[0.350s] -- Installing: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/local/lib/python3.10/dist-packages/rrr_robot_interfaces-0.0.0-py3.10.egg-info/SOURCES.txt
+[0.351s] -- Installing: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/local/lib/python3.10/dist-packages/rrr_robot_interfaces-0.0.0-py3.10.egg-info/top_level.txt
+[0.351s] -- Installing: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/local/lib/python3.10/dist-packages/rrr_robot_interfaces-0.0.0-py3.10.egg-info/PKG-INFO
+[0.351s] -- Installing: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/local/lib/python3.10/dist-packages/rrr_robot_interfaces-0.0.0-py3.10.egg-info/dependency_links.txt
+[0.351s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/local/lib/python3.10/dist-packages/rrr_robot_interfaces
+[0.351s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/local/lib/python3.10/dist-packages/rrr_robot_interfaces/rrr_robot_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[0.351s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/local/lib/python3.10/dist-packages/rrr_robot_interfaces/__init__.py
+[0.351s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/local/lib/python3.10/dist-packages/rrr_robot_interfaces/_rrr_robot_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+[0.351s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/local/lib/python3.10/dist-packages/rrr_robot_interfaces/rrr_robot_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[0.351s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/local/lib/python3.10/dist-packages/rrr_robot_interfaces/_rrr_robot_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+[0.351s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/local/lib/python3.10/dist-packages/rrr_robot_interfaces/rrr_robot_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[0.351s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/local/lib/python3.10/dist-packages/rrr_robot_interfaces/_rrr_robot_interfaces_s.ep.rosidl_typesupport_c.c
+[0.351s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/local/lib/python3.10/dist-packages/rrr_robot_interfaces/librrr_robot_interfaces__rosidl_generator_py.so
+[0.351s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/local/lib/python3.10/dist-packages/rrr_robot_interfaces/srv
+[0.351s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/local/lib/python3.10/dist-packages/rrr_robot_interfaces/srv/_rrr_auto.py
+[0.351s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/local/lib/python3.10/dist-packages/rrr_robot_interfaces/srv/_rrr_pubq_s.c
+[0.351s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/local/lib/python3.10/dist-packages/rrr_robot_interfaces/srv/__init__.py
+[0.351s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/local/lib/python3.10/dist-packages/rrr_robot_interfaces/srv/_rrripk.py
+[0.352s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/local/lib/python3.10/dist-packages/rrr_robot_interfaces/srv/_rrr_invert_kinematics.py
+[0.352s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/local/lib/python3.10/dist-packages/rrr_robot_interfaces/srv/_rrr_mode.py
+[0.352s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/local/lib/python3.10/dist-packages/rrr_robot_interfaces/srv/_rrr_auto_s.c
+[0.352s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/local/lib/python3.10/dist-packages/rrr_robot_interfaces/srv/_rrr_invert_kinematics_s.c
+[0.352s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/local/lib/python3.10/dist-packages/rrr_robot_interfaces/srv/_rrr_mode_s.c
+[0.352s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/local/lib/python3.10/dist-packages/rrr_robot_interfaces/srv/_rrr_pubq.py
+[0.352s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/local/lib/python3.10/dist-packages/rrr_robot_interfaces/srv/_rrripk_s.c
+[0.370s] Listing '/home/waritt/robotsim_ws/install/rrr_robot_interfaces/local/lib/python3.10/dist-packages/rrr_robot_interfaces'...
+[0.370s] Listing '/home/waritt/robotsim_ws/install/rrr_robot_interfaces/local/lib/python3.10/dist-packages/rrr_robot_interfaces/srv'...
+[0.373s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/local/lib/python3.10/dist-packages/rrr_robot_interfaces/rrr_robot_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[0.373s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/local/lib/python3.10/dist-packages/rrr_robot_interfaces/rrr_robot_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[0.373s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/local/lib/python3.10/dist-packages/rrr_robot_interfaces/rrr_robot_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[0.373s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/lib/librrr_robot_interfaces__rosidl_generator_py.so
+[0.374s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/share/rrr_robot_interfaces/srv/RRRMode.idl
+[0.374s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/share/rrr_robot_interfaces/srv/RRRIPK.idl
+[0.374s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/share/rrr_robot_interfaces/srv/RRRAuto.idl
+[0.374s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/share/rrr_robot_interfaces/srv/RRRInvertKinematics.idl
+[0.374s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/share/rrr_robot_interfaces/srv/RRRPubq.idl
+[0.374s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/share/rrr_robot_interfaces/srv/RRRMode.srv
+[0.374s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/share/rrr_robot_interfaces/srv/RRRMode_Request.msg
+[0.374s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/share/rrr_robot_interfaces/srv/RRRMode_Response.msg
+[0.374s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/share/rrr_robot_interfaces/srv/RRRIPK.srv
+[0.374s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/share/rrr_robot_interfaces/srv/RRRIPK_Request.msg
+[0.374s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/share/rrr_robot_interfaces/srv/RRRIPK_Response.msg
+[0.374s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/share/rrr_robot_interfaces/srv/RRRAuto.srv
+[0.374s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/share/rrr_robot_interfaces/srv/RRRAuto_Request.msg
+[0.374s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/share/rrr_robot_interfaces/srv/RRRAuto_Response.msg
+[0.375s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/share/rrr_robot_interfaces/srv/RRRInvertKinematics.srv
+[0.375s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/share/rrr_robot_interfaces/srv/RRRInvertKinematics_Request.msg
+[0.375s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/share/rrr_robot_interfaces/srv/RRRInvertKinematics_Response.msg
+[0.375s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/share/rrr_robot_interfaces/srv/RRRPubq.srv
+[0.375s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/share/rrr_robot_interfaces/srv/RRRPubq_Request.msg
+[0.375s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/share/rrr_robot_interfaces/srv/RRRPubq_Response.msg
+[0.375s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/share/ament_index/resource_index/package_run_dependencies/rrr_robot_interfaces
+[0.375s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/share/ament_index/resource_index/parent_prefix_path/rrr_robot_interfaces
+[0.375s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/share/rrr_robot_interfaces/environment/ament_prefix_path.sh
+[0.375s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/share/rrr_robot_interfaces/environment/ament_prefix_path.dsv
+[0.375s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/share/rrr_robot_interfaces/environment/path.sh
+[0.375s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/share/rrr_robot_interfaces/environment/path.dsv
+[0.375s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/share/rrr_robot_interfaces/local_setup.bash
+[0.375s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/share/rrr_robot_interfaces/local_setup.sh
+[0.375s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/share/rrr_robot_interfaces/local_setup.zsh
+[0.375s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/share/rrr_robot_interfaces/local_setup.dsv
+[0.376s] -- Installing: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/share/rrr_robot_interfaces/package.dsv
+[0.376s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/share/ament_index/resource_index/packages/rrr_robot_interfaces
+[0.376s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/share/rrr_robot_interfaces/cmake/export_rrr_robot_interfaces__rosidl_generator_cExport.cmake
+[0.376s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/share/rrr_robot_interfaces/cmake/export_rrr_robot_interfaces__rosidl_generator_cExport-noconfig.cmake
+[0.376s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/share/rrr_robot_interfaces/cmake/export_rrr_robot_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+[0.376s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/share/rrr_robot_interfaces/cmake/export_rrr_robot_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[0.376s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/share/rrr_robot_interfaces/cmake/export_rrr_robot_interfaces__rosidl_generator_cppExport.cmake
+[0.376s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/share/rrr_robot_interfaces/cmake/export_rrr_robot_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+[0.376s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/share/rrr_robot_interfaces/cmake/export_rrr_robot_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[0.376s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/share/rrr_robot_interfaces/cmake/rrr_robot_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[0.376s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/share/rrr_robot_interfaces/cmake/rrr_robot_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[0.376s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/share/rrr_robot_interfaces/cmake/rrr_robot_interfaces__rosidl_typesupport_cExport.cmake
+[0.376s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/share/rrr_robot_interfaces/cmake/rrr_robot_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[0.377s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/share/rrr_robot_interfaces/cmake/rrr_robot_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[0.377s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/share/rrr_robot_interfaces/cmake/rrr_robot_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[0.377s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/share/rrr_robot_interfaces/cmake/rrr_robot_interfaces__rosidl_typesupport_cppExport.cmake
+[0.377s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/share/rrr_robot_interfaces/cmake/rrr_robot_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[0.377s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/share/rrr_robot_interfaces/cmake/export_rrr_robot_interfaces__rosidl_generator_pyExport.cmake
+[0.377s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/share/rrr_robot_interfaces/cmake/export_rrr_robot_interfaces__rosidl_generator_pyExport-noconfig.cmake
+[0.377s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/share/rrr_robot_interfaces/cmake/rosidl_cmake-extras.cmake
+[0.377s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/share/rrr_robot_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[0.377s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/share/rrr_robot_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[0.377s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/share/rrr_robot_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[0.377s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/share/rrr_robot_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[0.377s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/share/rrr_robot_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[0.377s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/share/rrr_robot_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[0.378s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/share/rrr_robot_interfaces/cmake/rrr_robot_interfacesConfig.cmake
+[0.378s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/share/rrr_robot_interfaces/cmake/rrr_robot_interfacesConfig-version.cmake
+[0.378s] -- Up-to-date: /home/waritt/robotsim_ws/install/rrr_robot_interfaces/share/rrr_robot_interfaces/package.xml
+[0.378s] Invoked command in '/home/waritt/robotsim_ws/build/rrr_robot_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/waritt/robotsim_ws/build/rrr_robot_interfaces

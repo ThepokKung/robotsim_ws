@@ -52,6 +52,8 @@ class AutoNode(Node):
             self.auto_target[1] = target.random_target_y
             self.auto_target[2] = target.random_target_z
 
+            self.get_logger().info(f'Auto target : {self.auto_target}')
+
             goal_pos = RRRInvertKinematics.Request()
             goal_pos.goal_pos.x = self.auto_target[0]
             goal_pos.goal_pos.y = self.auto_target[1]
@@ -59,12 +61,10 @@ class AutoNode(Node):
 
             result = self.ink_calcalate.call(goal_pos)
 
-            self.get_logger().info(f'response : {result.ikn_check}')
-
             q_pub = RRRPubq.Request()
-            q_pub.goal_pos.x = self.ipk_target[0]
-            q_pub.goal_pos.y = self.ipk_target[1]
-            q_pub.goal_pos.z = self.ipk_target[2]
+            q_pub.goal_pos.x = self.auto_target[0]
+            q_pub.goal_pos.y = self.auto_target[1]
+            q_pub.goal_pos.z = self.auto_target[2]
             q_pub.q1 = result.q1
             q_pub.q2 = result.q2
             q_pub.q3 = result.q3

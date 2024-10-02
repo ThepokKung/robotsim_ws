@@ -49,6 +49,10 @@ class JointstatePublisher(Node):
 
         self.ready = True
 
+        msg_ready = Bool()
+        msg_ready.data = self.ready
+        self.ready_pub.publish(msg_ready)
+
     def sim_loop(self):
         msg = JointState()
         msg.header.stamp = self.get_clock().now().to_msg()
@@ -77,10 +81,11 @@ class JointstatePublisher(Node):
 
         if pos_check[0] <= 0.1 and pos_check[1] <= 0.1 and pos_check[2] <= 0.1 and self.ready == False:
             self.ready = True
+            msg_ready.data = self.ready
+            self.ready_pub.publish(msg_ready)
             self.get_logger().info(f'Stop Run')
 
-        msg_ready.data = self.ready
-        self.ready_pub.publish(msg_ready)
+        
 
     def q_state_callback(self ,request:RRRPubq.Request ,response:RRRPubq.Response):
         if self.ready:
@@ -93,7 +98,14 @@ class JointstatePublisher(Node):
             self.q_goal[2] = request.q3
 
             self.ready = False
+
+            msg_ready = Bool()
+            msg_ready.data = self.ready
+            self.ready_pub.publish(msg_ready)
+
             self.get_logger().info(f'Start Run')
+            self.get_logger().info(f'Target pos : {self.goal_pos}')
+            self.get_logger().info(f'Target q : {self.q_goal}')
 
         return response
 
