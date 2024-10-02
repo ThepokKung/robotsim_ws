@@ -1,0 +1,6 @@
+Invoking command in '/home/waritt/robotsim_ws/build/rrr_robot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/waritt/robotsim_ws/src/rrr_robot -DCMAKE_INSTALL_PREFIX=/home/waritt/robotsim_ws/install/rrr_robot
+Invoked command in '/home/waritt/robotsim_ws/build/rrr_robot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/waritt/robotsim_ws/src/rrr_robot -DCMAKE_INSTALL_PREFIX=/home/waritt/robotsim_ws/install/rrr_robot
+Invoking command in '/home/waritt/robotsim_ws/build/rrr_robot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/waritt/robotsim_ws/build/rrr_robot -- -j16 -l16
+Invoked command in '/home/waritt/robotsim_ws/build/rrr_robot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/waritt/robotsim_ws/build/rrr_robot -- -j16 -l16
+Invoking command in '/home/waritt/robotsim_ws/build/rrr_robot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/waritt/robotsim_ws/build/rrr_robot
+Invoked command in '/home/waritt/robotsim_ws/build/rrr_robot' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/waritt/robotsim_ws/build/rrr_robot

@@ -6,13 +6,6 @@
 /home/waritt/robotsim_ws/install/rrr_robot/local/lib/python3.10/dist-packages/rrr_robot-0.0.0-py3.10.egg-info/dependency_links.txt
 /home/waritt/robotsim_ws/install/rrr_robot/local/lib/python3.10/dist-packages/rrr_robot/__init__.py
 /home/waritt/robotsim_ws/install/rrr_robot/local/lib/python3.10/dist-packages/rrr_robot/dummy_module.py
-/home/waritt/robotsim_ws/install/rrr_robot/lib/rrr_robot/jointstate_script.py
-/home/waritt/robotsim_ws/install/rrr_robot/lib/rrr_robot/controller.py
-/home/waritt/robotsim_ws/install/rrr_robot/lib/rrr_robot/random_target.py
-/home/waritt/robotsim_ws/install/rrr_robot/lib/rrr_robot/mode_control.py
-/home/waritt/robotsim_ws/install/rrr_robot/lib/rrr_robot/ipk_node.py
-/home/waritt/robotsim_ws/install/rrr_robot/lib/rrr_robot/invert_kinematics.py
-/home/waritt/robotsim_ws/install/rrr_robot/lib/rrr_robot/jointstate_publisher.py
 /home/waritt/robotsim_ws/install/rrr_robot/lib/rrr_robot/cpp_node_test
 /home/waritt/robotsim_ws/install/rrr_robot/share/rrr_robot/config/workspace_pos.npy
 /home/waritt/robotsim_ws/install/rrr_robot/share/rrr_robot/config/display.rviz
