@@ -7,9 +7,6 @@ from rclpy.callback_groups import MutuallyExclusiveCallbackGroup
 
 from rrr_robot_interfaces.srv import RRRMode ,RRRIPK ,RRRInvertKinematics ,RRRTargetPub
 
-from sensor_msgs.msg import JointState
-from geometry_msgs.msg import PoseStamped
-
 import roboticstoolbox as rtb
 from spatialmath import SE3
 import numpy as np

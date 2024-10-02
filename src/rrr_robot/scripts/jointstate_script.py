@@ -51,7 +51,7 @@ class JointstatePublisher(Node):
         self.ready = True
 
         # Display Node start
-        self.get_logger().info(f'JointState publisher Start')
+        self.get_logger().info(f'JointState publisher Start Node')
 
     def sim_loop(self):
         joint_msg = JointState()

@@ -1,6 +1,0 @@
-[31mCMake Error at cmake_install.cmake:70 (file):
-  file INSTALL cannot find
-  "/home/waritt/robotsim_ws/src/rrr_robot/scripts/random_target.py": No such
-  file or directory.
-
-[0m

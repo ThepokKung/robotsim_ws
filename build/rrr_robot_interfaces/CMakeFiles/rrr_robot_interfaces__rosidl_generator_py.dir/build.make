@@ -97,24 +97,10 @@ CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/rrr
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/rrr_robot_interfaces/srv/_rrripk_s.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_generator_py/rrr_robot_interfaces/srv/_rrripk_s.c -o CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/rrr_robot_interfaces/srv/_rrripk_s.c.s
 
-CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_auto_s.c.o: CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/flags.make
-CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_auto_s.c.o: rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_auto_s.c
-CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_auto_s.c.o: CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/waritt/robotsim_ws/build/rrr_robot_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_auto_s.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_auto_s.c.o -MF CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_auto_s.c.o.d -o CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_auto_s.c.o -c /home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_auto_s.c
-
-CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_auto_s.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_auto_s.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_auto_s.c > CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_auto_s.c.i
-
-CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_auto_s.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_auto_s.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_auto_s.c -o CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_auto_s.c.s
-
 CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_invert_kinematics_s.c.o: CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/flags.make
 CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_invert_kinematics_s.c.o: rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_invert_kinematics_s.c
 CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_invert_kinematics_s.c.o: CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/waritt/robotsim_ws/build/rrr_robot_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_invert_kinematics_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/waritt/robotsim_ws/build/rrr_robot_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_invert_kinematics_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_invert_kinematics_s.c.o -MF CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_invert_kinematics_s.c.o.d -o CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_invert_kinematics_s.c.o -c /home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_invert_kinematics_s.c
 
 CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_invert_kinematics_s.c.i: cmake_force
@@ -128,7 +114,7 @@ CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/rrr
 CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_target_pub_s.c.o: CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/flags.make
 CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_target_pub_s.c.o: rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_target_pub_s.c
 CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_target_pub_s.c.o: CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/waritt/robotsim_ws/build/rrr_robot_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_target_pub_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/waritt/robotsim_ws/build/rrr_robot_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_target_pub_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_target_pub_s.c.o -MF CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_target_pub_s.c.o.d -o CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_target_pub_s.c.o -c /home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_target_pub_s.c
 
 CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_target_pub_s.c.i: cmake_force
@@ -139,22 +125,36 @@ CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/rrr
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_target_pub_s.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_target_pub_s.c -o CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_target_pub_s.c.s
 
+CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_random_target_s.c.o: CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/flags.make
+CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_random_target_s.c.o: rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_random_target_s.c
+CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_random_target_s.c.o: CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/waritt/robotsim_ws/build/rrr_robot_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_random_target_s.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_random_target_s.c.o -MF CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_random_target_s.c.o.d -o CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_random_target_s.c.o -c /home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_random_target_s.c
+
+CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_random_target_s.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_random_target_s.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_random_target_s.c > CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_random_target_s.c.i
+
+CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_random_target_s.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_random_target_s.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_random_target_s.c -o CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_random_target_s.c.s
+
 # Object files for target rrr_robot_interfaces__rosidl_generator_py
 rrr_robot_interfaces__rosidl_generator_py_OBJECTS = \
 "CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_mode_s.c.o" \
 "CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/rrr_robot_interfaces/srv/_rrripk_s.c.o" \
-"CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_auto_s.c.o" \
 "CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_invert_kinematics_s.c.o" \
-"CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_target_pub_s.c.o"
+"CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_target_pub_s.c.o" \
+"CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_random_target_s.c.o"
 
 # External object files for target rrr_robot_interfaces__rosidl_generator_py
 rrr_robot_interfaces__rosidl_generator_py_EXTERNAL_OBJECTS =
 
 rosidl_generator_py/rrr_robot_interfaces/librrr_robot_interfaces__rosidl_generator_py.so: CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_mode_s.c.o
 rosidl_generator_py/rrr_robot_interfaces/librrr_robot_interfaces__rosidl_generator_py.so: CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/rrr_robot_interfaces/srv/_rrripk_s.c.o
-rosidl_generator_py/rrr_robot_interfaces/librrr_robot_interfaces__rosidl_generator_py.so: CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_auto_s.c.o
 rosidl_generator_py/rrr_robot_interfaces/librrr_robot_interfaces__rosidl_generator_py.so: CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_invert_kinematics_s.c.o
 rosidl_generator_py/rrr_robot_interfaces/librrr_robot_interfaces__rosidl_generator_py.so: CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_target_pub_s.c.o
+rosidl_generator_py/rrr_robot_interfaces/librrr_robot_interfaces__rosidl_generator_py.so: CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_random_target_s.c.o
 rosidl_generator_py/rrr_robot_interfaces/librrr_robot_interfaces__rosidl_generator_py.so: CMakeFiles/rrr_robot_interfaces__rosidl_generator_py.dir/build.make
 rosidl_generator_py/rrr_robot_interfaces/librrr_robot_interfaces__rosidl_generator_py.so: /usr/lib/x86_64-linux-gnu/libpython3.10.so
 rosidl_generator_py/rrr_robot_interfaces/librrr_robot_interfaces__rosidl_generator_py.so: librrr_robot_interfaces__rosidl_typesupport_c.so
