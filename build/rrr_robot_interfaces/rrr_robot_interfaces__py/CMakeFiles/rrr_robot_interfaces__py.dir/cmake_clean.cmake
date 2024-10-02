@@ -9,6 +9,8 @@ file(REMOVE_RECURSE
   "../rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_invert_kinematics_s.c"
   "../rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_mode.py"
   "../rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_mode_s.c"
+  "../rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_pubq.py"
+  "../rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_pubq_s.c"
   "../rosidl_generator_py/rrr_robot_interfaces/srv/_rrripk.py"
   "../rosidl_generator_py/rrr_robot_interfaces/srv/_rrripk_s.c"
   "CMakeFiles/rrr_robot_interfaces__py"

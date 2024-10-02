@@ -9,12 +9,16 @@ file(REMOVE_RECURSE
   "rosidl_generator_cpp/rrr_robot_interfaces/srv/detail/rrr_mode__builder.hpp"
   "rosidl_generator_cpp/rrr_robot_interfaces/srv/detail/rrr_mode__struct.hpp"
   "rosidl_generator_cpp/rrr_robot_interfaces/srv/detail/rrr_mode__traits.hpp"
+  "rosidl_generator_cpp/rrr_robot_interfaces/srv/detail/rrr_pubq__builder.hpp"
+  "rosidl_generator_cpp/rrr_robot_interfaces/srv/detail/rrr_pubq__struct.hpp"
+  "rosidl_generator_cpp/rrr_robot_interfaces/srv/detail/rrr_pubq__traits.hpp"
   "rosidl_generator_cpp/rrr_robot_interfaces/srv/detail/rrripk__builder.hpp"
   "rosidl_generator_cpp/rrr_robot_interfaces/srv/detail/rrripk__struct.hpp"
   "rosidl_generator_cpp/rrr_robot_interfaces/srv/detail/rrripk__traits.hpp"
   "rosidl_generator_cpp/rrr_robot_interfaces/srv/rrr_auto.hpp"
   "rosidl_generator_cpp/rrr_robot_interfaces/srv/rrr_invert_kinematics.hpp"
   "rosidl_generator_cpp/rrr_robot_interfaces/srv/rrr_mode.hpp"
+  "rosidl_generator_cpp/rrr_robot_interfaces/srv/rrr_pubq.hpp"
   "rosidl_generator_cpp/rrr_robot_interfaces/srv/rrripk.hpp"
 )
 

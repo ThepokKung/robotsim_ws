@@ -33,6 +33,7 @@ install(PROGRAMS
   scripts/mode_control.py
   scripts/ipk_node.py
   scripts/invert_kinematics.py
+  scripts/jointstate_publisher.py
   DESTINATION lib/${PROJECT_NAME}
 )
 

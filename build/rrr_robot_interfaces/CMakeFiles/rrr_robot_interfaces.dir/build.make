@@ -78,6 +78,9 @@ CMakeFiles/rrr_robot_interfaces: rosidl_cmake/srv/RRRAuto_Response.msg
 CMakeFiles/rrr_robot_interfaces: /home/waritt/robotsim_ws/src/rrr_robot_interfaces/srv/RRRInvertKinematics.srv
 CMakeFiles/rrr_robot_interfaces: rosidl_cmake/srv/RRRInvertKinematics_Request.msg
 CMakeFiles/rrr_robot_interfaces: rosidl_cmake/srv/RRRInvertKinematics_Response.msg
+CMakeFiles/rrr_robot_interfaces: /home/waritt/robotsim_ws/src/rrr_robot_interfaces/srv/RRRPubq.srv
+CMakeFiles/rrr_robot_interfaces: rosidl_cmake/srv/RRRPubq_Request.msg
+CMakeFiles/rrr_robot_interfaces: rosidl_cmake/srv/RRRPubq_Response.msg
 CMakeFiles/rrr_robot_interfaces: /opt/ros/humble/share/geometry_msgs/msg/Accel.idl
 CMakeFiles/rrr_robot_interfaces: /opt/ros/humble/share/geometry_msgs/msg/AccelStamped.idl
 CMakeFiles/rrr_robot_interfaces: /opt/ros/humble/share/geometry_msgs/msg/AccelWithCovariance.idl

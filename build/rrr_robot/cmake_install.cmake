@@ -74,6 +74,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
     "/home/waritt/robotsim_ws/src/rrr_robot/scripts/mode_control.py"
     "/home/waritt/robotsim_ws/src/rrr_robot/scripts/ipk_node.py"
     "/home/waritt/robotsim_ws/src/rrr_robot/scripts/invert_kinematics.py"
+    "/home/waritt/robotsim_ws/src/rrr_robot/scripts/jointstate_publisher.py"
     )
 endif()
 

@@ -7,10 +7,9 @@ from rclpy.node import Node
 from rclpy.executors import MultiThreadedExecutor
 from rclpy.callback_groups import MutuallyExclusiveCallbackGroup
 
-from rrr_robot_interfaces.srv import RRRIPK , RRRInvertKinematics
+from std_msgs.msg import Bool
 
-from functools import partial
-from threading import Event
+from rrr_robot_interfaces.srv import RRRIPK , RRRInvertKinematics , RRRPubq
 
 
 class IPKNode(Node):
@@ -25,15 +24,25 @@ class IPKNode(Node):
         self.ink_result = MutuallyExclusiveCallbackGroup()
         self.ink_calcalate = self.create_client(RRRInvertKinematics ,'/ink_calculate' ,callback_group = self.ink_result)
 
+        self.q_state = MutuallyExclusiveCallbackGroup()
+        self.q_call = self.create_client(RRRPubq ,'/q_state' ,callback_group = self.q_state)
+
+        # Sub Topic
+        self.create_subscription(Bool, '/robot_ready', self.robot_ready_callback, 10)
+
         # Variable
         self.mode_call = False
         self.ipk_target = [0.0 ,0.0 ,0.0]
         self.q = [0.0 ,0.0 ,0.0]
         self.invert_find = False
+        self.ready = False
+
+    def robot_ready_callback(self,msg:Bool):
+        self.ready = msg.data
 
 
     def ipk_target_callback(self ,request:RRRIPK.Request ,response:RRRIPK.Response):
-        if self.mode_call:
+        if self.mode_call and self.ready:
             self.ipk_target[0] = request.ipk_target.x
             self.ipk_target[1] = request.ipk_target.y
             self.ipk_target[2] = request.ipk_target.z
@@ -44,7 +53,7 @@ class IPKNode(Node):
             goal_pos.goal_pos.y = self.ipk_target[1]
             goal_pos.goal_pos.z = self.ipk_target[2]
 
-            result = self.ink_calcalate.call(goal_pos)          
+            result = self.ink_calcalate.call(goal_pos)
 
             self.get_logger().info(f'response : {result.ikn_check}')
 
@@ -52,7 +61,26 @@ class IPKNode(Node):
             response.ipk_q1 = result.q1
             response.ipk_q2 = result.q2
             response.ipk_q3 = result.q3
-            self.get_logger().info(f'q_response : {result}')  
+
+            # q_pub = RRRPubq.Request()
+            # q_pub.goal_pos.x = self.ipk_target[0]
+            # q_pub.goal_pos.y = self.ipk_target[1]
+            # q_pub.goal_pos.z = self.ipk_target[2]
+            # q_pub.q1 = result.q1
+            # q_pub.q2 = result.q2
+            # q_pub.q3 = result.q3
+
+            # robot_state = self.q_call.call(q_pub)
+            # self.get_logger().info(f'Ready : {robot_state.run_check}')          
+
+            # if robot_state.run_check:
+            #     self.get_logger().info(f'response : {result.ikn_check}')
+
+            #     response.ipk_check = result.ikn_check
+            #     response.ipk_q1 = result.q1
+            #     response.ipk_q2 = result.q2
+            #     response.ipk_q3 = result.q3
+                # self.get_logger().info(f'q_response : {result}')  
 
         return response
 
