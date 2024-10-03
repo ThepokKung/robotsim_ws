@@ -1,2 +1,0 @@
-
-geometry_msgs/Point random_target

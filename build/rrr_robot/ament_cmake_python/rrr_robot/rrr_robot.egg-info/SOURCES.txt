@@ -1,7 +1,0 @@
-setup.py
-rrr_robot/__init__.py
-rrr_robot/dummy_module.py
-rrr_robot.egg-info/PKG-INFO
-rrr_robot.egg-info/SOURCES.txt
-rrr_robot.egg-info/dependency_links.txt
-rrr_robot.egg-info/top_level.txt

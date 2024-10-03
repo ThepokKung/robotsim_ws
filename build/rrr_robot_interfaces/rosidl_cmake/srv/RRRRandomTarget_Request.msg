@@ -1,1 +1,0 @@
-bool target_call

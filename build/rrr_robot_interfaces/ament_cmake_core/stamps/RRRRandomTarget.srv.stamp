@@ -1,3 +1,0 @@
-bool target_call
----
-geometry_msgs/Point random_target
