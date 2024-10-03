@@ -56,8 +56,6 @@ cdr_serialize(
   const rrr_robot_interfaces::srv::RRRIPK_Request & ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Member: ipk_call
-  cdr << (ros_message.ipk_call ? true : false);
   // Member: ipk_target
   geometry_msgs::msg::typesupport_fastrtps_cpp::cdr_serialize(
     ros_message.ipk_target,
@@ -71,13 +69,6 @@ cdr_deserialize(
   eprosima::fastcdr::Cdr & cdr,
   rrr_robot_interfaces::srv::RRRIPK_Request & ros_message)
 {
-  // Member: ipk_call
-  {
-    uint8_t tmp;
-    cdr >> tmp;
-    ros_message.ipk_call = tmp ? true : false;
-  }
-
   // Member: ipk_target
   geometry_msgs::msg::typesupport_fastrtps_cpp::cdr_deserialize(
     cdr, ros_message.ipk_target);
@@ -98,12 +89,6 @@ get_serialized_size(
   (void)padding;
   (void)wchar_size;
 
-  // Member: ipk_call
-  {
-    size_t item_size = sizeof(ros_message.ipk_call);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
   // Member: ipk_target
 
   current_alignment +=
@@ -132,14 +117,6 @@ max_serialized_size_RRRIPK_Request(
   full_bounded = true;
   is_plain = true;
 
-
-  // Member: ipk_call
-  {
-    size_t array_size = 1;
-
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
-  }
 
   // Member: ipk_target
   {

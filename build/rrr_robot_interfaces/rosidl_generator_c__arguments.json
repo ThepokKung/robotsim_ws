@@ -5,9 +5,9 @@
   "idl_tuples": [
     "/home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_adapter/rrr_robot_interfaces:srv/RRRMode.idl",
     "/home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_adapter/rrr_robot_interfaces:srv/RRRIPK.idl",
-    "/home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_adapter/rrr_robot_interfaces:srv/RRRAuto.idl",
     "/home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_adapter/rrr_robot_interfaces:srv/RRRInvertKinematics.idl",
-    "/home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_adapter/rrr_robot_interfaces:srv/RRRPubq.idl"
+    "/home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_adapter/rrr_robot_interfaces:srv/RRRTargetPub.idl",
+    "/home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_adapter/rrr_robot_interfaces:srv/RRRRandomTarget.idl"
   ],
   "ros_interface_dependencies": [
     "geometry_msgs:/opt/ros/humble/share/geometry_msgs/msg/Accel.idl",
@@ -117,9 +117,9 @@
     "/opt/ros/humble/share/rosidl_generator_c/cmake/../resource/srv__type_support.h.em",
     "/home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_adapter/rrr_robot_interfaces/srv/RRRMode.idl",
     "/home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_adapter/rrr_robot_interfaces/srv/RRRIPK.idl",
-    "/home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_adapter/rrr_robot_interfaces/srv/RRRAuto.idl",
     "/home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_adapter/rrr_robot_interfaces/srv/RRRInvertKinematics.idl",
-    "/home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_adapter/rrr_robot_interfaces/srv/RRRPubq.idl",
+    "/home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_adapter/rrr_robot_interfaces/srv/RRRTargetPub.idl",
+    "/home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_adapter/rrr_robot_interfaces/srv/RRRRandomTarget.idl",
     "/opt/ros/humble/share/geometry_msgs/msg/Accel.idl",
     "/opt/ros/humble/share/geometry_msgs/msg/AccelStamped.idl",
     "/opt/ros/humble/share/geometry_msgs/msg/AccelWithCovariance.idl",

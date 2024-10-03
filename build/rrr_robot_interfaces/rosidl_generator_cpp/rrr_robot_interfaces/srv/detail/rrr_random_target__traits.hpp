@@ -1,0 +1,259 @@
+// generated from rosidl_generator_cpp/resource/idl__traits.hpp.em
+// with input from rrr_robot_interfaces:srv/RRRRandomTarget.idl
+// generated code does not contain a copyright notice
+
+#ifndef RRR_ROBOT_INTERFACES__SRV__DETAIL__RRR_RANDOM_TARGET__TRAITS_HPP_
+#define RRR_ROBOT_INTERFACES__SRV__DETAIL__RRR_RANDOM_TARGET__TRAITS_HPP_
+
+#include <stdint.h>
+
+#include <sstream>
+#include <string>
+#include <type_traits>
+
+#include "rrr_robot_interfaces/srv/detail/rrr_random_target__struct.hpp"
+#include "rosidl_runtime_cpp/traits.hpp"
+
+namespace rrr_robot_interfaces
+{
+
+namespace srv
+{
+
+inline void to_flow_style_yaml(
+  const RRRRandomTarget_Request & msg,
+  std::ostream & out)
+{
+  out << "{";
+  // member: target_call
+  {
+    out << "target_call: ";
+    rosidl_generator_traits::value_to_yaml(msg.target_call, out);
+  }
+  out << "}";
+}  // NOLINT(readability/fn_size)
+
+inline void to_block_style_yaml(
+  const RRRRandomTarget_Request & msg,
+  std::ostream & out, size_t indentation = 0)
+{
+  // member: target_call
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "target_call: ";
+    rosidl_generator_traits::value_to_yaml(msg.target_call, out);
+    out << "\n";
+  }
+}  // NOLINT(readability/fn_size)
+
+inline std::string to_yaml(const RRRRandomTarget_Request & msg, bool use_flow_style = false)
+{
+  std::ostringstream out;
+  if (use_flow_style) {
+    to_flow_style_yaml(msg, out);
+  } else {
+    to_block_style_yaml(msg, out);
+  }
+  return out.str();
+}
+
+}  // namespace srv
+
+}  // namespace rrr_robot_interfaces
+
+namespace rosidl_generator_traits
+{
+
+[[deprecated("use rrr_robot_interfaces::srv::to_block_style_yaml() instead")]]
+inline void to_yaml(
+  const rrr_robot_interfaces::srv::RRRRandomTarget_Request & msg,
+  std::ostream & out, size_t indentation = 0)
+{
+  rrr_robot_interfaces::srv::to_block_style_yaml(msg, out, indentation);
+}
+
+[[deprecated("use rrr_robot_interfaces::srv::to_yaml() instead")]]
+inline std::string to_yaml(const rrr_robot_interfaces::srv::RRRRandomTarget_Request & msg)
+{
+  return rrr_robot_interfaces::srv::to_yaml(msg);
+}
+
+template<>
+inline const char * data_type<rrr_robot_interfaces::srv::RRRRandomTarget_Request>()
+{
+  return "rrr_robot_interfaces::srv::RRRRandomTarget_Request";
+}
+
+template<>
+inline const char * name<rrr_robot_interfaces::srv::RRRRandomTarget_Request>()
+{
+  return "rrr_robot_interfaces/srv/RRRRandomTarget_Request";
+}
+
+template<>
+struct has_fixed_size<rrr_robot_interfaces::srv::RRRRandomTarget_Request>
+  : std::integral_constant<bool, true> {};
+
+template<>
+struct has_bounded_size<rrr_robot_interfaces::srv::RRRRandomTarget_Request>
+  : std::integral_constant<bool, true> {};
+
+template<>
+struct is_message<rrr_robot_interfaces::srv::RRRRandomTarget_Request>
+  : std::true_type {};
+
+}  // namespace rosidl_generator_traits
+
+// Include directives for member types
+// Member 'random_target'
+#include "geometry_msgs/msg/detail/point__traits.hpp"
+
+namespace rrr_robot_interfaces
+{
+
+namespace srv
+{
+
+inline void to_flow_style_yaml(
+  const RRRRandomTarget_Response & msg,
+  std::ostream & out)
+{
+  out << "{";
+  // member: random_target
+  {
+    out << "random_target: ";
+    to_flow_style_yaml(msg.random_target, out);
+  }
+  out << "}";
+}  // NOLINT(readability/fn_size)
+
+inline void to_block_style_yaml(
+  const RRRRandomTarget_Response & msg,
+  std::ostream & out, size_t indentation = 0)
+{
+  // member: random_target
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "random_target:\n";
+    to_block_style_yaml(msg.random_target, out, indentation + 2);
+  }
+}  // NOLINT(readability/fn_size)
+
+inline std::string to_yaml(const RRRRandomTarget_Response & msg, bool use_flow_style = false)
+{
+  std::ostringstream out;
+  if (use_flow_style) {
+    to_flow_style_yaml(msg, out);
+  } else {
+    to_block_style_yaml(msg, out);
+  }
+  return out.str();
+}
+
+}  // namespace srv
+
+}  // namespace rrr_robot_interfaces
+
+namespace rosidl_generator_traits
+{
+
+[[deprecated("use rrr_robot_interfaces::srv::to_block_style_yaml() instead")]]
+inline void to_yaml(
+  const rrr_robot_interfaces::srv::RRRRandomTarget_Response & msg,
+  std::ostream & out, size_t indentation = 0)
+{
+  rrr_robot_interfaces::srv::to_block_style_yaml(msg, out, indentation);
+}
+
+[[deprecated("use rrr_robot_interfaces::srv::to_yaml() instead")]]
+inline std::string to_yaml(const rrr_robot_interfaces::srv::RRRRandomTarget_Response & msg)
+{
+  return rrr_robot_interfaces::srv::to_yaml(msg);
+}
+
+template<>
+inline const char * data_type<rrr_robot_interfaces::srv::RRRRandomTarget_Response>()
+{
+  return "rrr_robot_interfaces::srv::RRRRandomTarget_Response";
+}
+
+template<>
+inline const char * name<rrr_robot_interfaces::srv::RRRRandomTarget_Response>()
+{
+  return "rrr_robot_interfaces/srv/RRRRandomTarget_Response";
+}
+
+template<>
+struct has_fixed_size<rrr_robot_interfaces::srv::RRRRandomTarget_Response>
+  : std::integral_constant<bool, has_fixed_size<geometry_msgs::msg::Point>::value> {};
+
+template<>
+struct has_bounded_size<rrr_robot_interfaces::srv::RRRRandomTarget_Response>
+  : std::integral_constant<bool, has_bounded_size<geometry_msgs::msg::Point>::value> {};
+
+template<>
+struct is_message<rrr_robot_interfaces::srv::RRRRandomTarget_Response>
+  : std::true_type {};
+
+}  // namespace rosidl_generator_traits
+
+namespace rosidl_generator_traits
+{
+
+template<>
+inline const char * data_type<rrr_robot_interfaces::srv::RRRRandomTarget>()
+{
+  return "rrr_robot_interfaces::srv::RRRRandomTarget";
+}
+
+template<>
+inline const char * name<rrr_robot_interfaces::srv::RRRRandomTarget>()
+{
+  return "rrr_robot_interfaces/srv/RRRRandomTarget";
+}
+
+template<>
+struct has_fixed_size<rrr_robot_interfaces::srv::RRRRandomTarget>
+  : std::integral_constant<
+    bool,
+    has_fixed_size<rrr_robot_interfaces::srv::RRRRandomTarget_Request>::value &&
+    has_fixed_size<rrr_robot_interfaces::srv::RRRRandomTarget_Response>::value
+  >
+{
+};
+
+template<>
+struct has_bounded_size<rrr_robot_interfaces::srv::RRRRandomTarget>
+  : std::integral_constant<
+    bool,
+    has_bounded_size<rrr_robot_interfaces::srv::RRRRandomTarget_Request>::value &&
+    has_bounded_size<rrr_robot_interfaces::srv::RRRRandomTarget_Response>::value
+  >
+{
+};
+
+template<>
+struct is_service<rrr_robot_interfaces::srv::RRRRandomTarget>
+  : std::true_type
+{
+};
+
+template<>
+struct is_service_request<rrr_robot_interfaces::srv::RRRRandomTarget_Request>
+  : std::true_type
+{
+};
+
+template<>
+struct is_service_response<rrr_robot_interfaces::srv::RRRRandomTarget_Response>
+  : std::true_type
+{
+};
+
+}  // namespace rosidl_generator_traits
+
+#endif  // RRR_ROBOT_INTERFACES__SRV__DETAIL__RRR_RANDOM_TARGET__TRAITS_HPP_

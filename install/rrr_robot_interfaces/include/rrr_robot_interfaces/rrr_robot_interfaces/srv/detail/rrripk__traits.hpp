@@ -29,13 +29,6 @@ inline void to_flow_style_yaml(
   std::ostream & out)
 {
   out << "{";
-  // member: ipk_call
-  {
-    out << "ipk_call: ";
-    rosidl_generator_traits::value_to_yaml(msg.ipk_call, out);
-    out << ", ";
-  }
-
   // member: ipk_target
   {
     out << "ipk_target: ";
@@ -48,16 +41,6 @@ inline void to_block_style_yaml(
   const RRRIPK_Request & msg,
   std::ostream & out, size_t indentation = 0)
 {
-  // member: ipk_call
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    out << "ipk_call: ";
-    rosidl_generator_traits::value_to_yaml(msg.ipk_call, out);
-    out << "\n";
-  }
-
   // member: ipk_target
   {
     if (indentation > 0) {

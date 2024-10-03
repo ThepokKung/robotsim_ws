@@ -364,15 +364,15 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rrr_robot_interfaces/srv" TYPE FILE FILES "/home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_adapter/rrr_robot_interfaces/srv/RRRAuto.idl")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rrr_robot_interfaces/srv" TYPE FILE FILES "/home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_adapter/rrr_robot_interfaces/srv/RRRInvertKinematics.idl")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rrr_robot_interfaces/srv" TYPE FILE FILES "/home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_adapter/rrr_robot_interfaces/srv/RRRPubq.idl")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rrr_robot_interfaces/srv" TYPE FILE FILES "/home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_adapter/rrr_robot_interfaces/srv/RRRTargetPub.idl")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rrr_robot_interfaces/srv" TYPE FILE FILES "/home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_adapter/rrr_robot_interfaces/srv/RRRRandomTarget.idl")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -400,18 +400,6 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rrr_robot_interfaces/srv" TYPE FILE FILES "/home/waritt/robotsim_ws/src/rrr_robot_interfaces/srv/RRRAuto.srv")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rrr_robot_interfaces/srv" TYPE FILE FILES "/home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_cmake/srv/RRRAuto_Request.msg")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rrr_robot_interfaces/srv" TYPE FILE FILES "/home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_cmake/srv/RRRAuto_Response.msg")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rrr_robot_interfaces/srv" TYPE FILE FILES "/home/waritt/robotsim_ws/src/rrr_robot_interfaces/srv/RRRInvertKinematics.srv")
 endif()
 
@@ -424,15 +412,27 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rrr_robot_interfaces/srv" TYPE FILE FILES "/home/waritt/robotsim_ws/src/rrr_robot_interfaces/srv/RRRPubq.srv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rrr_robot_interfaces/srv" TYPE FILE FILES "/home/waritt/robotsim_ws/src/rrr_robot_interfaces/srv/RRRTargetPub.srv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rrr_robot_interfaces/srv" TYPE FILE FILES "/home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_cmake/srv/RRRPubq_Request.msg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rrr_robot_interfaces/srv" TYPE FILE FILES "/home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_cmake/srv/RRRTargetPub_Request.msg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rrr_robot_interfaces/srv" TYPE FILE FILES "/home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_cmake/srv/RRRPubq_Response.msg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rrr_robot_interfaces/srv" TYPE FILE FILES "/home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_cmake/srv/RRRTargetPub_Response.msg")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rrr_robot_interfaces/srv" TYPE FILE FILES "/home/waritt/robotsim_ws/src/rrr_robot_interfaces/srv/RRRRandomTarget.srv")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rrr_robot_interfaces/srv" TYPE FILE FILES "/home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_cmake/srv/RRRRandomTarget_Request.msg")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rrr_robot_interfaces/srv" TYPE FILE FILES "/home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_cmake/srv/RRRRandomTarget_Response.msg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)

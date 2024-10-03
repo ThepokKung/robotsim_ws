@@ -1,0 +1,24 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from rrr_robot_interfaces/srv/RRRTargetPub.srv
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/Point.idl"
+
+module rrr_robot_interfaces {
+  module srv {
+    struct RRRTargetPub_Request {
+      boolean run_end;
+
+      geometry_msgs::msg::Point goal_pos;
+
+      double q1;
+
+      double q2;
+
+      double q3;
+    };
+    struct RRRTargetPub_Response {
+      uint8 structure_needs_at_least_one_member;
+    };
+  };
+};

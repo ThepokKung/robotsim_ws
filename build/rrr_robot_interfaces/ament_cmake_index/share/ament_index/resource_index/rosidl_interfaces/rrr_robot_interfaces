@@ -1,7 +1,3 @@
-srv/RRRAuto.idl
-srv/RRRAuto.srv
-srv/RRRAuto_Request.msg
-srv/RRRAuto_Response.msg
 srv/RRRIPK.idl
 srv/RRRIPK.srv
 srv/RRRIPK_Request.msg
@@ -14,7 +10,11 @@ srv/RRRMode.idl
 srv/RRRMode.srv
 srv/RRRMode_Request.msg
 srv/RRRMode_Response.msg
-srv/RRRPubq.idl
-srv/RRRPubq.srv
-srv/RRRPubq_Request.msg
-srv/RRRPubq_Response.msg
+srv/RRRRandomTarget.idl
+srv/RRRRandomTarget.srv
+srv/RRRRandomTarget_Request.msg
+srv/RRRRandomTarget_Response.msg
+srv/RRRTargetPub.idl
+srv/RRRTargetPub.srv
+srv/RRRTargetPub_Request.msg
+srv/RRRTargetPub_Response.msg

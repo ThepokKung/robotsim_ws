@@ -9,13 +9,11 @@
 /home/waritt/robotsim_ws/install/rrr_robot/lib/rrr_robot/jointstate_script.py
 /home/waritt/robotsim_ws/install/rrr_robot/lib/rrr_robot/controller.py
 /home/waritt/robotsim_ws/install/rrr_robot/lib/rrr_robot/random_target.py
-/home/waritt/robotsim_ws/install/rrr_robot/lib/rrr_robot/mode_control.py
-/home/waritt/robotsim_ws/install/rrr_robot/lib/rrr_robot/ipk_node.py
 /home/waritt/robotsim_ws/install/rrr_robot/lib/rrr_robot/invert_kinematics.py
-/home/waritt/robotsim_ws/install/rrr_robot/lib/rrr_robot/jointstate_publisher.py
 /home/waritt/robotsim_ws/install/rrr_robot/lib/rrr_robot/cpp_node_test
 /home/waritt/robotsim_ws/install/rrr_robot/share/rrr_robot/config/workspace_pos.npy
 /home/waritt/robotsim_ws/install/rrr_robot/share/rrr_robot/config/display.rviz
+/home/waritt/robotsim_ws/install/rrr_robot/share/rrr_robot/config/custom_display.rviz
 /home/waritt/robotsim_ws/install/rrr_robot/share/rrr_robot/launch/fun.launch.py
 /home/waritt/robotsim_ws/install/rrr_robot/share/rrr_robot/launch/simple_display.launch.py
 /home/waritt/robotsim_ws/install/rrr_robot/share/rrr_robot/meshes/link_1.stl

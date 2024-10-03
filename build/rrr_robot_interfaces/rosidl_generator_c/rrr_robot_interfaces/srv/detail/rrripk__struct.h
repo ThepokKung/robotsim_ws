@@ -24,7 +24,6 @@ extern "C"
 /// Struct defined in srv/RRRIPK in the package rrr_robot_interfaces.
 typedef struct rrr_robot_interfaces__srv__RRRIPK_Request
 {
-  bool ipk_call;
   geometry_msgs__msg__Point ipk_target;
 } rrr_robot_interfaces__srv__RRRIPK_Request;
 

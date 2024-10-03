@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 
-from rrr_robot.dummy_module import dummy_function, dummy_var
 import rclpy
 from rclpy.node import Node
 
@@ -27,6 +26,9 @@ class InvertKinmatics(Node):
             ],
             name = "3R_Robot"
         )
+
+        # Display Node Start
+        self.get_logger().info(f'Invert Kinematics Start Node')
 
 
 

@@ -77,9 +77,9 @@ rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_mode__type_support.cpp: /opt
 rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_mode__type_support.cpp: /opt/ros/humble/share/rosidl_typesupport_cpp/resource/srv__type_support.cpp.em
 rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_mode__type_support.cpp: rosidl_adapter/rrr_robot_interfaces/srv/RRRMode.idl
 rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_mode__type_support.cpp: rosidl_adapter/rrr_robot_interfaces/srv/RRRIPK.idl
-rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_mode__type_support.cpp: rosidl_adapter/rrr_robot_interfaces/srv/RRRAuto.idl
 rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_mode__type_support.cpp: rosidl_adapter/rrr_robot_interfaces/srv/RRRInvertKinematics.idl
-rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_mode__type_support.cpp: rosidl_adapter/rrr_robot_interfaces/srv/RRRPubq.idl
+rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_mode__type_support.cpp: rosidl_adapter/rrr_robot_interfaces/srv/RRRTargetPub.idl
+rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_mode__type_support.cpp: rosidl_adapter/rrr_robot_interfaces/srv/RRRRandomTarget.idl
 rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_mode__type_support.cpp: /opt/ros/humble/share/geometry_msgs/msg/Accel.idl
 rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_mode__type_support.cpp: /opt/ros/humble/share/geometry_msgs/msg/AccelStamped.idl
 rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_mode__type_support.cpp: /opt/ros/humble/share/geometry_msgs/msg/AccelWithCovariance.idl
@@ -176,14 +176,14 @@ rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_mode__type_support.cpp: /opt
 rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrripk__type_support.cpp: rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_mode__type_support.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrripk__type_support.cpp
 
-rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_auto__type_support.cpp: rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_mode__type_support.cpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_auto__type_support.cpp
-
 rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_invert_kinematics__type_support.cpp: rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_mode__type_support.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_invert_kinematics__type_support.cpp
 
-rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_pubq__type_support.cpp: rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_mode__type_support.cpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_pubq__type_support.cpp
+rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_target_pub__type_support.cpp: rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_mode__type_support.cpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_target_pub__type_support.cpp
+
+rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_random_target__type_support.cpp: rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_mode__type_support.cpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_random_target__type_support.cpp
 
 CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_mode__type_support.cpp.o: CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/flags.make
 CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_mode__type_support.cpp.o: rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_mode__type_support.cpp
@@ -213,24 +213,10 @@ CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrripk__type_support.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrripk__type_support.cpp -o CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrripk__type_support.cpp.s
 
-CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_auto__type_support.cpp.o: CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/flags.make
-CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_auto__type_support.cpp.o: rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_auto__type_support.cpp
-CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_auto__type_support.cpp.o: CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/waritt/robotsim_ws/build/rrr_robot_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_auto__type_support.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_auto__type_support.cpp.o -MF CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_auto__type_support.cpp.o.d -o CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_auto__type_support.cpp.o -c /home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_auto__type_support.cpp
-
-CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_auto__type_support.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_auto__type_support.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_auto__type_support.cpp > CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_auto__type_support.cpp.i
-
-CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_auto__type_support.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_auto__type_support.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_auto__type_support.cpp -o CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_auto__type_support.cpp.s
-
 CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_invert_kinematics__type_support.cpp.o: CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/flags.make
 CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_invert_kinematics__type_support.cpp.o: rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_invert_kinematics__type_support.cpp
 CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_invert_kinematics__type_support.cpp.o: CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/waritt/robotsim_ws/build/rrr_robot_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_invert_kinematics__type_support.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/waritt/robotsim_ws/build/rrr_robot_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_invert_kinematics__type_support.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_invert_kinematics__type_support.cpp.o -MF CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_invert_kinematics__type_support.cpp.o.d -o CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_invert_kinematics__type_support.cpp.o -c /home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_invert_kinematics__type_support.cpp
 
 CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_invert_kinematics__type_support.cpp.i: cmake_force
@@ -241,36 +227,50 @@ CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_invert_kinematics__type_support.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_invert_kinematics__type_support.cpp -o CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_invert_kinematics__type_support.cpp.s
 
-CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_pubq__type_support.cpp.o: CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/flags.make
-CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_pubq__type_support.cpp.o: rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_pubq__type_support.cpp
-CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_pubq__type_support.cpp.o: CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/waritt/robotsim_ws/build/rrr_robot_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_pubq__type_support.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_pubq__type_support.cpp.o -MF CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_pubq__type_support.cpp.o.d -o CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_pubq__type_support.cpp.o -c /home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_pubq__type_support.cpp
+CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_target_pub__type_support.cpp.o: CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/flags.make
+CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_target_pub__type_support.cpp.o: rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_target_pub__type_support.cpp
+CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_target_pub__type_support.cpp.o: CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/waritt/robotsim_ws/build/rrr_robot_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_target_pub__type_support.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_target_pub__type_support.cpp.o -MF CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_target_pub__type_support.cpp.o.d -o CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_target_pub__type_support.cpp.o -c /home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_target_pub__type_support.cpp
 
-CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_pubq__type_support.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_pubq__type_support.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_pubq__type_support.cpp > CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_pubq__type_support.cpp.i
+CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_target_pub__type_support.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_target_pub__type_support.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_target_pub__type_support.cpp > CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_target_pub__type_support.cpp.i
 
-CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_pubq__type_support.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_pubq__type_support.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_pubq__type_support.cpp -o CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_pubq__type_support.cpp.s
+CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_target_pub__type_support.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_target_pub__type_support.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_target_pub__type_support.cpp -o CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_target_pub__type_support.cpp.s
+
+CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_random_target__type_support.cpp.o: CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/flags.make
+CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_random_target__type_support.cpp.o: rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_random_target__type_support.cpp
+CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_random_target__type_support.cpp.o: CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/waritt/robotsim_ws/build/rrr_robot_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_random_target__type_support.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_random_target__type_support.cpp.o -MF CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_random_target__type_support.cpp.o.d -o CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_random_target__type_support.cpp.o -c /home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_random_target__type_support.cpp
+
+CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_random_target__type_support.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_random_target__type_support.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_random_target__type_support.cpp > CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_random_target__type_support.cpp.i
+
+CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_random_target__type_support.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_random_target__type_support.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_random_target__type_support.cpp -o CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_random_target__type_support.cpp.s
 
 # Object files for target rrr_robot_interfaces__rosidl_typesupport_cpp
 rrr_robot_interfaces__rosidl_typesupport_cpp_OBJECTS = \
 "CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_mode__type_support.cpp.o" \
 "CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrripk__type_support.cpp.o" \
-"CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_auto__type_support.cpp.o" \
 "CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_invert_kinematics__type_support.cpp.o" \
-"CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_pubq__type_support.cpp.o"
+"CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_target_pub__type_support.cpp.o" \
+"CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_random_target__type_support.cpp.o"
 
 # External object files for target rrr_robot_interfaces__rosidl_typesupport_cpp
 rrr_robot_interfaces__rosidl_typesupport_cpp_EXTERNAL_OBJECTS =
 
 librrr_robot_interfaces__rosidl_typesupport_cpp.so: CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_mode__type_support.cpp.o
 librrr_robot_interfaces__rosidl_typesupport_cpp.so: CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrripk__type_support.cpp.o
-librrr_robot_interfaces__rosidl_typesupport_cpp.so: CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_auto__type_support.cpp.o
 librrr_robot_interfaces__rosidl_typesupport_cpp.so: CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_invert_kinematics__type_support.cpp.o
-librrr_robot_interfaces__rosidl_typesupport_cpp.so: CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_pubq__type_support.cpp.o
+librrr_robot_interfaces__rosidl_typesupport_cpp.so: CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_target_pub__type_support.cpp.o
+librrr_robot_interfaces__rosidl_typesupport_cpp.so: CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_random_target__type_support.cpp.o
 librrr_robot_interfaces__rosidl_typesupport_cpp.so: CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/build.make
 librrr_robot_interfaces__rosidl_typesupport_cpp.so: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_cpp.so
 librrr_robot_interfaces__rosidl_typesupport_cpp.so: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_cpp.so
@@ -292,10 +292,10 @@ CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/clean:
 	$(CMAKE_COMMAND) -P CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/cmake_clean.cmake
 .PHONY : CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/clean
 
-CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/depend: rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_auto__type_support.cpp
 CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/depend: rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_invert_kinematics__type_support.cpp
 CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/depend: rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_mode__type_support.cpp
-CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/depend: rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_pubq__type_support.cpp
+CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/depend: rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_random_target__type_support.cpp
+CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/depend: rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrr_target_pub__type_support.cpp
 CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/depend: rosidl_typesupport_cpp/rrr_robot_interfaces/srv/rrripk__type_support.cpp
 	cd /home/waritt/robotsim_ws/build/rrr_robot_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/waritt/robotsim_ws/src/rrr_robot_interfaces /home/waritt/robotsim_ws/src/rrr_robot_interfaces /home/waritt/robotsim_ws/build/rrr_robot_interfaces /home/waritt/robotsim_ws/build/rrr_robot_interfaces /home/waritt/robotsim_ws/build/rrr_robot_interfaces/CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_cpp.dir/depend
