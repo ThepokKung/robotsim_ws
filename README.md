@@ -70,15 +70,15 @@ theta3_range = np.linspace(-np.pi, np.pi, 100)  # Joint 3
 
 ในระบบ Simulation การทำงานของแขนกล 3R Robot ได้มีการสร้าง custom service ขึ้นมาเพื่องานที่แตกต่างกันภายใต้ Interface 'rrr_robot_interfaces' ทั้งหมด 5 ตัว คือ
 
--   RRRMode : เป็น service ที่ใช้ในการเรียกเพื่อเปลี่ยนโหมดการทำงานของแขนกล
+- RRRMode : เป็น service ที่ใช้ในการเรียกเพื่อเปลี่ยนโหมดการทำงานของแขนกล
 
--   RRRInvertKinematics : เป็น service ที่ใช้ในการเรียกใช้ Node สำหรับหา Invert Kinematic
+- RRRInvertKinematics : เป็น service ที่ใช้ในการเรียกใช้ Node สำหรับหา Invert Kinematic
 
--   RRRTargetPub : เป็น service ที่ใช้ในการส่งตำแหน่ง target และค่า configuration space ของแต่ละ Joint ไปยัง Node สำหรับ pub ค่าไปยัง RVIZ
+- RRRTargetPub : เป็น service ที่ใช้ในการส่งตำแหน่ง target และค่า configuration space ของแต่ละ Joint ไปยัง Node สำหรับ pub ค่าไปยัง RVIZ
 
--   RRRIPK : เป็น service ที่ใช้ในการกำหนด Task space ของ IPk Mode 
+- RRRIPK : เป็น service ที่ใช้ในการกำหนด Task space ของ IPk Mode 
 
--   RRRRandomTarget : เป็น service ที่ใช้ในการเรียกค่า Task space ของ Auto Mode จาก random_node
+- RRRRandomTarget : เป็น service ที่ใช้ในการเรียกค่า Task space ของ Auto Mode จาก random_node
 
 ## Pub topic '/target' and '/end_effector' to show in RVIZ2
 
@@ -102,23 +102,109 @@ theta3_range = np.linspace(-np.pi, np.pi, 100)  # Joint 3
 
 **VDO แสดงการทำงานใน IPK Mode**
 
-[VDO_run_ipk_mode](picture/VDO_run_ipk_mode.webm)
+![VDO_run_ipk_mode](picture/VDO_run_ipk_mode.gif)
 
 ## Autonomous Mode (Auto)
 
-แสดงการทำงาน Auto Mode
+การทำงานใน Auto Mode จะเป็นการทำงานที่เมื่อเรียกใช้งานจะะทำการ random ค่า target จาก random_node จากนั้นแขนกลจะเคลื่อนที่ไปยัง target โดยเมื่อเคลื่อนที่ถึงแล้วจะทำการ random ค่า target ใหม่อีกครั้งแล้วเคลื่อนที่
 
-## Tele-operation Mode (Teleop)
+**VDO แสดงการทำงานใน Auto Mode**
 
-แสดงการทำงาน Teleop Mode
+![VDO_run_auto_mode](picture/VDO_run_auto_mode.gif)
 
 ## Example test VDO
 
-VDO แสดงการทำงาน
+![VDO_run_all](picture/VDO_run_all.gif)
 
 # How to install 3R Robot Simulation
 
-แสดงการ dowload และเรียกใช้งาน
+ในการใช้งานให้ทำการ clone workspace จาก github นี้ไป
+
+```
+git clone https://github.com/DenWaritthon/robotsim_ws.git
+```
+
+จากนั้นทำการ build และ source workspace ที่ทำการ clone มา
+
+```
+cd robotsim_ws/
+```
+
+```
+colcon build && source install/setup.bash
+```
+
+# How to use 3R Robot Simulation
+
+ทำการเรียกใช้งาน launch file สำหรับเปิดใช้งาน RVIZ
+
+```
+ros2 launch rrr_robot fun.launch.py
+```
+
+ทำการเรียกใช้งาน launch file สำหรับเปิดใช้งานในระบบ Simulation การทำงานของแขนกล 3R Robot
+
+```
+ros2 launch rrr_robot rrr_robt.launch.py
+```
+
+## Use Mode Chang
+
+**ในการใช้งานสามารเปลี่ยนโหมดได้โดยใช้ Key ต่อไปนี้**
+
+- Inverse Pose Kinematics Mode : IPK
+- Tele-operation Mode : Teleop
+- Autonomous Mode : Auto
+
+
+**วิธีที่ 1** ทำการเรียกใช้งาน rqt เพื่อใช้งาน service call
+
+```
+rqt
+```
+ทำการ call service **'/robot_mode'**
+
+![rqt_robot_mode](picture/rqt_robot_mode.png)
+
+
+**วิธีที่ 2** ทำการเรียกใช้งาน CLI เพื่อใช้งาน service call
+
+- Call IPK Mode
+
+```
+ros2 service call /robot_mode rrr_robot_interfaces/srv/RRRMode "mode_call: 'IPK'"
+```
+
+- Call Auto Mode
+
+```
+ros2 service call /robot_mode rrr_robot_interfaces/srv/RRRMode "mode_call: 'Auto'"
+```
+
+
+## Use IPK Mode
+
+**วิธีที่ 1** ทำการเรียกใช้งาน rqt เพื่อใช้งาน service call
+
+```
+rqt
+```
+ทำการ call service **'/ipk_target'**
+
+![rqt_ipk_target](picture/rqt_ipk_target.png)
+
+
+**วิธีที่ 2** ทำการเรียกใช้งาน CLI เพื่อใช้งาน service call
+
+```
+ros2 service call /ipk_target rrr_robot_interfaces/srv/RRRIPK "ipk_target:
+  x: 100.0
+  y: 100.0
+  z: 100.0" 
+```
+CLI service call ที่ตำแหน่ง (x , y , z) = (100.0 , 100.0 , 100.0)
+
+**Waritthon Kongnoo**
 
 
 

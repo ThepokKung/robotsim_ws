@@ -15,6 +15,7 @@
 /home/waritt/robotsim_ws/install/rrr_robot/share/rrr_robot/config/display.rviz
 /home/waritt/robotsim_ws/install/rrr_robot/share/rrr_robot/config/custom_display.rviz
 /home/waritt/robotsim_ws/install/rrr_robot/share/rrr_robot/launch/fun.launch.py
+/home/waritt/robotsim_ws/install/rrr_robot/share/rrr_robot/launch/rrr_robt.launch.py
 /home/waritt/robotsim_ws/install/rrr_robot/share/rrr_robot/launch/simple_display.launch.py
 /home/waritt/robotsim_ws/install/rrr_robot/share/rrr_robot/meshes/link_1.stl
 /home/waritt/robotsim_ws/install/rrr_robot/share/rrr_robot/meshes/link_3.stl
