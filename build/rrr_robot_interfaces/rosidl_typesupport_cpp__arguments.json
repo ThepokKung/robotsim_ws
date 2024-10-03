@@ -7,7 +7,8 @@
     "/home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_adapter/rrr_robot_interfaces:srv/RRRIPK.idl",
     "/home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_adapter/rrr_robot_interfaces:srv/RRRInvertKinematics.idl",
     "/home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_adapter/rrr_robot_interfaces:srv/RRRTargetPub.idl",
-    "/home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_adapter/rrr_robot_interfaces:srv/RRRRandomTarget.idl"
+    "/home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_adapter/rrr_robot_interfaces:srv/RRRRandomTarget.idl",
+    "/home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_adapter/rrr_robot_interfaces:srv/RRRTeleop.idl"
   ],
   "ros_interface_dependencies": [
     "geometry_msgs:/opt/ros/humble/share/geometry_msgs/msg/Accel.idl",
@@ -113,6 +114,7 @@
     "/home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_adapter/rrr_robot_interfaces/srv/RRRInvertKinematics.idl",
     "/home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_adapter/rrr_robot_interfaces/srv/RRRTargetPub.idl",
     "/home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_adapter/rrr_robot_interfaces/srv/RRRRandomTarget.idl",
+    "/home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_adapter/rrr_robot_interfaces/srv/RRRTeleop.idl",
     "/opt/ros/humble/share/geometry_msgs/msg/Accel.idl",
     "/opt/ros/humble/share/geometry_msgs/msg/AccelStamped.idl",
     "/opt/ros/humble/share/geometry_msgs/msg/AccelWithCovariance.idl",

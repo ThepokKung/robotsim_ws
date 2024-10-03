@@ -69,6 +69,11 @@ static bool _RRRTargetPub_Request__cdr_serialize(
     cdr << (ros_message->run_end ? true : false);
   }
 
+  // Field name: teleop_on
+  {
+    cdr << (ros_message->teleop_on ? true : false);
+  }
+
   // Field name: goal_pos
   {
     const message_type_support_callbacks_t * callbacks =
@@ -115,6 +120,13 @@ static bool _RRRTargetPub_Request__cdr_deserialize(
     uint8_t tmp;
     cdr >> tmp;
     ros_message->run_end = tmp ? true : false;
+  }
+
+  // Field name: teleop_on
+  {
+    uint8_t tmp;
+    cdr >> tmp;
+    ros_message->teleop_on = tmp ? true : false;
   }
 
   // Field name: goal_pos
@@ -166,6 +178,12 @@ size_t get_serialized_size_rrr_robot_interfaces__srv__RRRTargetPub_Request(
   // field.name run_end
   {
     size_t item_size = sizeof(ros_message->run_end);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name teleop_on
+  {
+    size_t item_size = sizeof(ros_message->teleop_on);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -221,6 +239,13 @@ size_t max_serialized_size_rrr_robot_interfaces__srv__RRRTargetPub_Request(
   is_plain = true;
 
   // member: run_end
+  {
+    size_t array_size = 1;
+
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+  // member: teleop_on
   {
     size_t array_size = 1;
 

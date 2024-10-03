@@ -3,3 +3,4 @@
 /home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_adapter/rrr_robot_interfaces:srv/RRRInvertKinematics.idl
 /home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_adapter/rrr_robot_interfaces:srv/RRRTargetPub.idl
 /home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_adapter/rrr_robot_interfaces:srv/RRRRandomTarget.idl
+/home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_adapter/rrr_robot_interfaces:srv/RRRTeleop.idl

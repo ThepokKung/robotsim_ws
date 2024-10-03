@@ -85,16 +85,32 @@ private:
   ::rrr_robot_interfaces::srv::RRRTargetPub_Request msg_;
 };
 
+class Init_RRRTargetPub_Request_teleop_on
+{
+public:
+  explicit Init_RRRTargetPub_Request_teleop_on(::rrr_robot_interfaces::srv::RRRTargetPub_Request & msg)
+  : msg_(msg)
+  {}
+  Init_RRRTargetPub_Request_goal_pos teleop_on(::rrr_robot_interfaces::srv::RRRTargetPub_Request::_teleop_on_type arg)
+  {
+    msg_.teleop_on = std::move(arg);
+    return Init_RRRTargetPub_Request_goal_pos(msg_);
+  }
+
+private:
+  ::rrr_robot_interfaces::srv::RRRTargetPub_Request msg_;
+};
+
 class Init_RRRTargetPub_Request_run_end
 {
 public:
   Init_RRRTargetPub_Request_run_end()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  Init_RRRTargetPub_Request_goal_pos run_end(::rrr_robot_interfaces::srv::RRRTargetPub_Request::_run_end_type arg)
+  Init_RRRTargetPub_Request_teleop_on run_end(::rrr_robot_interfaces::srv::RRRTargetPub_Request::_run_end_type arg)
   {
     msg_.run_end = std::move(arg);
-    return Init_RRRTargetPub_Request_goal_pos(msg_);
+    return Init_RRRTargetPub_Request_teleop_on(msg_);
   }
 
 private:

@@ -36,6 +36,13 @@ inline void to_flow_style_yaml(
     out << ", ";
   }
 
+  // member: teleop_on
+  {
+    out << "teleop_on: ";
+    rosidl_generator_traits::value_to_yaml(msg.teleop_on, out);
+    out << ", ";
+  }
+
   // member: goal_pos
   {
     out << "goal_pos: ";
@@ -76,6 +83,16 @@ inline void to_block_style_yaml(
     }
     out << "run_end: ";
     rosidl_generator_traits::value_to_yaml(msg.run_end, out);
+    out << "\n";
+  }
+
+  // member: teleop_on
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "teleop_on: ";
+    rosidl_generator_traits::value_to_yaml(msg.teleop_on, out);
     out << "\n";
   }
 

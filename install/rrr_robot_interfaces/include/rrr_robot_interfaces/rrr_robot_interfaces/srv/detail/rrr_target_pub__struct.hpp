@@ -44,6 +44,7 @@ struct RRRTargetPub_Request_
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       this->run_end = false;
+      this->teleop_on = false;
       this->q1 = 0.0;
       this->q2 = 0.0;
       this->q3 = 0.0;
@@ -57,6 +58,7 @@ struct RRRTargetPub_Request_
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       this->run_end = false;
+      this->teleop_on = false;
       this->q1 = 0.0;
       this->q2 = 0.0;
       this->q3 = 0.0;
@@ -67,6 +69,9 @@ struct RRRTargetPub_Request_
   using _run_end_type =
     bool;
   _run_end_type run_end;
+  using _teleop_on_type =
+    bool;
+  _teleop_on_type teleop_on;
   using _goal_pos_type =
     geometry_msgs::msg::Point_<ContainerAllocator>;
   _goal_pos_type goal_pos;
@@ -85,6 +90,12 @@ struct RRRTargetPub_Request_
     const bool & _arg)
   {
     this->run_end = _arg;
+    return *this;
+  }
+  Type & set__teleop_on(
+    const bool & _arg)
+  {
+    this->teleop_on = _arg;
     return *this;
   }
   Type & set__goal_pos(
@@ -155,6 +166,9 @@ struct RRRTargetPub_Request_
   bool operator==(const RRRTargetPub_Request_ & other) const
   {
     if (this->run_end != other.run_end) {
+      return false;
+    }
+    if (this->teleop_on != other.teleop_on) {
       return false;
     }
     if (this->goal_pos != other.goal_pos) {

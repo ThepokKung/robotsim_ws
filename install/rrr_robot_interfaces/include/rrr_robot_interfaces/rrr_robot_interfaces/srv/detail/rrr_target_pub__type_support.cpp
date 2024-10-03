@@ -37,7 +37,7 @@ void RRRTargetPub_Request_fini_function(void * message_memory)
   typed_message->~RRRTargetPub_Request();
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember RRRTargetPub_Request_message_member_array[5] = {
+static const ::rosidl_typesupport_introspection_cpp::MessageMember RRRTargetPub_Request_message_member_array[6] = {
   {
     "run_end",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_BOOLEAN,  // type
@@ -47,6 +47,23 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember RRRTargetPub_
     0,  // array size
     false,  // is upper bound
     offsetof(rrr_robot_interfaces::srv::RRRTargetPub_Request, run_end),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
+    nullptr  // resize(index) function pointer
+  },
+  {
+    "teleop_on",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_BOOLEAN,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(rrr_robot_interfaces::srv::RRRTargetPub_Request, teleop_on),  // bytes offset in struct
     nullptr,  // default value
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
@@ -128,7 +145,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember RRRTargetPub_
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers RRRTargetPub_Request_message_members = {
   "rrr_robot_interfaces::srv",  // message namespace
   "RRRTargetPub_Request",  // message name
-  5,  // number of fields
+  6,  // number of fields
   sizeof(rrr_robot_interfaces::srv::RRRTargetPub_Request),
   RRRTargetPub_Request_message_member_array,  // message members
   RRRTargetPub_Request_init_function,  // function to initialize message memory (memory has to be allocated)

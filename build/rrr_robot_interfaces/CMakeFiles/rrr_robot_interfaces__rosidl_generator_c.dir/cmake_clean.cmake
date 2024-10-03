@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_random_target__functions.c.o.d"
   "CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_target_pub__functions.c.o"
   "CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_target_pub__functions.c.o.d"
+  "CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_teleop__functions.c.o"
+  "CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_teleop__functions.c.o.d"
   "CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrripk__functions.c.o"
   "CMakeFiles/rrr_robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrripk__functions.c.o.d"
   "librrr_robot_interfaces__rosidl_generator_c.pdb"
@@ -27,6 +29,10 @@ file(REMOVE_RECURSE
   "rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_target_pub__functions.h"
   "rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_target_pub__struct.h"
   "rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_target_pub__type_support.h"
+  "rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_teleop__functions.c"
+  "rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_teleop__functions.h"
+  "rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_teleop__struct.h"
+  "rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_teleop__type_support.h"
   "rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrripk__functions.c"
   "rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrripk__functions.h"
   "rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrripk__struct.h"
@@ -35,6 +41,7 @@ file(REMOVE_RECURSE
   "rosidl_generator_c/rrr_robot_interfaces/srv/rrr_mode.h"
   "rosidl_generator_c/rrr_robot_interfaces/srv/rrr_random_target.h"
   "rosidl_generator_c/rrr_robot_interfaces/srv/rrr_target_pub.h"
+  "rosidl_generator_c/rrr_robot_interfaces/srv/rrr_teleop.h"
   "rosidl_generator_c/rrr_robot_interfaces/srv/rrripk.h"
 )
 

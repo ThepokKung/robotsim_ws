@@ -58,6 +58,8 @@ cdr_serialize(
 {
   // Member: run_end
   cdr << (ros_message.run_end ? true : false);
+  // Member: teleop_on
+  cdr << (ros_message.teleop_on ? true : false);
   // Member: goal_pos
   geometry_msgs::msg::typesupport_fastrtps_cpp::cdr_serialize(
     ros_message.goal_pos,
@@ -82,6 +84,13 @@ cdr_deserialize(
     uint8_t tmp;
     cdr >> tmp;
     ros_message.run_end = tmp ? true : false;
+  }
+
+  // Member: teleop_on
+  {
+    uint8_t tmp;
+    cdr >> tmp;
+    ros_message.teleop_on = tmp ? true : false;
   }
 
   // Member: goal_pos
@@ -116,6 +125,12 @@ get_serialized_size(
   // Member: run_end
   {
     size_t item_size = sizeof(ros_message.run_end);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // Member: teleop_on
+  {
+    size_t item_size = sizeof(ros_message.teleop_on);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -167,6 +182,14 @@ max_serialized_size_RRRTargetPub_Request(
 
 
   // Member: run_end
+  {
+    size_t array_size = 1;
+
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+
+  // Member: teleop_on
   {
     size_t array_size = 1;
 

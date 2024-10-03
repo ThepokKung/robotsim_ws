@@ -18,3 +18,7 @@ srv/RRRTargetPub.idl
 srv/RRRTargetPub.srv
 srv/RRRTargetPub_Request.msg
 srv/RRRTargetPub_Response.msg
+srv/RRRTeleop.idl
+srv/RRRTeleop.srv
+srv/RRRTeleop_Request.msg
+srv/RRRTeleop_Response.msg

@@ -12,6 +12,9 @@ file(REMOVE_RECURSE
   "rosidl_generator_cpp/rrr_robot_interfaces/srv/detail/rrr_target_pub__builder.hpp"
   "rosidl_generator_cpp/rrr_robot_interfaces/srv/detail/rrr_target_pub__struct.hpp"
   "rosidl_generator_cpp/rrr_robot_interfaces/srv/detail/rrr_target_pub__traits.hpp"
+  "rosidl_generator_cpp/rrr_robot_interfaces/srv/detail/rrr_teleop__builder.hpp"
+  "rosidl_generator_cpp/rrr_robot_interfaces/srv/detail/rrr_teleop__struct.hpp"
+  "rosidl_generator_cpp/rrr_robot_interfaces/srv/detail/rrr_teleop__traits.hpp"
   "rosidl_generator_cpp/rrr_robot_interfaces/srv/detail/rrripk__builder.hpp"
   "rosidl_generator_cpp/rrr_robot_interfaces/srv/detail/rrripk__struct.hpp"
   "rosidl_generator_cpp/rrr_robot_interfaces/srv/detail/rrripk__traits.hpp"
@@ -19,6 +22,7 @@ file(REMOVE_RECURSE
   "rosidl_generator_cpp/rrr_robot_interfaces/srv/rrr_mode.hpp"
   "rosidl_generator_cpp/rrr_robot_interfaces/srv/rrr_random_target.hpp"
   "rosidl_generator_cpp/rrr_robot_interfaces/srv/rrr_target_pub.hpp"
+  "rosidl_generator_cpp/rrr_robot_interfaces/srv/rrr_teleop.hpp"
   "rosidl_generator_cpp/rrr_robot_interfaces/srv/rrripk.hpp"
 )
 

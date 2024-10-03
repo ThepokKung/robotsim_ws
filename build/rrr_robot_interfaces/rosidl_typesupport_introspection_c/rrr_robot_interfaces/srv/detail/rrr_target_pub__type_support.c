@@ -37,7 +37,7 @@ void rrr_robot_interfaces__srv__RRRTargetPub_Request__rosidl_typesupport_introsp
   rrr_robot_interfaces__srv__RRRTargetPub_Request__fini(message_memory);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember rrr_robot_interfaces__srv__RRRTargetPub_Request__rosidl_typesupport_introspection_c__RRRTargetPub_Request_message_member_array[5] = {
+static rosidl_typesupport_introspection_c__MessageMember rrr_robot_interfaces__srv__RRRTargetPub_Request__rosidl_typesupport_introspection_c__RRRTargetPub_Request_message_member_array[6] = {
   {
     "run_end",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_BOOLEAN,  // type
@@ -47,6 +47,23 @@ static rosidl_typesupport_introspection_c__MessageMember rrr_robot_interfaces__s
     0,  // array size
     false,  // is upper bound
     offsetof(rrr_robot_interfaces__srv__RRRTargetPub_Request, run_end),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
+    "teleop_on",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_BOOLEAN,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(rrr_robot_interfaces__srv__RRRTargetPub_Request, teleop_on),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
@@ -128,7 +145,7 @@ static rosidl_typesupport_introspection_c__MessageMember rrr_robot_interfaces__s
 static const rosidl_typesupport_introspection_c__MessageMembers rrr_robot_interfaces__srv__RRRTargetPub_Request__rosidl_typesupport_introspection_c__RRRTargetPub_Request_message_members = {
   "rrr_robot_interfaces__srv",  // message namespace
   "RRRTargetPub_Request",  // message name
-  5,  // number of fields
+  6,  // number of fields
   sizeof(rrr_robot_interfaces__srv__RRRTargetPub_Request),
   rrr_robot_interfaces__srv__RRRTargetPub_Request__rosidl_typesupport_introspection_c__RRRTargetPub_Request_message_member_array,  // message members
   rrr_robot_interfaces__srv__RRRTargetPub_Request__rosidl_typesupport_introspection_c__RRRTargetPub_Request_init_function,  // function to initialize message memory (memory has to be allocated)
@@ -146,7 +163,7 @@ static rosidl_message_type_support_t rrr_robot_interfaces__srv__RRRTargetPub_Req
 ROSIDL_TYPESUPPORT_INTROSPECTION_C_EXPORT_rrr_robot_interfaces
 const rosidl_message_type_support_t *
 ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, rrr_robot_interfaces, srv, RRRTargetPub_Request)() {
-  rrr_robot_interfaces__srv__RRRTargetPub_Request__rosidl_typesupport_introspection_c__RRRTargetPub_Request_message_member_array[1].members_ =
+  rrr_robot_interfaces__srv__RRRTargetPub_Request__rosidl_typesupport_introspection_c__RRRTargetPub_Request_message_member_array[2].members_ =
     ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, geometry_msgs, msg, Point)();
   if (!rrr_robot_interfaces__srv__RRRTargetPub_Request__rosidl_typesupport_introspection_c__RRRTargetPub_Request_message_type_support_handle.typesupport_identifier) {
     rrr_robot_interfaces__srv__RRRTargetPub_Request__rosidl_typesupport_introspection_c__RRRTargetPub_Request_message_type_support_handle.typesupport_identifier =

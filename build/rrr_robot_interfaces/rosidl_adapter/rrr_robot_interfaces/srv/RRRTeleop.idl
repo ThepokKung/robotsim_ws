@@ -1,0 +1,18 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from rrr_robot_interfaces/srv/RRRTeleop.srv
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/Point.idl"
+
+module rrr_robot_interfaces {
+  module srv {
+    struct RRRTeleop_Request {
+      string ref_frame;
+
+      geometry_msgs::msg::Point teleop_target;
+    };
+    struct RRRTeleop_Response {
+      uint8 structure_needs_at_least_one_member;
+    };
+  };
+};

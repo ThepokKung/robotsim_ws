@@ -21,6 +21,7 @@ rrr_robot_interfaces__srv__RRRTargetPub_Request__init(rrr_robot_interfaces__srv_
     return false;
   }
   // run_end
+  // teleop_on
   // goal_pos
   if (!geometry_msgs__msg__Point__init(&msg->goal_pos)) {
     rrr_robot_interfaces__srv__RRRTargetPub_Request__fini(msg);
@@ -39,6 +40,7 @@ rrr_robot_interfaces__srv__RRRTargetPub_Request__fini(rrr_robot_interfaces__srv_
     return;
   }
   // run_end
+  // teleop_on
   // goal_pos
   geometry_msgs__msg__Point__fini(&msg->goal_pos);
   // q1
@@ -54,6 +56,10 @@ rrr_robot_interfaces__srv__RRRTargetPub_Request__are_equal(const rrr_robot_inter
   }
   // run_end
   if (lhs->run_end != rhs->run_end) {
+    return false;
+  }
+  // teleop_on
+  if (lhs->teleop_on != rhs->teleop_on) {
     return false;
   }
   // goal_pos
@@ -87,6 +93,8 @@ rrr_robot_interfaces__srv__RRRTargetPub_Request__copy(
   }
   // run_end
   output->run_end = input->run_end;
+  // teleop_on
+  output->teleop_on = input->teleop_on;
   // goal_pos
   if (!geometry_msgs__msg__Point__copy(
       &(input->goal_pos), &(output->goal_pos)))

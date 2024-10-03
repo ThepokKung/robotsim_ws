@@ -25,6 +25,7 @@ extern "C"
 typedef struct rrr_robot_interfaces__srv__RRRTargetPub_Request
 {
   bool run_end;
+  bool teleop_on;
   geometry_msgs__msg__Point goal_pos;
   double q1;
   double q2;

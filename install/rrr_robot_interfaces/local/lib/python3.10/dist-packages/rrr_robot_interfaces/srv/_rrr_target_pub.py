@@ -62,6 +62,7 @@ class RRRTargetPub_Request(metaclass=Metaclass_RRRTargetPub_Request):
 
     __slots__ = [
         '_run_end',
+        '_teleop_on',
         '_goal_pos',
         '_q1',
         '_q2',
@@ -70,6 +71,7 @@ class RRRTargetPub_Request(metaclass=Metaclass_RRRTargetPub_Request):
 
     _fields_and_field_types = {
         'run_end': 'boolean',
+        'teleop_on': 'boolean',
         'goal_pos': 'geometry_msgs/Point',
         'q1': 'double',
         'q2': 'double',
@@ -77,6 +79,7 @@ class RRRTargetPub_Request(metaclass=Metaclass_RRRTargetPub_Request):
     }
 
     SLOT_TYPES = (
+        rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
         rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
         rosidl_parser.definition.NamespacedType(['geometry_msgs', 'msg'], 'Point'),  # noqa: E501
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
@@ -89,6 +92,7 @@ class RRRTargetPub_Request(metaclass=Metaclass_RRRTargetPub_Request):
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
         self.run_end = kwargs.get('run_end', bool())
+        self.teleop_on = kwargs.get('teleop_on', bool())
         from geometry_msgs.msg import Point
         self.goal_pos = kwargs.get('goal_pos', Point())
         self.q1 = kwargs.get('q1', float())
@@ -126,6 +130,8 @@ class RRRTargetPub_Request(metaclass=Metaclass_RRRTargetPub_Request):
             return False
         if self.run_end != other.run_end:
             return False
+        if self.teleop_on != other.teleop_on:
+            return False
         if self.goal_pos != other.goal_pos:
             return False
         if self.q1 != other.q1:
@@ -153,6 +159,19 @@ class RRRTargetPub_Request(metaclass=Metaclass_RRRTargetPub_Request):
                 isinstance(value, bool), \
                 "The 'run_end' field must be of type 'bool'"
         self._run_end = value
+
+    @builtins.property
+    def teleop_on(self):
+        """Message field 'teleop_on'."""
+        return self._teleop_on
+
+    @teleop_on.setter
+    def teleop_on(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, bool), \
+                "The 'teleop_on' field must be of type 'bool'"
+        self._teleop_on = value
 
     @builtins.property
     def goal_pos(self):

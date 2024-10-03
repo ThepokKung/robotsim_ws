@@ -63,6 +63,15 @@ bool rrr_robot_interfaces__srv__rrr_target_pub__request__convert_from_py(PyObjec
     ros_message->run_end = (Py_True == field);
     Py_DECREF(field);
   }
+  {  // teleop_on
+    PyObject * field = PyObject_GetAttrString(_pymsg, "teleop_on");
+    if (!field) {
+      return false;
+    }
+    assert(PyBool_Check(field));
+    ros_message->teleop_on = (Py_True == field);
+    Py_DECREF(field);
+  }
   {  // goal_pos
     PyObject * field = PyObject_GetAttrString(_pymsg, "goal_pos");
     if (!field) {
@@ -128,6 +137,17 @@ PyObject * rrr_robot_interfaces__srv__rrr_target_pub__request__convert_to_py(voi
     field = PyBool_FromLong(ros_message->run_end ? 1 : 0);
     {
       int rc = PyObject_SetAttrString(_pymessage, "run_end", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // teleop_on
+    PyObject * field = NULL;
+    field = PyBool_FromLong(ros_message->teleop_on ? 1 : 0);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "teleop_on", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

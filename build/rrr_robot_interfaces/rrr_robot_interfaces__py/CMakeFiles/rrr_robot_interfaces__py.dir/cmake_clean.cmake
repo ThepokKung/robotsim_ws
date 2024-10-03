@@ -11,6 +11,8 @@ file(REMOVE_RECURSE
   "../rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_random_target_s.c"
   "../rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_target_pub.py"
   "../rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_target_pub_s.c"
+  "../rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_teleop.py"
+  "../rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_teleop_s.c"
   "../rosidl_generator_py/rrr_robot_interfaces/srv/_rrripk.py"
   "../rosidl_generator_py/rrr_robot_interfaces/srv/_rrripk_s.c"
   "CMakeFiles/rrr_robot_interfaces__py"
