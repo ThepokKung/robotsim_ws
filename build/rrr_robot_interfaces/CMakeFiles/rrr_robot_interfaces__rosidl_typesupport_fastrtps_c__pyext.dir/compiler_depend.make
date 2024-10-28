@@ -254,12 +254,19 @@ CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl
   rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_invert_kinematics__functions.h \
   rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_teleop__type_support.h \
   rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_teleop__struct.h \
-  rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_teleop__functions.h
+  rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_teleop__functions.h \
+  rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_save_path__type_support.h \
+  rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_save_path__struct.h \
+  rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_save_path__functions.h
 
+
+rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_save_path__type_support.h:
 
 rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_teleop__functions.h:
 
 /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point__struct.h:
+
+rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_save_path__functions.h:
 
 rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_invert_kinematics__struct.h:
 
@@ -272,6 +279,8 @@ rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_mode__type_support.h:
 /usr/include/python3.10/fileutils.h:
 
 /usr/include/python3.10/pystrcmp.h:
+
+rosidl_generator_c/rrr_robot_interfaces/srv/detail/rrr_save_path__struct.h:
 
 /usr/include/python3.10/eval.h:
 

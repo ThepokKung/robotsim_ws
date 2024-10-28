@@ -30,16 +30,16 @@ class ControllerNode(Node):
 
         # Variable
         self.mode = ''
-        self.teleop_ref = 'base'
+        self.teleop_ref = ['base','hand']
         # self.goal_pos = [0.0 ,0.0 ,0.0]
 
         # Display key for call mode
-        self.get_logger().info(f'Mode key :\nTele-operation Mode : Teleop\n Autonomous Mode : Auto')
+        self.get_logger().info(f'Mode key :\nTele-operation Mode : Teleop\nAutonomous Mode : Auto')
 
     def teleop_mode(self, call):
         teleop_msg = RRRTeleop.Request()
         teleop_msg.teleop_run = call
-        teleop_msg.frame_ref = self.teleop_ref
+        teleop_msg.frame_ref = self.teleop_ref[0]
         self.teleop_call.call_async(teleop_msg)
 
     def mode_callback(self, request:RRRMode.Request, response:RRRMode.Response):

@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "../rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_invert_kinematics_s.c"
   "../rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_mode.py"
   "../rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_mode_s.c"
+  "../rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_save_path.py"
+  "../rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_save_path_s.c"
   "../rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_teleop.py"
   "../rosidl_generator_py/rrr_robot_interfaces/srv/_rrr_teleop_s.c"
   "CMakeFiles/rrr_robot_interfaces__py"

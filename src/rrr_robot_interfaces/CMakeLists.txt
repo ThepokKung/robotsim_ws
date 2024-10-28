@@ -29,6 +29,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "srv/RRRMode.srv"
   "srv/RRRInvertKinematics.srv"
   "srv/RRRTeleop.srv"
+  "srv/RRRSavePath.srv"
   DEPENDENCIES geometry_msgs
 )
 

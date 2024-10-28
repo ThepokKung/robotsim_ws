@@ -18,10 +18,14 @@ set(CMAKE_MULTIPLE_OUTPUT_PAIRS
   "/home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_generator_cpp/rrr_robot_interfaces/srv/detail/rrr_mode__builder.hpp" "/home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_generator_cpp/rrr_robot_interfaces/srv/rrr_mode.hpp"
   "/home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_generator_cpp/rrr_robot_interfaces/srv/detail/rrr_mode__struct.hpp" "/home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_generator_cpp/rrr_robot_interfaces/srv/rrr_mode.hpp"
   "/home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_generator_cpp/rrr_robot_interfaces/srv/detail/rrr_mode__traits.hpp" "/home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_generator_cpp/rrr_robot_interfaces/srv/rrr_mode.hpp"
+  "/home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_generator_cpp/rrr_robot_interfaces/srv/detail/rrr_save_path__builder.hpp" "/home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_generator_cpp/rrr_robot_interfaces/srv/rrr_mode.hpp"
+  "/home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_generator_cpp/rrr_robot_interfaces/srv/detail/rrr_save_path__struct.hpp" "/home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_generator_cpp/rrr_robot_interfaces/srv/rrr_mode.hpp"
+  "/home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_generator_cpp/rrr_robot_interfaces/srv/detail/rrr_save_path__traits.hpp" "/home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_generator_cpp/rrr_robot_interfaces/srv/rrr_mode.hpp"
   "/home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_generator_cpp/rrr_robot_interfaces/srv/detail/rrr_teleop__builder.hpp" "/home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_generator_cpp/rrr_robot_interfaces/srv/rrr_mode.hpp"
   "/home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_generator_cpp/rrr_robot_interfaces/srv/detail/rrr_teleop__struct.hpp" "/home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_generator_cpp/rrr_robot_interfaces/srv/rrr_mode.hpp"
   "/home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_generator_cpp/rrr_robot_interfaces/srv/detail/rrr_teleop__traits.hpp" "/home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_generator_cpp/rrr_robot_interfaces/srv/rrr_mode.hpp"
   "/home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_generator_cpp/rrr_robot_interfaces/srv/rrr_invert_kinematics.hpp" "/home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_generator_cpp/rrr_robot_interfaces/srv/rrr_mode.hpp"
+  "/home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_generator_cpp/rrr_robot_interfaces/srv/rrr_save_path.hpp" "/home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_generator_cpp/rrr_robot_interfaces/srv/rrr_mode.hpp"
   "/home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_generator_cpp/rrr_robot_interfaces/srv/rrr_teleop.hpp" "/home/waritt/robotsim_ws/build/rrr_robot_interfaces/rosidl_generator_cpp/rrr_robot_interfaces/srv/rrr_mode.hpp"
   )
 

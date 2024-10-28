@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/rrr_robot_interfaces/srv/detail/rrr_invert_kinematics__type_support.cpp.o.d"
   "CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/rrr_robot_interfaces/srv/detail/rrr_mode__type_support.cpp.o"
   "CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/rrr_robot_interfaces/srv/detail/rrr_mode__type_support.cpp.o.d"
+  "CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/rrr_robot_interfaces/srv/detail/rrr_save_path__type_support.cpp.o"
+  "CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/rrr_robot_interfaces/srv/detail/rrr_save_path__type_support.cpp.o.d"
   "CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/rrr_robot_interfaces/srv/detail/rrr_teleop__type_support.cpp.o"
   "CMakeFiles/rrr_robot_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/rrr_robot_interfaces/srv/detail/rrr_teleop__type_support.cpp.o.d"
   "librrr_robot_interfaces__rosidl_typesupport_introspection_cpp.pdb"
@@ -11,6 +13,8 @@ file(REMOVE_RECURSE
   "rosidl_typesupport_introspection_cpp/rrr_robot_interfaces/srv/detail/rrr_invert_kinematics__type_support.cpp"
   "rosidl_typesupport_introspection_cpp/rrr_robot_interfaces/srv/detail/rrr_mode__rosidl_typesupport_introspection_cpp.hpp"
   "rosidl_typesupport_introspection_cpp/rrr_robot_interfaces/srv/detail/rrr_mode__type_support.cpp"
+  "rosidl_typesupport_introspection_cpp/rrr_robot_interfaces/srv/detail/rrr_save_path__rosidl_typesupport_introspection_cpp.hpp"
+  "rosidl_typesupport_introspection_cpp/rrr_robot_interfaces/srv/detail/rrr_save_path__type_support.cpp"
   "rosidl_typesupport_introspection_cpp/rrr_robot_interfaces/srv/detail/rrr_teleop__rosidl_typesupport_introspection_cpp.hpp"
   "rosidl_typesupport_introspection_cpp/rrr_robot_interfaces/srv/detail/rrr_teleop__type_support.cpp"
 )

@@ -6,6 +6,10 @@ srv/RRRMode.idl
 srv/RRRMode.srv
 srv/RRRMode_Request.msg
 srv/RRRMode_Response.msg
+srv/RRRSavePath.idl
+srv/RRRSavePath.srv
+srv/RRRSavePath_Request.msg
+srv/RRRSavePath_Response.msg
 srv/RRRTeleop.idl
 srv/RRRTeleop.srv
 srv/RRRTeleop_Request.msg
