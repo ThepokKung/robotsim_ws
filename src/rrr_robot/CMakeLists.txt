@@ -30,6 +30,7 @@ install(PROGRAMS
   scripts/jointstate_script.py
   scripts/controller.py
   scripts/invert_kinematics.py
+  scripts/target_bag.py
   DESTINATION lib/${PROJECT_NAME}
 )
 
