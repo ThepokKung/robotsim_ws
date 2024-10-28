@@ -7,8 +7,8 @@ def generate_launch_description():
     luanch_description = LaunchDescription()
 
     package_name = 'rrr_robot'
-    executable_name = ['controller.py' ,'invert_kinematics.py' ,'random_target.py' ,'jointstate_script.py']
-    name = ['controller' ,'invert_kinematics' ,'random_target' ,'jointstate_script']
+    executable_name = ['controller.py' ,'invert_kinematics.py' ,'target_bag.py' ,'jointstate_script.py']
+    name = ['controller' ,'invert_kinematics' ,'target_bag' ,'jointstate_script']
 
     for i in range(len(executable_name)):
         node_call = Node(

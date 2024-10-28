@@ -5,7 +5,7 @@ from rclpy.node import Node
 from rclpy.executors import MultiThreadedExecutor
 from rclpy.callback_groups import MutuallyExclusiveCallbackGroup
 
-from rrr_robot_interfaces.srv import RRRTeleop , RRRInvertKinematics
+from rrr_robot_interfaces.srv import *
 
 from sensor_msgs.msg import JointState
 from geometry_msgs.msg import PoseStamped , Twist , Point 
@@ -34,6 +34,8 @@ class JointstatePublisher(Node):
         # Service client
         self.ink_call_group = MutuallyExclusiveCallbackGroup()
         self.ink_calcalate = self.create_client(RRRInvertKinematics ,'/ink_calculate' ,callback_group = self.ink_call_group)
+        self.target_call_group = MutuallyExclusiveCallbackGroup()
+        self.target_call = self.create_client(RRRTargetPath ,'/call_path' ,callback_group = self.target_call_group)
         
         # Timmer 
         self.dt = 0.01
@@ -68,29 +70,19 @@ class JointstatePublisher(Node):
         # Display Node start
         self.get_logger().info(f'JointState publisher Start Node')
 
-    def target_callback(self, msg :PoseStamped):
-        if self.auto_run and self.robot_run == False:
-            self.goal_pos[0] = msg.pose.position.x
-            self.goal_pos[1] = msg.pose.position.y
-            self.goal_pos[2] = msg.pose.position.z
+    def call_target(self):
+        call_msg = RRRTargetPath.Request()
+        call_msg.call_path = True
 
-            self.get_logger().info(f'Auto target : {self.goal_pose}')
+        result = self.target_call.call(call_msg)
 
-            ink_target = RRRInvertKinematics.Request()
-            ink_target.goal_pos.x = self.goal_pos[0]
-            ink_target.goal_pos.y = self.goal_pos[1]
-            ink_target.goal_pos.z = self.goal_pos[2]
+        if result.all_done:
+            pass
 
-            result = self.ink_calcalate.call(ink_target)
-
-            self.get_logger().info(f'Invert Kinematic check : {result.ikn_check}')
-             
-            if result.ikn_check:
-                self.q_goal[0] = result.q1
-                self.q_goal[1] = result.q2
-                self.q_goal[2] = result.q3
-
-            self.robot_run = True
+    def auto_callback(self, request:RRRAuto.Request, response:RRRAuto.Response):
+        self.auto_run = request.auto_run
+        self.call_target()
+        return response
 
     def teleop_callback(self, request:RRRTeleop.Request, response:RRRTeleop.Response):
         if self.auto_run == False:
@@ -107,6 +99,30 @@ class JointstatePublisher(Node):
             self.cmd_vel[0] = msg.linear.x
             self.cmd_vel[1] = msg.linear.y
             self.cmd_vel[2] = msg.linear.z
+
+    def target_callback(self, msg :PoseStamped):
+        if self.auto_run and self.robot_run == False:
+            self.goal_pos[0] = msg.pose.position.x
+            self.goal_pos[1] = msg.pose.position.y
+            self.goal_pos[2] = msg.pose.position.z
+
+            self.get_logger().info(f'Auto target : {self.goal_pose}')
+
+            ink_target = RRRInvertKinematics.Request()
+            ink_target.goal_pos.x = self.goal_pose[0]
+            ink_target.goal_pos.y = self.goal_pose[1]
+            ink_target.goal_pos.z = self.goal_pose[2]
+
+            result = self.ink_calcalate.call(ink_target)
+
+            self.get_logger().info(f'Invert Kinematic check : {result.ikn_check}')
+             
+            if result.ikn_check:
+                self.q_goal[0] = result.q1
+                self.q_goal[1] = result.q2
+                self.q_goal[2] = result.q3
+
+            self.robot_run = True
 
     def sim_loop(self):
         # Set header pub message
@@ -151,6 +167,13 @@ class JointstatePublisher(Node):
             joint_msg.name.append(self.name[i])
 
         current_pos = self.robot.fkine([self.q[0],self.q[1],self.q[2],0])
+
+        if self.auto_run:
+            pos_check = self.goal_pose - current_pos.t
+            if pos_check[0] < 0.1 and pos_check[1] < 0.1 and pos_check[2] < 0.1:
+                self.robot_run = False
+                self.call_target()
+
 
         pose_msg = Point()
         pose_msg.x = current_pos.t[0]
