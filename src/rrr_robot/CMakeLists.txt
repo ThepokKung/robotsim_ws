@@ -29,7 +29,6 @@ ament_python_install_package(${PROJECT_NAME})
 install(PROGRAMS
   scripts/jointstate_script.py
   scripts/controller.py
-  scripts/random_target.py
   scripts/invert_kinematics.py
   DESTINATION lib/${PROJECT_NAME}
 )
