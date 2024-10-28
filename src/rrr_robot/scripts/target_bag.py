@@ -34,12 +34,12 @@ class TargetBagNode(Node):
             self.save_path.append([msg.x,msg.y,msg.z])
             self.save = False
     
-    def save_path_callback(self, request:RRRSavePath.Request, response:RRRSavePath.Response):
+    def save_path_callback(self, request:RRRTargetPath.Request, response:RRRTargetPath.Response):
         self.save = request.save_path
 
         return response
         
-    def call_path_callback(self, request:RRRSavePath.Request, response:RRRSavePath.Response):
+    def call_path_callback(self, request:RRRTargetPath.Request, response:RRRTargetPath.Response):
         self.call_path = request.call_path
         if len(self.save_path) > 0:
             self.path_msg[0] = self.save_path.pop(0)[0]

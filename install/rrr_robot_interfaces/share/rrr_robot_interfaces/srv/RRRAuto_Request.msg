@@ -1,1 +1,0 @@
-bool auto_run
