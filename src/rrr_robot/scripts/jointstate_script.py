@@ -45,8 +45,12 @@ class JointstatePublisher(Node):
         self.teleop_run = False
         self.teleop_ref = ''
 
-        self.q = [0.0 ,0.0 ,0.5]
+        self.auto_run = False
+
+        self.q = [0.0 ,pi/2 ,pi/2]
         self.cmd_vel = [0.0 ,0.0 ,0.0]
+
+        self.q_goal = [0.0 ,0.0 ,0.0]
 
         self.name = ["joint_1" ,"joint_2" ,"joint_3"]
 
@@ -55,9 +59,12 @@ class JointstatePublisher(Node):
 
     def teleop_callback(self, request:RRRTeleop.Request, response:RRRTeleop.Response):
         self.teleop_run = request.teleop_run
+        self.get_logger().info(f'Teleop run : {self.teleop_run}')
         if self.teleop_run:
             self.teleop_ref = request.frame_ref
             self.get_logger().info(f'Jacobian ref by frame : {self.teleop_ref}')
+
+        return response
 
     def cmd_callback(self, msg : Twist):
         if self.teleop_run:
@@ -84,9 +91,22 @@ class JointstatePublisher(Node):
 
             q_dot = np.linalg.inv(j_reduce) @ np.array(self.cmd_vel)
 
-            if np.linalg.det(j_reduce) < 0.1 :
+            if np.linalg.det(j_reduce) < 0.01 :
                 q_dot = [0,0,0,0]
                 self.get_logger().info(f'Singurality Stop!!!')
+
+        elif self.auto_run:
+            k = 1.5
+
+            delta_q = [0.0 ,0.0 ,0.0]
+            delta_q[0] = self.q_goal[0] - self.q[0]
+            delta_q[1] = self.q_goal[1] - self.q[1]
+            delta_q[2] = self.q_goal[2] - self.q[2]
+
+            q_dot[0] = delta_q[0] * self.dt *k
+            q_dot[1] = delta_q[1] * self.dt *k
+            q_dot[2] = delta_q[2] * self.dt *k
+
         else:
             q_dot = [0,0,0,0]
 
@@ -94,7 +114,7 @@ class JointstatePublisher(Node):
         self.q[1] = self.q[1] + q_dot[1]
         self.q[2] = self.q[2] + q_dot[2]
 
-        for i in range(len(self.q)):
+        for i in range(len(self.q)): 
             joint_msg.position.append(self.q[i])
             joint_msg.name.append(self.name[i])
 

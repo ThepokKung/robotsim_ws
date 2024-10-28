@@ -3,7 +3,7 @@
 import rclpy
 from rclpy.node import Node
 
-from rrr_robot_interfaces.srv 
+from rrr_robot_interfaces.srv import RRRTeleop
 
 from sensor_msgs.msg import JointState
 from geometry_msgs.msg import PoseStamped , Twist
@@ -23,6 +23,9 @@ class JointstatePublisher(Node):
 
         # Sub Topic
         self.create_subscription(Twist, '/cmd_vel', self.cmd_callback, 10)
+
+        # Service server
+        self.create_service(RRRTeleop ,'/teleop_mode' ,self.teleop_callback)
         
         # Timmer 
         self.dt = 0.01
@@ -39,6 +42,9 @@ class JointstatePublisher(Node):
         )
 
         # Variable
+        self.teleop_run = False
+        self.teleop_ref = ''
+
         self.q = [0.0 ,0.0 ,0.5]
         self.cmd_vel = [0.0 ,0.0 ,0.0]
 
@@ -47,10 +53,19 @@ class JointstatePublisher(Node):
         # Display Node start
         self.get_logger().info(f'JointState publisher Start Node')
 
+    def teleop_callback(self, request:RRRTeleop.Request, response:RRRTeleop.Response):
+        self.teleop_run = request.teleop_run
+        if self.teleop_run:
+            self.teleop_ref = request.frame_ref
+            self.get_logger().info(f'Jacobian ref by frame : {self.teleop_ref}')
+
+        return response
+
     def cmd_callback(self, msg : Twist):
-        self.cmd_vel[0] = msg.linear.x
-        self.cmd_vel[1] = msg.linear.y
-        self.cmd_vel[2] = msg.linear.z
+        if self.teleop_run:
+            self.cmd_vel[0] = msg.linear.x
+            self.cmd_vel[1] = msg.linear.y
+            self.cmd_vel[2] = msg.linear.z
 
     def sim_loop(self):
         # Set header pub message
@@ -62,14 +77,20 @@ class JointstatePublisher(Node):
         end_effector_msg.header.frame_id = 'link_0'
 
         # calculate q value
-        J = self.robot.jacob0([self.q[0],self.q[1],self.q[2],0])
-        j_reduce = J[:3, :3]
+        if self.teleop_run:
+            if self.teleop_ref == 'base':
+                J = self.robot.jacob0([self.q[0],self.q[1],self.q[2],0])
+            elif self.teleop_ref == 'hand':
+                J = self.robot.jacobe([self.q[0],self.q[1],self.q[2],0])
+            j_reduce = J[:3, :3]
 
-        q_dot = np.linalg.inv(j_reduce) @ np.array(self.cmd_vel)
+            q_dot = np.linalg.inv(j_reduce) @ np.array(self.cmd_vel)
 
-        if np.linalg.det(j_reduce) < 0.1 :
+            if np.linalg.det(j_reduce) < 0.1 :
+                q_dot = [0,0,0,0]
+                self.get_logger().info(f'Singurality Stop!!!')
+        else:
             q_dot = [0,0,0,0]
-            self.get_logger().info(f'Singurality Stop!!!')
 
         self.q[0] = self.q[0] + q_dot[0]
         self.q[1] = self.q[1] + q_dot[1]
