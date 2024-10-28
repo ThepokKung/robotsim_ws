@@ -1,2 +1,0 @@
-bool teleop_run
-string frame_ref

@@ -1,2 +1,0 @@
-
-bool mode_change
