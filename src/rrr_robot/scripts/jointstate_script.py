@@ -29,7 +29,7 @@ class JointstatePublisher(Node):
 
         # Service server
         self.create_service(RRRTeleop ,'/teleop_mode' ,self.teleop_callback)
-        self.create_service(RRRTeleop ,'/auto_mode' ,self.auto_callback)
+        self.create_service(RRRAuto ,'/auto_mode' ,self.auto_callback)
 
         # Service client
         self.ink_call_group = MutuallyExclusiveCallbackGroup()
@@ -81,7 +81,8 @@ class JointstatePublisher(Node):
 
     def auto_callback(self, request:RRRAuto.Request, response:RRRAuto.Response):
         self.auto_run = request.auto_run
-        self.call_target()
+        if self.auto_run:
+            self.call_target()
         return response
 
     def teleop_callback(self, request:RRRTeleop.Request, response:RRRTeleop.Response):

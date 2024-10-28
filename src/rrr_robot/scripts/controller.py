@@ -2,6 +2,8 @@
 
 import rclpy
 from rclpy.node import Node
+from rclpy.executors import MultiThreadedExecutor
+from rclpy.callback_groups import MutuallyExclusiveCallbackGroup
 
 from rrr_robot_interfaces.srv import RRRMode ,RRRTeleop ,RRRAuto
 
@@ -11,11 +13,13 @@ class ControllerNode(Node):
         super().__init__('Controller_node')
 
         # Service server
-        self.create_service(RRRMode ,'/robot_mode' ,self.mode_callback)
+        self.create_service(RRRMode ,'/robot_mode' ,self.mode_callback )
 
         # Service client
-        self.teleop_call= self.create_client(RRRTeleop ,'/teleop_mode')
-        self.auto_call= self.create_client(RRRTeleop ,'/auto_mode')
+        self.teleop_call_group = MutuallyExclusiveCallbackGroup()
+        self.teleop_call= self.create_client(RRRTeleop ,'/teleop_mode',callback_group = self.teleop_call_group)
+        self.auto_call_group = MutuallyExclusiveCallbackGroup()
+        self.auto_call= self.create_client(RRRAuto ,'/auto_mode',callback_group = self.auto_call_group)
 
         # Variable
         self.mode = ''
@@ -28,6 +32,7 @@ class ControllerNode(Node):
     def auto_mode(self,call):
         auto_msg = RRRAuto.Request()
         auto_msg.auto_run = call
+        self.get_logger().info(f'call auto')
         self.auto_call.call_async(auto_msg)
 
     def teleop_mode(self, call):
@@ -65,7 +70,12 @@ class ControllerNode(Node):
 def main(args=None):
     rclpy.init(args=args)
     node = ControllerNode()
-    rclpy.spin(node)
+    # rclpy.spin(node)
+
+    executor = MultiThreadedExecutor()
+    executor.add_node(node)
+    executor.spin()
+    
     node.destroy_node()
     rclpy.shutdown()
 
