@@ -59,6 +59,15 @@ bool rrr_robot_interfaces__srv__rrr_save_path__request__convert_from_py(PyObject
     ros_message->save_path = (Py_True == field);
     Py_DECREF(field);
   }
+  {  // call_path
+    PyObject * field = PyObject_GetAttrString(_pymsg, "call_path");
+    if (!field) {
+      return false;
+    }
+    assert(PyBool_Check(field));
+    ros_message->call_path = (Py_True == field);
+    Py_DECREF(field);
+  }
 
   return true;
 }
@@ -86,6 +95,17 @@ PyObject * rrr_robot_interfaces__srv__rrr_save_path__request__convert_to_py(void
     field = PyBool_FromLong(ros_message->save_path ? 1 : 0);
     {
       int rc = PyObject_SetAttrString(_pymessage, "save_path", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // call_path
+    PyObject * field = NULL;
+    field = PyBool_FromLong(ros_message->call_path ? 1 : 0);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "call_path", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;
@@ -145,7 +165,15 @@ bool rrr_robot_interfaces__srv__rrr_save_path__response__convert_from_py(PyObjec
     assert(strncmp("rrr_robot_interfaces.srv._rrr_save_path.RRRSavePath_Response", full_classname_dest, 60) == 0);
   }
   rrr_robot_interfaces__srv__RRRSavePath_Response * ros_message = _ros_message;
-  ros_message->structure_needs_at_least_one_member = 0;
+  {  // all_done
+    PyObject * field = PyObject_GetAttrString(_pymsg, "all_done");
+    if (!field) {
+      return false;
+    }
+    assert(PyBool_Check(field));
+    ros_message->all_done = (Py_True == field);
+    Py_DECREF(field);
+  }
 
   return true;
 }
@@ -167,7 +195,18 @@ PyObject * rrr_robot_interfaces__srv__rrr_save_path__response__convert_to_py(voi
       return NULL;
     }
   }
-  (void)raw_ros_message;
+  rrr_robot_interfaces__srv__RRRSavePath_Response * ros_message = (rrr_robot_interfaces__srv__RRRSavePath_Response *)raw_ros_message;
+  {  // all_done
+    PyObject * field = NULL;
+    field = PyBool_FromLong(ros_message->all_done ? 1 : 0);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "all_done", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
 
   // ownership of _pymessage is transferred to the caller
   return _pymessage;

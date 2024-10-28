@@ -1,3 +1,7 @@
+srv/RRRAuto.idl
+srv/RRRAuto.srv
+srv/RRRAuto_Request.msg
+srv/RRRAuto_Response.msg
 srv/RRRInvertKinematics.idl
 srv/RRRInvertKinematics.srv
 srv/RRRInvertKinematics_Request.msg
@@ -6,10 +10,10 @@ srv/RRRMode.idl
 srv/RRRMode.srv
 srv/RRRMode_Request.msg
 srv/RRRMode_Response.msg
-srv/RRRSavePath.idl
-srv/RRRSavePath.srv
-srv/RRRSavePath_Request.msg
-srv/RRRSavePath_Response.msg
+srv/RRRTargetPath.idl
+srv/RRRTargetPath.srv
+srv/RRRTargetPath_Request.msg
+srv/RRRTargetPath_Response.msg
 srv/RRRTeleop.idl
 srv/RRRTeleop.srv
 srv/RRRTeleop_Request.msg

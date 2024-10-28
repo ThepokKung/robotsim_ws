@@ -1,0 +1,17 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from rrr_robot_interfaces/srv/RRRTargetPath.srv
+// generated code does not contain a copyright notice
+
+
+module rrr_robot_interfaces {
+  module srv {
+    struct RRRTargetPath_Request {
+      boolean save_path;
+
+      boolean call_path;
+    };
+    struct RRRTargetPath_Response {
+      boolean all_done;
+    };
+  };
+};

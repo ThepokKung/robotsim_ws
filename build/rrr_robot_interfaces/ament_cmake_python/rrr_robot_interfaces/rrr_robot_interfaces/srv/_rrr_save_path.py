@@ -56,13 +56,16 @@ class RRRSavePath_Request(metaclass=Metaclass_RRRSavePath_Request):
 
     __slots__ = [
         '_save_path',
+        '_call_path',
     ]
 
     _fields_and_field_types = {
         'save_path': 'boolean',
+        'call_path': 'boolean',
     }
 
     SLOT_TYPES = (
+        rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
         rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
     )
 
@@ -71,6 +74,7 @@ class RRRSavePath_Request(metaclass=Metaclass_RRRSavePath_Request):
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
         self.save_path = kwargs.get('save_path', bool())
+        self.call_path = kwargs.get('call_path', bool())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -103,6 +107,8 @@ class RRRSavePath_Request(metaclass=Metaclass_RRRSavePath_Request):
             return False
         if self.save_path != other.save_path:
             return False
+        if self.call_path != other.call_path:
+            return False
         return True
 
     @classmethod
@@ -123,8 +129,24 @@ class RRRSavePath_Request(metaclass=Metaclass_RRRSavePath_Request):
                 "The 'save_path' field must be of type 'bool'"
         self._save_path = value
 
+    @builtins.property
+    def call_path(self):
+        """Message field 'call_path'."""
+        return self._call_path
+
+    @call_path.setter
+    def call_path(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, bool), \
+                "The 'call_path' field must be of type 'bool'"
+        self._call_path = value
+
 
 # Import statements for member types
+
+# already imported above
+# import builtins
 
 # already imported above
 # import rosidl_parser.definition
@@ -175,18 +197,22 @@ class RRRSavePath_Response(metaclass=Metaclass_RRRSavePath_Response):
     """Message class 'RRRSavePath_Response'."""
 
     __slots__ = [
+        '_all_done',
     ]
 
     _fields_and_field_types = {
+        'all_done': 'boolean',
     }
 
     SLOT_TYPES = (
+        rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
         assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
+        self.all_done = kwargs.get('all_done', bool())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -217,12 +243,27 @@ class RRRSavePath_Response(metaclass=Metaclass_RRRSavePath_Response):
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
             return False
+        if self.all_done != other.all_done:
+            return False
         return True
 
     @classmethod
     def get_fields_and_field_types(cls):
         from copy import copy
         return copy(cls._fields_and_field_types)
+
+    @builtins.property
+    def all_done(self):
+        """Message field 'all_done'."""
+        return self._all_done
+
+    @all_done.setter
+    def all_done(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, bool), \
+                "The 'all_done' field must be of type 'bool'"
+        self._all_done = value
 
 
 class Metaclass_RRRSavePath(type):

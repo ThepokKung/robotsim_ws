@@ -4,6 +4,7 @@
     "/home/waritt/robotsim_ws/src/rrr_robot_interfaces:srv/RRRMode.srv",
     "/home/waritt/robotsim_ws/src/rrr_robot_interfaces:srv/RRRInvertKinematics.srv",
     "/home/waritt/robotsim_ws/src/rrr_robot_interfaces:srv/RRRTeleop.srv",
-    "/home/waritt/robotsim_ws/src/rrr_robot_interfaces:srv/RRRSavePath.srv"
+    "/home/waritt/robotsim_ws/src/rrr_robot_interfaces:srv/RRRAuto.srv",
+    "/home/waritt/robotsim_ws/src/rrr_robot_interfaces:srv/RRRTargetPath.srv"
   ]
 }

@@ -2,17 +2,8 @@
 
 import rclpy
 from rclpy.node import Node
-from rclpy.executors import MultiThreadedExecutor
-from rclpy.callback_groups import MutuallyExclusiveCallbackGroup
 
-from rrr_robot_interfaces.srv import RRRMode ,RRRInvertKinematics ,RRRTeleop
-
-from geometry_msgs.msg import PoseStamped , Twist
-
-import roboticstoolbox as rtb
-from spatialmath import SE3
-import numpy as np
-from math import pi 
+from rrr_robot_interfaces.srv import RRRMode ,RRRTeleop ,RRRAuto
 
 
 class ControllerNode(Node):
@@ -23,18 +14,21 @@ class ControllerNode(Node):
         self.create_service(RRRMode ,'/robot_mode' ,self.mode_callback)
 
         # Service client
-        self.teleop_call_group = MutuallyExclusiveCallbackGroup()
-        self.teleop_call= self.create_client(RRRTeleop ,'/teleop_mode' ,callback_group = self.teleop_call_group)
-        # self.ink_call_group = MutuallyExclusiveCallbackGroup()
-        # self.ink_calcalate = self.create_client(RRRInvertKinematics ,'/ink_calculate' ,callback_group = self.ink_call_group)
+        self.teleop_call= self.create_client(RRRTeleop ,'/teleop_mode')
+        self.auto_call= self.create_client(RRRTeleop ,'/auto_mode')
 
         # Variable
         self.mode = ''
         self.teleop_ref = ['base','hand']
-        # self.goal_pos = [0.0 ,0.0 ,0.0]
+        self.goal_pos = [0.0 ,0.0 ,0.0]
 
         # Display key for call mode
         self.get_logger().info(f'Mode key :\nTele-operation Mode : Teleop\nAutonomous Mode : Auto')
+
+    def auto_mode(self,call):
+        auto_msg = RRRAuto.Request()
+        auto_msg.auto_run = call
+        self.auto_call.call_async(auto_msg)
 
     def teleop_mode(self, call):
         teleop_msg = RRRTeleop.Request()
@@ -49,12 +43,14 @@ class ControllerNode(Node):
             response.mode_change = True
 
             self.teleop_mode(True)
+            self.auto_mode(False)
 
         elif self.mode == 'Auto':
             self.get_logger().info(f'Mode call : {self.mode}')    
             response.mode_change = True
 
             self.teleop_mode(False)
+            self.auto_mode(True)
             
         else:
             self.get_logger().info(f'Mode call : {self.mode} not found')
@@ -62,18 +58,14 @@ class ControllerNode(Node):
 
             self.mode = ''
             self.teleop_mode(False)
+            self.auto_mode(False)
 
         return response
 
 def main(args=None):
     rclpy.init(args=args)
     node = ControllerNode()
-
-    # rclpy.spin(node)
-    executor = MultiThreadedExecutor()
-    executor.add_node(node)
-    executor.spin()
-
+    rclpy.spin(node)
     node.destroy_node()
     rclpy.shutdown()
 

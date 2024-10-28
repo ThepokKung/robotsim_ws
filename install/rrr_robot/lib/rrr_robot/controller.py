@@ -2,15 +2,11 @@
 
 import rclpy
 from rclpy.node import Node
-from rclpy.executors import MultiThreadedExecutor
-from rclpy.callback_groups import MutuallyExclusiveCallbackGroup
 
-from rrr_robot_interfaces.srv import RRRMode ,RRRInvertKinematics ,RRRTeleop
+from rrr_robot_interfaces.srv import RRRMode ,RRRTeleop
 
-from geometry_msgs.msg import PoseStamped , Twist
+from geometry_msgs.msg import PoseStamped
 
-import roboticstoolbox as rtb
-from spatialmath import SE3
 import numpy as np
 from math import pi 
 
@@ -23,18 +19,20 @@ class ControllerNode(Node):
         self.create_service(RRRMode ,'/robot_mode' ,self.mode_callback)
 
         # Service client
-        self.teleop_call_group = MutuallyExclusiveCallbackGroup()
-        self.teleop_call= self.create_client(RRRTeleop ,'/teleop_mode' ,callback_group = self.teleop_call_group)
-        # self.ink_call_group = MutuallyExclusiveCallbackGroup()
-        # self.ink_calcalate = self.create_client(RRRInvertKinematics ,'/ink_calculate' ,callback_group = self.ink_call_group)
+        self.teleop_call= self.create_client(RRRTeleop ,'/teleop_mode')
+
+        # self.auto_call= self.create_client(RRRTeleop ,'/teleop_mode')
 
         # Variable
         self.mode = ''
         self.teleop_ref = ['base','hand']
-        # self.goal_pos = [0.0 ,0.0 ,0.0]
+        self.goal_pos = [0.0 ,0.0 ,0.0]
 
         # Display key for call mode
         self.get_logger().info(f'Mode key :\nTele-operation Mode : Teleop\nAutonomous Mode : Auto')
+
+    def auto_mode(self):
+        pass
 
     def teleop_mode(self, call):
         teleop_msg = RRRTeleop.Request()
