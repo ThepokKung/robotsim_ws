@@ -5,15 +5,15 @@ from rclpy.node import Node
 
 from geometry_msgs.msg import PoseStamped , Point
 
-from rrr_robot_interfaces.srv import RRRSavePath
+from rrr_robot_interfaces.srv import RRRTargetPath
 
 class TargetBagNode(Node):
     def __init__(self):
         super().__init__('target_bag_node')
 
         # Service server
-        self.create_service(RRRSavePath ,'/save_path' ,self.save_path_callback)
-        self.create_service(RRRSavePath ,'/call_path' ,self.call_path_callback)
+        self.create_service(RRRTargetPath ,'/save_path' ,self.save_path_callback)
+        self.create_service(RRRTargetPath ,'/call_path' ,self.call_path_callback)
 
         # Pub Topic
         self.end_effector_pub = self.create_publisher(PoseStamped, "/end_effector", 10)
