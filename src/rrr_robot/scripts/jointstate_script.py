@@ -36,6 +36,8 @@ class JointstatePublisher(Node):
         self.ink_calcalate = self.create_client(RRRInvertKinematics ,'/ink_calculate' ,callback_group = self.ink_call_group)
         self.target_call_group = MutuallyExclusiveCallbackGroup()
         self.target_call = self.create_client(RRRTargetPath ,'/call_path' ,callback_group = self.target_call_group)
+        self.robot_call_group = MutuallyExclusiveCallbackGroup()
+        self.robot_call = self.create_client(RRRMode ,'/Mode' ,callback_group = self.robot_call_group)
         
         # Timmer 
         self.dt = 0.01
@@ -54,6 +56,7 @@ class JointstatePublisher(Node):
         # Variable
         self.teleop_run = False
         self.teleop_ref = ''
+        self.auto_to_target = False
 
         self.auto_run = False
 
@@ -65,18 +68,36 @@ class JointstatePublisher(Node):
         self.q_goal = [0.0 ,0.0 ,0.0]
         self.goal_pose = [0.0 ,0.0 ,0.0]
 
+        self.temp_sig = 0
+
         self.name = ["joint_1" ,"joint_2" ,"joint_3"]
 
         # Display Node start
         self.get_logger().info(f'JointState publisher Start Node')
 
+    def set_teleop_mode(self):
+        robotMode_msg = RRRMode.Request()
+        robotMode_msg.mode_call = "Teleop"
+        self.robot_call.call_async(robotMode_msg)
+
     def call_target(self):
-        call_msg = RRRTargetPath.Request()
-        call_msg.call_path = True
+        if self.auto_to_target == False:
+            call_msg = RRRTargetPath.Request()
+            call_msg.call_path = True
+            
+            result = RRRTargetPath.Response()
 
-        result = self.target_call.call(call_msg)
+            if (self.robot_run == False and self.auto_to_target == False) : result = self.target_call.call(call_msg)
 
-        if result.all_done:
+            if result.message == 'Target pub':
+                self.auto_to_target = True
+
+            if result.all_done == True:
+                self.set_teleop_mode()
+                self.auto_run = False
+                self.auto_to_target = False
+                self.get_logger().info("Now all done")
+        else:
             pass
 
     def auto_callback(self, request:RRRAuto.Request, response:RRRAuto.Response):
@@ -103,9 +124,9 @@ class JointstatePublisher(Node):
 
     def target_callback(self, msg :PoseStamped):
         if self.auto_run and self.robot_run == False:
-            self.goal_pos[0] = msg.pose.position.x
-            self.goal_pos[1] = msg.pose.position.y
-            self.goal_pos[2] = msg.pose.position.z
+            self.goal_pose[0] = msg.pose.position.x
+            self.goal_pose[1] = msg.pose.position.y
+            self.goal_pose[2] = msg.pose.position.z
 
             self.get_logger().info(f'Auto target : {self.goal_pose}')
 
@@ -130,6 +151,9 @@ class JointstatePublisher(Node):
         joint_msg = JointState()
         joint_msg.header.stamp = self.get_clock().now().to_msg()
 
+        # q dot
+        q_dot = [0,0,0,0]
+
         # calculate q value
         if self.teleop_run:
             if self.teleop_ref == 'base':
@@ -143,6 +167,11 @@ class JointstatePublisher(Node):
             if np.linalg.det(j_reduce) < 0.01 :
                 q_dot = [0,0,0,0]
                 self.get_logger().info(f'Singurality Stop!!!')
+                self.temp_sig = self.temp_sig + 1
+                if (self.temp_sig > 100):
+                    self.q = [0.0 ,pi/2 ,pi/2]
+                    self.temp_sig = 0
+                    self.get_logger().info(f'Set to defalut')
 
         elif self.auto_run:
             k = 1.5
@@ -173,6 +202,7 @@ class JointstatePublisher(Node):
             pos_check = self.goal_pose - current_pos.t
             if pos_check[0] < 0.1 and pos_check[1] < 0.1 and pos_check[2] < 0.1:
                 self.robot_run = False
+                self.auto_to_target = False
                 self.call_target()
 
 

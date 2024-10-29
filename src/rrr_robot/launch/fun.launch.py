@@ -48,7 +48,7 @@ def generate_launch_description():
         package='joint_state_publisher_gui',
         executable='joint_state_publisher_gui'
     )
-
+                                                                  
     # random_node = Node(
     #     package='random_target',
     #     executable='random.py'

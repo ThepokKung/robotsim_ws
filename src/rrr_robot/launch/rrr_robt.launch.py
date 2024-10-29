@@ -10,6 +10,7 @@ def generate_launch_description():
     executable_name = ['controller.py' ,'invert_kinematics.py' ,'target_bag.py' ,'jointstate_script.py']
     name = ['controller' ,'invert_kinematics' ,'target_bag' ,'jointstate_script']
 
+
     for i in range(len(executable_name)):
         node_call = Node(
             package= package_name,
